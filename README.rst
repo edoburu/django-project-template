@@ -48,5 +48,14 @@ Usage
 
 Create a Django project::
 
-    django-admin.py startproject -e py,example,gitignore --template=https://github.com/edoburu/django-project-template/archive/master.zip
+    mkdir my-website.com
+    cd my-website.com
+    django-admin.py startproject . -e py,example,gitignore --template=https://github.com/edoburu/django-project-template/archive/master.zip
 
+Optionally, you can place the files in a ``src`` folder off course::
+
+    mkdir -p my-website.com/src
+    cd my-website.com
+    django-admin.py startproject src -e py,example,gitignore --template=https://github.com/edoburu/django-project-template/archive/master.zip
+
+This allows you to create folders like ``docs``, ``logs``, ``etc`` at the toplevel.

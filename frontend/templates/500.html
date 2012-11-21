@@ -1,0 +1,27 @@
+{% load static %}{% get_static_prefix as STATIC_URL %}<!DOCTYPE html>
+
+<html xml:lang="{{ LANGUAGE_CODE|default:"nl" }}" lang="{{ LANGUAGE_CODE|default:"nl" }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Powered by Django" />
+    <title>Interne fout!</title>
+    <link href="{{ STATIC_URL }}frontend/css/style.css" rel="stylesheet" type="text/css" />
+    {% block scripts %}{% endblock %}
+  </head>
+
+  <body id="theme" class="page500">
+    <div id="container">
+
+      <h2 class="pagetitle">Interne fout</h2>
+      <div id="content" class="clearfix">
+        <p>
+          Er is een fout opgetreden. Probeert u het later a.u.b. opnieuw.
+        </p>
+        <p>
+          Terug naar de <a href="/">start pagina</a>.
+        </p>
+      </div><!-- /content -->
+
+    </div>
+  </body>
+</html>

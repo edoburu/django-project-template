@@ -1,0 +1,13 @@
+*.pyc
+*.pyo
+*.mo
+*.db
+*.egg-info/
+.project
+.idea/
+.pydevproject
+.idea/workspace.xml
+.DS_Store
+dist/
+docs/_build/
+{{ project_name }}/settings/local.py

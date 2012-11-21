@@ -1,4 +1,7 @@
-# Django settings for edoburu project.
+"""
+The default settings for any Django project.
+Place project customizations in ``project.py``.
+"""
 import os, re
 
 DEBUG          = True

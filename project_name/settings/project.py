@@ -1,3 +1,6 @@
+"""
+Project specific settings
+"""
 from .defaults import *
 
 # Database to use

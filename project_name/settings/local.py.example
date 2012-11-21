@@ -1,8 +1,11 @@
+"""
+Local settings for development.
+"""
 from .project import INSTALLED_APPS, MIDDLEWARE_CLASSES
 
 # Output to console
-#import logging, sys
-#logging.basicConfig(level=logging.DEBUG, stream=sys.stderr)
+import logging, sys
+logging.basicConfig(level=logging.DEBUG, stream=sys.stderr)
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 

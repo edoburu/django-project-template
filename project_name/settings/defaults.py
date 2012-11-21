@@ -31,7 +31,7 @@ TIME_ZONE = 'Europe/Amsterdam'
 LANGUAGE_CODE = 'nl_NL'
 
 # Path autodetection
-PROJECT_DIR  = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+PROJECT_DIR  = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 
 # Paths
 MEDIA_ROOT   = PROJECT_DIR + '/web/media/'

@@ -50,12 +50,12 @@ Create a Django project::
 
     mkdir my-website.com
     cd my-website.com
-    django-admin.py startproject . -e py,example,gitignore --template=https://github.com/edoburu/django-project-template/archive/master.zip
+    django-admin.py startproject mywebsite . -e py,example,gitignore --template=https://github.com/edoburu/django-project-template/archive/master.zip
 
 Optionally, you can place the files in a ``src`` folder off course::
 
     mkdir -p my-website.com/src
     cd my-website.com
-    django-admin.py startproject src -e py,example,gitignore --template=https://github.com/edoburu/django-project-template/archive/master.zip
+    django-admin.py startproject mywebsite src -e py,example,gitignore --template=https://github.com/edoburu/django-project-template/archive/master.zip
 
 This allows you to create folders like ``docs``, ``logs``, ``etc`` at the toplevel.

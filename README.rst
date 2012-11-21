@@ -46,6 +46,7 @@ Features:
 Usage
 -----
 
-::
-    django-admin.py startproject -e py,example,gitignore --template=<this folder>
+Create a Django project::
+
+    django-admin.py startproject -e py,example,gitignore --template=https://github.com/edoburu/django-project-template/archive/master.zip
 

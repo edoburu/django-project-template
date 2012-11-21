@@ -1,4 +1,6 @@
 # Install with: `pip install -r requirements.txt`
+
+# Essential files
 Django >= 1.4.2, < 1.5
 Pillow==1.7.8
 MySQL-python==1.2.3
@@ -19,5 +21,5 @@ bpython >= 0.11
 
 # Extra apps for this site
 -e git+https://github.com/clintecker/django-google-analytics.git@140787ba86ef4995b2cabf927bf0b56ec7728348#egg=google_analytics-0.2
--e git+https://github.com/wardi/django-filebrowser-no-grappelli.git@5b2bac4220fe7cd05b4f208da7f5478387e0ead0#egg=django_filebrowser_no_grappelli-dev
+-e git+https://github.com/wardi/django-filebrowser-no-grappelli.git@5b2bac4220fe7cd05b4f208da7f5478387e0ead0#egg=django_filebrowser_no_grappelli-3.1.1
 django-crispy-forms >= 1.2.0, < 1.3

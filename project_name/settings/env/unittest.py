@@ -1,4 +1,4 @@
-from settings.project import *
+from .. import *
 from os.path import dirname
 import sys
 

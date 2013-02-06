@@ -1,0 +1,22 @@
+/*!
+ * Bootstrap v2.x
+ *
+ * Copyright 2013 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+
+// Base config
+$iconSpritePath:      image-path("../vendor/bootstrap/glyphicons-halflings.png");
+$iconWhiteSpritePath: image-path("../vendor/bootstrap/glyphicons-halflings-white.png");
+
+// Base styles from bootstrap. To find out which components are available, see:
+// https://github.com/thomas-mcdonald/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/bootstrap.scss
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/forms";
+
+// for bootstrap icon-* classes:
+//@import "bootstrap/sprites";

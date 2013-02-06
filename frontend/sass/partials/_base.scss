@@ -1,0 +1,196 @@
+@charset "utf-8";
+
+$body_font_family: Arial, Helvetica, sans-serif;
+$body_font_size: 12px;
+$body_background_color: #fff;
+$body_text_color: #333;
+
+$header_text_color: #333;
+$header_link_hover: #666;
+$error_text_color: #B94A48;
+
+
+/* ---- Meyer-based reset ---- */
+
+span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, tt, var,
+center, dl, dt, dd,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ---- extra resets and utils ---- */
+
+:focus       { outline: 0; }
+a[name]      { padding: 0; }
+textarea     { overflow: auto; }
+* html table { font-size: 100%; }
+
+img, a img, object {
+  border: 0;
+  vertical-align: bottom;
+}
+
+.clearfix:after {
+  content:      ".";
+  font-size:    0;
+  line-height:  0;
+  display:      block;
+  height:       0;
+  clear:        both;
+  visibility:   hidden;
+}
+
+* html .clearfix { height:     1%; }
+*+html .clearfix { min-height: 0;  }
+
+
+/* containers */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  font-family: $body_font_family;
+  font-size: $body_font_size;
+  background-color: $body_background_color;
+  color: $body_text_color;
+}
+
+#container {
+  position: relative;
+}
+
+h1 {
+  color: $header_text_color;
+  font-size: 19px;
+  margin: 10px 0 10px;
+}
+
+h2 {
+  color: $header_text_color;
+  font-size: 17px;
+  margin: 10px 0;
+}
+
+h3 {
+  color: $header_text_color;
+  font-size: 15px;
+  margin: 10px 0;
+}
+
+h1 a,
+h2 a {
+  color: $header_text_color;
+  text-decoration: none;  /* for blog */
+}
+
+h1 a:hover,
+h2 a:hover {
+  color: $header_link_hover;  /* for blog */
+}
+
+article blockquote,
+#main-text blockquote {
+  margin: 1em 2em;
+}
+
+article p,
+#main-text p {
+  margin: 0 0 1em 0;
+}
+
+article ul,
+#main-text ul {
+  margin: .5em 0 1.5em 0;
+  padding-left: 1.5em;
+}
+
+article em,
+#main-text em {
+  font-style: italic;
+}
+
+
+/* ---- plugins ---- */
+
+pre, code {
+  /* use something more modern then Courier New */
+  font-family: "Consolas", "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+}
+
+iframe {
+  border: 1px solid #ccc;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+/* ---- other styles here ---- */
+
+.form-horizontal {
+  textarea {
+    width: 320px;
+  }
+
+  label {
+    /* TODO: no .control-label for label tags? */
+    float: left;
+    width: 100px;
+    padding-top: 5px;
+    text-indent: 10px;
+  }
+}
+
+ul.messages {
+  list-style: none;
+  padding: 0 0 0 1em;
+  margin: 1em 0;
+}
+
+.messages {
+  li.error,
+  p.error {
+    color: $error_text_color;
+    font-weight: bold;
+    margin: 2px 0;
+  }
+}

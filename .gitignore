@@ -8,6 +8,7 @@
 .pydevproject
 .idea/workspace.xml
 .DS_Store
+.sass-cache/
 dist/
 docs/_build/
 {{ project_name }}/settings/local.py

@@ -12,16 +12,16 @@ Installed apps:
 * Django 1.4
 * MySQLdb
 * Pillow (PIL replacement)
-* SORL Thumbnail
-* South
-* bpython
-* django-admin-tools
-* django-compressor
-* django-crispy-forms
-* django-debugtools
-* django-filebrowser-no-grapelli
-* django-fluent-dashboard
-* django-google-analytics
+* SORL-Thumbnail_
+* South_
+* bpython_
+* django-admin-tools_
+* django-compressor_
+* django-crispy-forms_
+* django-debugtools_
+* django-filebrowser-no-grapelli_
+* django-fluent-dashboard_
+* django-google-analytics_
 
 Configured URLs:
 
@@ -63,10 +63,10 @@ This allows you to create folders like ``docs``, ``web``, ``logs``, ``etc`` at t
 This setup is recommended.
 
 
-Working with SCSS files (optional!)
-===================================
+Working with SCSS files
+=======================
 
-As extra present, the CSS files are easier to edit using SASS_ and Compass_.
+As extra treat, the CSS files are easier to edit using SASS_ and Compass_.
 
 It gives these advantages to regular CSS:
 
@@ -78,8 +78,9 @@ It gives these advantages to regular CSS:
 
 .. note::
 
-    This feature is optional! The project already has a ``screen.css`` file which can be used and edited.
+    This feature is optional. If you don't like to use it, the project already has a ``screen.css`` file which can be used and edited.
     Feel free to remove those files in your own projects or fork (``config.rb``, ``Guardfile``, and ``frontend/sass``).
+    However, we highly recommended to take a look at it.
 
 
 Using compass
@@ -91,7 +92,7 @@ Install Compass_ using::
 
 Leave Compass_ running in the terminal::
 
-    compass watch --poll
+    compass watch
 
 It automatically compiles the ``*.css`` files for you.
 
@@ -121,8 +122,18 @@ Each time a change is made in ``*.scss`` files, the files are compiled and the b
 the CSS file, even without reloading the entire page!
 
 
+.. _bpython: http://bpython-interpreter.org/
 .. _Compass: http://compass-style.org/
-.. _SASS: http://sass-lang.com/
-.. _LiveReload: http://livereload.com/
+.. _django-admin-tools: https://bitbucket.org/izi/django-admin-tools
+.. _django-compressor: http://django_compressor.readthedocs.org/
+.. _django-crispy-forms: http://django-crispy-forms.readthedocs.org/
+.. _django-debugtools: https://github.com/edoburu/django-debugtools
+.. _django-filebrowser-no-grapelli: https://github.com/wardi/django-filebrowser-no-grappelli
+.. _django-fluent-dashboard: https://github.com/edoburu/django-fluent-dashboard
+.. _django-google-analytics: https://github.com/clintecker/django-google-analytics
 .. _Guard: https://github.com/guard/guard
 .. _guard-livereload: https://github.com/guard/guard-livereload
+.. _LiveReload: http://livereload.com/
+.. _SASS: http://sass-lang.com/
+.. _SORL-Thumbnail: https://github.com/sorl/sorl-thumbnail
+.. _South: http://south.readthedocs.org/

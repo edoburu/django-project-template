@@ -1,3 +1,5 @@
+.. TODO: Complete the README descriptions and "about" section.{% if False %}{# Hiding GitHub README #}
+
 Django project template
 =======================
 
@@ -51,17 +53,16 @@ Create a Django project::
 
     mkdir my-website.com
     cd my-website.com
-    django-admin.py startproject mywebsite . -e py,example,gitignore --template=https://github.com/edoburu/django-project-template/archive/master.zip
+    django-admin.py startproject mywebsite . -e py,rst,example,gitignore --template=https://github.com/edoburu/django-project-template/archive/master.zip
 
 Alternatively, you can place the files in a ``src`` folder too::
 
     mkdir -p my-website.com/src
     cd my-website.com
-    django-admin.py startproject mywebsite src -e py,example,gitignore --template=https://github.com/edoburu/django-project-template/archive/master.zip
+    django-admin.py startproject mywebsite src -e py,rst,example,gitignore --template=https://github.com/edoburu/django-project-template/archive/master.zip
 
 This allows you to create folders like ``docs``, ``web``, ``logs``, ``etc`` at the toplevel.
 This setup is recommended.
-
 
 Working with SCSS files
 =======================
@@ -81,7 +82,6 @@ It gives these advantages to regular CSS:
     This feature is optional. If you don't like to use it, the project already has a ``screen.css`` file which can be used and edited.
     Feel free to remove those files in your own projects or fork (``config.rb``, ``Guardfile``, and ``frontend/sass``).
     However, we highly recommended to take a look at it.
-
 
 Using compass
 -------------
@@ -121,9 +121,7 @@ And toggle the "LiveReload" button in the browser at the desired page.
 Each time a change is made in ``*.scss`` files, the files are compiled and the browser reloads
 the CSS file, even without reloading the entire page!
 
-
 .. _bpython: http://bpython-interpreter.org/
-.. _Compass: http://compass-style.org/
 .. _django-admin-tools: https://bitbucket.org/izi/django-admin-tools
 .. _django-compressor: http://django_compressor.readthedocs.org/
 .. _django-crispy-forms: http://django-crispy-forms.readthedocs.org/
@@ -131,9 +129,67 @@ the CSS file, even without reloading the entire page!
 .. _django-filebrowser-no-grapelli: https://github.com/wardi/django-filebrowser-no-grappelli
 .. _django-fluent-dashboard: https://github.com/edoburu/django-fluent-dashboard
 .. _django-google-analytics: https://github.com/clintecker/django-google-analytics
-.. _Guard: https://github.com/guard/guard
-.. _guard-livereload: https://github.com/guard/guard-livereload
 .. _LiveReload: http://livereload.com/
-.. _SASS: http://sass-lang.com/
 .. _SORL-Thumbnail: https://github.com/sorl/sorl-thumbnail
 .. _South: http://south.readthedocs.org/
+
+
+------------
+
+.. {% else %}
+
+{{ project_name|title }} Project
+========================================
+
+About
+-----
+
+Describe your project here.
+
+Prerequisites
+-------------
+
+- Python >= 2.6
+- pip
+- virtualenv (virtualenvwrapper is recommended)
+
+Installation
+------------
+
+To setup a local development environment::
+
+    mkvirtualenv {{ project_name }}
+    pip install -r requirements.txt
+    cp settings/local.py.example settings/local.py   # Enter your DB credentials
+
+    ./manage.py syncdb --migrate
+    ./manage.py runserver
+
+Compiling CSS files
+~~~~~~~~~~~~~~~~~~~
+
+To compile SASS_ files::
+
+    gem install compass bootstrap-sass oily_png guard-livereload guard-compass
+
+    guard
+
+To enable LiveReload_ of ``*.css`` files during development, install a browser plugin:
+
+* Firefox (2.0.9 dev release): https://github.com/siasia/livereload-extensions/downloads
+* Everyone else: http://help.livereload.com/kb/general-use/browser-extensions
+
+And toggle the "LiveReload" button in the browser at the desired page.
+
+License
+-------
+
+Describe project license here.
+
+
+.. Add links here:{% endif %}
+
+.. _Compass: http://compass-style.org/
+.. _LiveReload: http://livereload.com/
+.. _guard-livereload: https://github.com/guard/guard-livereload
+.. _SASS: http://sass-lang.com/

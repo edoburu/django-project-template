@@ -64,6 +64,8 @@ Alternatively, you can place the files in a ``src`` folder too::
 This allows you to create folders like ``docs``, ``web``, ``logs``, ``etc`` at the toplevel.
 This setup is recommended.
 
+The remaining instructions - to start the development server - can be found in the generated ``README.rst`` file.
+
 Working with SCSS files
 =======================
 
@@ -160,7 +162,8 @@ To setup a local development environment::
 
     mkvirtualenv {{ project_name }}
     pip install -r requirements.txt
-    cp settings/local.py.example settings/local.py   # Enter your DB credentials
+    edit {{ project_name }}/settings/project.py    # Enter your DB credentials
+    cp {{ project_name }}/settings/local.py.example {{ project_name }}/settings/local.py    # To enable debugging
 
     ./manage.py syncdb --migrate
     ./manage.py runserver

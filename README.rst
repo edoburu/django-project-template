@@ -163,7 +163,7 @@ To setup a local development environment::
     mkvirtualenv {{ project_name }}
     pip install -r requirements.txt
     edit {{ project_name }}/settings/project.py    # Enter your DB credentials
-    cp {{ project_name }}/settings/local.py.example {{ project_name }}/settings/local.py    # To enable debugging
+    cp {{ project_name }}/settings/local.py.example {{ project_name }}/settings/local.py  # To enable debugging
 
     ./manage.py syncdb --migrate
     ./manage.py runserver

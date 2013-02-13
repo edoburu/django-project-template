@@ -27,6 +27,7 @@ def view500(request):
 # Include all remaining pages URLs from the CMS
 urlpatterns += patterns('',
     url(r'^500test/$', view=view500),
+    url(r'^403/$', 'django.views.defaults.permission_denied'),
     url(r'^404/$', 'django.views.defaults.page_not_found'),
     url(r'^500/$', 'django.views.defaults.server_error'),
 

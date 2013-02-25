@@ -162,7 +162,7 @@ iframe {
   box-sizing: border-box;
 }
 
-/* ---- other styles here ---- */
+/* ---- Overrides of Bootstrap ---- */
 .form-horizontal textarea {
   width: 320px;
 }
@@ -185,4 +185,8 @@ ul.messages {
   color: #b94a48;
   font-weight: bold;
   margin: 2px 0;
+}
+
+a.btn {
+  text-decoration: none;
 }

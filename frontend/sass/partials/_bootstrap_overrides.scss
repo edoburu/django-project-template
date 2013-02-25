@@ -1,0 +1,34 @@
+/* ---- Overrides of Bootstrap ---- */
+
+.form-horizontal {
+  textarea {
+    width: 320px;
+  }
+
+  label {
+    /* TODO: no .control-label for label tags? */
+    float: left;
+    width: 100px;
+    padding-top: 5px;
+    text-indent: 10px;
+  }
+}
+
+ul.messages {
+  list-style: none;
+  padding: 0 0 0 1em;
+  margin: 1em 0;
+}
+
+.messages {
+  li.error,
+  p.error {
+    color: $error_text_color;
+    font-weight: bold;
+    margin: 2px 0;
+  }
+}
+
+a.btn {
+  text-decoration: none;
+}

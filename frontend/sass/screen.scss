@@ -1,3 +1,6 @@
+@import "partials/bootstrap_config";
+
+
 // Sprites and CSS3 features
 @import "compass/css3";
 @import "compass/css3/transform";
@@ -7,3 +10,4 @@
 
 // Project files
 @import "partials/base";
+@import "partials/bootstrap_overrides";

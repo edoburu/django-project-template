@@ -8,15 +8,58 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
-// Base config
-$iconSpritePath:      image-path("../vendor/bootstrap/glyphicons-halflings.png");
-$iconWhiteSpritePath: image-path("../vendor/bootstrap/glyphicons-halflings-white.png");
+@import "partials/bootstrap_config";
 
-// Base styles from bootstrap. To find out which components are available, see:
-// https://github.com/thomas-mcdonald/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/bootstrap.scss
-@import "bootstrap/variables";
-@import "bootstrap/mixins";
+// Enable the desired bootstrap features as you like.
+// For code, see the files that `gem contents bootstrap-sass` lists, or browse:
+// https://github.com/thomas-mcdonald/bootstrap-sass/tree/master/vendor/assets/stylesheets/bootstrap
+
+// CSS Reset
+//@import "bootstrap/reset";
+
+// Grid system and page structure
+//@import "bootstrap/scaffolding";
+//@import "bootstrap/grid";
+//@import "bootstrap/layouts";
+
+// Base CSS
+//@import "bootstrap/type";
+//@import "bootstrap/code";
 @import "bootstrap/forms";
+//@import "bootstrap/tables";
 
-// for bootstrap icon-* classes:
-//@import "bootstrap/sprites";
+// Components: common
+//@import "bootstrap/sprites";   // for bootstrap icon-* classes:
+//@import "bootstrap/dropdowns";
+//@import "bootstrap/wells";
+//@import "bootstrap/component-animations";
+//@import "bootstrap/close";
+
+// Components: Buttons & Alerts
+//@import "bootstrap/buttons";
+//@import "bootstrap/button-groups";
+//@import "bootstrap/alerts";  // Note: alerts share common CSS with buttons and thus have styles in buttons
+
+// Components: Nav
+//@import "bootstrap/navs";
+//@import "bootstrap/navbar";
+//@import "bootstrap/breadcrumbs";
+//@import "bootstrap/pagination";
+//@import "bootstrap/pager";
+
+// Components: Popovers
+//@import "bootstrap/modals";
+//@import "bootstrap/tooltip";
+//@import "bootstrap/popovers";
+
+// Components: Misc
+//@import "bootstrap/thumbnails";
+//@import "bootstrap/media";
+//@import "bootstrap/labels-badges";
+//@import "bootstrap/progress-bars";
+//@import "bootstrap/accordion";
+//@import "bootstrap/carousel";
+//@import "bootstrap/hero-unit";
+
+// Utility classes
+//@import "bootstrap/utilities"; // Has to be last to override when necessary

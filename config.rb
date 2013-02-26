@@ -13,3 +13,6 @@ line_comments = false
 sass_options = {
     :debug_info => false
 }
+
+# django-compressor already adds file hashes, compass doesn't have to.
+asset_cache_buster :none

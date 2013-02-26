@@ -1,7 +1,12 @@
-// Overwritten variables
+// Core variables and mixins
 $iconSpritePath:      image-path("../vendor/bootstrap/glyphicons-halflings.png");
 $iconWhiteSpritePath: image-path("../vendor/bootstrap/glyphicons-halflings-white.png");
-
-// Core variables and mixins
-@import "bootstrap/variables"; // Override the variables for custom colors, font-sizes, etc
+@import "bootstrap/variables";
 @import "bootstrap/mixins";
+
+
+// Customize colors. For variables,
+// see: https://github.com/thomas-mcdonald/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_variables.scss
+
+$btnPrimaryBackground: $linkColor;   // = #08c
+$btnPrimaryBackgroundHighlight: adjust-hue($btnPrimaryBackground, 20%);

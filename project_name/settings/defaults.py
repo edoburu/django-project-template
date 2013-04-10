@@ -31,14 +31,15 @@ TIME_ZONE = 'Europe/Amsterdam'
 LANGUAGE_CODE = 'nl_NL'
 
 # Path autodetection
-PROJECT_DIR  = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
+SRC_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
+ROOT_DIR = SRC_DIR  # os.path.dirname(SRC_DIR)
 
 # Paths
-MEDIA_ROOT   = PROJECT_DIR + '/web/media/'
+MEDIA_ROOT   = ROOT_DIR + '/web/media/'
 MEDIA_URL    = '/media/'        # Must end with /
 ROOT_URLCONF = '{{ project_name }}.urls'
 
-STATIC_ROOT = PROJECT_DIR + '/web/static/'
+STATIC_ROOT = ROOT_DIR + '/web/static/'
 STATIC_URL  = '/static/'
 
 SESSION_COOKIE_HTTPONLY = True  # can't read cookie from JavaScript

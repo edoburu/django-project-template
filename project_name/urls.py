@@ -1,6 +1,7 @@
 from django.conf.urls import *
 from django.conf import settings
 from django.contrib import admin
+from filebrowser.sites import site as fb_site
 from frontend.views import TextFileView
 
 admin.autodiscover()
@@ -12,7 +13,7 @@ sitemaps = {
 urlpatterns = patterns('',
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^admin/filebrowser/', include('filebrowser.urls')),
+    url(r'^admin/filebrowser/', include(fb_site.urls)),
     url(r'^admin/util/tools/', include('admin_tools.urls')),
 )
 

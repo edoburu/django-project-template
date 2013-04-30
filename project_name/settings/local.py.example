@@ -11,6 +11,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Debugging assistance
 
+WSGI_APPLICATION = '{{ project_name }}.wsgi.development.application'
+
 INSTALLED_APPS += (
     #'debug_toolbar',
     #'django_extensions',

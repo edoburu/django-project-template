@@ -54,8 +54,6 @@ IGNORABLE_404_URLS = (
 
 ## --- Plugin components
 
-WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
-
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -2,6 +2,7 @@ from .. import *
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+COMPRESS_ENABLED = True
 
 DATABASES = {
     'default': {
@@ -15,3 +16,11 @@ DATABASES = {
 TEMPLATE_LOADERS = (
     ('django.template.loaders.cached.Loader', TEMPLATE_LOADERS),
 )
+
+ALLOWED_HOSTS = (
+    '{{ project_name }}.testing.mycompany.tld',
+)
+
+CACHES['default']['KEY_PREFIX'] = '{{ product_name }}.production'
+
+#INSTALLED_APPS += ('gunicorn',)

@@ -43,7 +43,7 @@ STATIC_ROOT = ROOT_DIR + '/web/static/'
 STATIC_URL  = '/static/'
 
 SESSION_COOKIE_HTTPONLY = True  # can't read cookie from JavaScript
-X_FRAME_OPTIONS = 'DENY'        # Prevent iframes. Can be overwritten per view using the @xframe_options_.. decorators
+X_FRAME_OPTIONS = 'SAMEORIGIN'  # Prevent iframes. Can be overwritten per view using the @xframe_options_.. decorators
 
 INTERNAL_IPS = ('127.0.0.1',)
 

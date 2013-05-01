@@ -58,5 +58,6 @@ FILEBROWSER_EXTENSIONS = {
     'Document': ['.pdf', '.doc', '.xls', '.csv', '.docx', '.xlsx'],
     'Video': ['.swf', '.mp4', '.flv', '.f4v', '.mov', '.3gp'],
 }
+FILEBROWSER_EXCLUDE = ('cache',)  # sorl.thumbnail generated files
 FILEBROWSER_MAX_UPLOAD_SIZE = 100 * 1024 * 1024  # in bytes
 FILEBROWSER_SAVE_FULL_URL = False

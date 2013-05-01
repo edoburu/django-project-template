@@ -2,16 +2,13 @@ from django.conf.urls import *
 from django.conf import settings
 from django.contrib import admin
 from filebrowser.sites import site as fb_site
-from frontend.views import TextFileView
+from frontend.views import TextFileView, Http500View
 
 admin.autodiscover()
 
 sitemaps = {
     # Place sitemaps here
 }
-
-def view500(request):
-    raise NotImplementedError("500 error page test")
 
 urlpatterns = patterns('',
     # Django admin
@@ -21,7 +18,7 @@ urlpatterns = patterns('',
     url(r'^admin/util/tools/', include('admin_tools.urls')),
 
     # Test pages
-    url(r'^500test/$', view=view500),
+    url(r'^500test/$', view=Http500View.as_view()),
     url(r'^403/$', 'django.views.defaults.permission_denied'),
     url(r'^404/$', 'django.views.defaults.page_not_found'),
     url(r'^500/$', 'django.views.defaults.server_error'),

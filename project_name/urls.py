@@ -10,23 +10,17 @@ sitemaps = {
     # Place sitemaps here
 }
 
+def view500(request):
+    raise NotImplementedError("500 error page test")
+
 urlpatterns = patterns('',
+    # Django admin
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^admin/filebrowser/', include(fb_site.urls)),
     url(r'^admin/util/tools/', include('admin_tools.urls')),
-)
 
-if settings.DEBUG:
-    urlpatterns += patterns('',
-        (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
-    )
-
-def view500(request):
-    raise NotImplementedError("500 error page test")
-
-# Include all remaining pages URLs from the CMS
-urlpatterns += patterns('',
+    # Test pages
     url(r'^500test/$', view=view500),
     url(r'^403/$', 'django.views.defaults.permission_denied'),
     url(r'^404/$', 'django.views.defaults.page_not_found'),
@@ -39,3 +33,8 @@ urlpatterns += patterns('',
     # CMS modules
     # TODO: add your urls here
 )
+
+if settings.DEBUG:
+    urlpatterns.insert(0,
+        url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT, 'show_indexes': True})
+    )

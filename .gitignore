@@ -11,4 +11,5 @@
 .sass-cache/
 dist/
 docs/_build/
-{{ project_name }}/settings/local.py
+/env/
+settings/local.py

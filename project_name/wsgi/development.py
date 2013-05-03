@@ -8,11 +8,9 @@ via the ``WSGI_APPLICATION`` setting.
 Each production site can use one of the other modules in this folder;
 the production/beta WSGI files auto-detect their system paths and location.
 """
-import os
-import sys
+from django.core.wsgi import get_wsgi_application
 
 # Export application object
-from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
 
 # Apply WSGI middleware here.

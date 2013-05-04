@@ -8,16 +8,6 @@ DEBUG          = True
 TEMPLATE_DEBUG = DEBUG
 TEMPLATE_STRING_IF_INVALID = ''
 
-# People who receive 500 errors
-ADMINS = (
-    ('{{ project_name }}', 'sysadmin@edoburu.nl'),
-)
-
-DEFAULT_FROM_EMAIL = 'sysadmin@edoburu.nl'
-
-# People who receive 404 errors
-MANAGERS = ADMINS
-
 
 ## --- Internal settings
 

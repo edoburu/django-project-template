@@ -3,6 +3,16 @@ Project specific settings
 """
 from .defaults import *
 
+# People who receive 500 errors
+ADMINS = (
+    ('{{ project_name }}', 'sysadmin@edoburu.nl'),
+)
+
+DEFAULT_FROM_EMAIL = 'sysadmin@edoburu.nl'
+
+# People who receive 404 errors
+MANAGERS = ADMINS
+
 # Database to use
 DATABASES = {
     'default': {

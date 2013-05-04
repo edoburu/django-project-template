@@ -3,15 +3,14 @@ Project specific settings
 """
 from .defaults import *
 
-# People who receive 500 errors
+# Admins receive 500 errors, managers receive 404 errors.
 ADMINS = (
     ('{{ project_name }}', 'sysadmin@edoburu.nl'),
 )
+MANAGERS = ADMINS
 
 DEFAULT_FROM_EMAIL = 'sysadmin@edoburu.nl'
-
-# People who receive 404 errors
-MANAGERS = ADMINS
+EMAIL_SUBJECT_PREFIX = '[Django][{{ project_name }}] '
 
 # Database to use
 DATABASES = {

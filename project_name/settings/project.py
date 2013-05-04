@@ -51,8 +51,6 @@ TEMPLATE_CONTEXT_PROCESSORS += (
 FORMAT_MODULE_PATH = '{{ project_name }}.settings.locale'  # Consistent date formatting
 
 # App specific settings
-ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'  # for filebrowser
-
 ADMIN_TOOLS_INDEX_DASHBOARD = 'fluent_dashboard.dashboard.FluentIndexDashboard'
 ADMIN_TOOLS_APP_INDEX_DASHBOARD = 'fluent_dashboard.dashboard.FluentAppIndexDashboard'
 ADMIN_TOOLS_MENU = 'fluent_dashboard.menu.FluentMenu'
@@ -69,4 +67,3 @@ FILEBROWSER_EXTENSIONS = {
 }
 FILEBROWSER_EXCLUDE = ('cache',)  # sorl.thumbnail generated files
 FILEBROWSER_MAX_UPLOAD_SIZE = 100 * 1024 * 1024  # in bytes
-FILEBROWSER_SAVE_FULL_URL = False

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load fluent_blogs_tags sharedcontent_tags i18n %}
+
+{% block headtitle %}{% block title %}{% endblock %}{% endblock %}
+
+{% block main %}
+      <div class="container blog-container">
+          <section class="main-content">
+              {% block content %}{% endblock %}
+          </section>
+          <aside class="blog-sidebar">
+              {% sharedcontent "blog_sidebar" %}
+          </aside>
+      </div>
+{% endblock %}

@@ -1,4 +1,4 @@
-{% load analytics compress %}<!doctype html>
+{% load analytics compress fluent_pages_tags %}<!doctype html>
 <html xml:lang="{{ LANGUAGE_CODE|default:"nl" }}" lang="{{ LANGUAGE_CODE|default:"nl" }}">
   <head>
     <meta charset="utf-8" />
@@ -35,9 +35,11 @@
     <div id="wrapper">
 
       <header id="top">
+        {% render_menu %}
       </header>
 
       <section id="content">
+        {% render_breadcrumb %}
         <div id="main">
           {% block main %}{% endblock %}
         </div>

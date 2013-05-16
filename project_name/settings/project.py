@@ -15,14 +15,15 @@ EMAIL_SUBJECT_PREFIX = '[Django][{{ project_name }}] '
 # Database to use
 DATABASES = {
     'default': {
-        'ENGINE':   'django.db.backends.mysql',
+        'ENGINE':   'django.db.backends.postgresql_psycopg2',
         'NAME':     '{{ project_name }}',
         'USER':     '{{ project_name }}',
         'PASSWORD': '',
+        'OPTIONS':  {'autocommit': True,},   # Stop that "current transaction is aborted" error
     },
 }
 
-SECRET_KEY = '{{ secret_key }}'
+SECRET_KEY = '{{ secret_key|safe }}'
 
 # Apps to use
 INSTALLED_APPS += (

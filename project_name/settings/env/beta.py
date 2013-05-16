@@ -21,6 +21,6 @@ ALLOWED_HOSTS = (
     '{{ project_name }}.testing.mycompany.tld',
 )
 
-CACHES['default']['KEY_PREFIX'] = '{{ product_name }}.production'
+CACHES['default']['KEY_PREFIX'] = '{{ product_name }}.beta'
 
 #INSTALLED_APPS += ('gunicorn',)

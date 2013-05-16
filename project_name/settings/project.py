@@ -49,16 +49,16 @@ INSTALLED_APPS += (
     'categories',
     'categories.editor',
     'crispy_forms',
-    'django_wysiwyg',
     'django.contrib.comments',
+    'django_wysiwyg',
     'filebrowser',
     'google_analytics',
     'mptt',
     'polymorphic',
     'polymorphic_tree',
+    'sorl.thumbnail',
     'taggit',
     'taggit_autocomplete_modified',
-    'sorl.thumbnail',
     'tinymce',
 
     # and enable the admin
@@ -81,7 +81,19 @@ ADMIN_TOOLS_INDEX_DASHBOARD = 'fluent_dashboard.dashboard.FluentIndexDashboard'
 ADMIN_TOOLS_APP_INDEX_DASHBOARD = 'fluent_dashboard.dashboard.FluentAppIndexDashboard'
 ADMIN_TOOLS_MENU = 'fluent_dashboard.menu.FluentMenu'
 
+COMMENTS_APP = 'fluent_comments'
+
 DJANGO_WYSIWYG_FLAVOR = 'tinymce_advanced'
+
+FILEBROWSER_DIRECTORY = ''
+FILEBROWSER_EXTENSIONS = {
+    'Folder': [''],
+    'Image': ['.jpg', '.jpeg', '.png', '.gif'],
+    'Document': ['.pdf', '.doc', '.xls', '.csv', '.docx', '.xlsx'],
+    'Video': ['.swf', '.mp4', '.flv', '.f4v', '.mov', '.3gp'],
+}
+FILEBROWSER_EXCLUDE = ('cache',)  # sorl.thumbnail generated files
+FILEBROWSER_MAX_UPLOAD_SIZE = 100 * 1024 * 1024  # in bytes
 
 FLUENT_BLOGS_BASE_TEMPLATE = 'base_blog.html'
 FLUENT_BLOGS_ENTRY_LINK_STYLE = '/{year}/{month}/{slug}/'
@@ -100,13 +112,3 @@ FLUENT_DASHBOARD_APP_ICONS = {}
 FLUENT_DASHBOARD_DEFAULT_MODULE = 'ModelList'
 
 FLUENT_PAGES_TEMPLATE_DIR = os.path.join(SRC_DIR, 'frontend', 'templates')
-
-FILEBROWSER_DIRECTORY = ''
-FILEBROWSER_EXTENSIONS = {
-    'Folder': [''],
-    'Image': ['.jpg', '.jpeg', '.png', '.gif'],
-    'Document': ['.pdf', '.doc', '.xls', '.csv', '.docx', '.xlsx'],
-    'Video': ['.swf', '.mp4', '.flv', '.f4v', '.mov', '.3gp'],
-}
-FILEBROWSER_EXCLUDE = ('cache',)  # sorl.thumbnail generated files
-FILEBROWSER_MAX_UPLOAD_SIZE = 100 * 1024 * 1024  # in bytes

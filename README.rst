@@ -66,6 +66,17 @@ This setup is recommended.
 
 The remaining instructions - to start the development server - can be found in the generated ``README.rst`` file.
 
+
+Django-fluent template
+----------------------
+
+In a second branch, you'll find a project template for the django-fluent_ CMS::
+
+    mkdir my-website.com
+    cd my-website.com
+    django-admin.py startproject mywebsite . -e py,rst,example,gitignore --template=https://github.com/edoburu/django-project-template/archive/django-fluent.zip
+
+
 Working with SCSS files
 =======================
 
@@ -193,6 +204,7 @@ Describe project license here.
 .. Add links here:{% endif %}
 
 .. _Compass: http://compass-style.org/
+.. _django-fluent: http://django-fluent.org/
 .. _LiveReload: http://livereload.com/
 .. _guard-livereload: https://github.com/guard/guard-livereload
 .. _SASS: http://sass-lang.com/

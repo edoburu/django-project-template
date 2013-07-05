@@ -1,19 +1,19 @@
 # Install with: `pip install -r requirements.txt`
 
 # Infrastructure
-Django >= 1.4.5, < 1.5
-Pillow==2.0.0
+Django >= 1.5.1, < 1.6
+Pillow==2.1.0
 #MySQL-python==1.2.4
 #psycopg2==2.5
-python-memcached >= 1.51, < 2.0
-South >= 0.7.6, < 0.8
+python-memcached >= 1.53, < 2.0
+South >= 0.8.1, < 0.9
 
 # CMS libraries
-django-fluent-dashboard >= 0.3.4
+django-fluent-dashboard >= 0.3.5
 
 # Support libs
 django-admin-tools >= 0.5.1, < 0.6
-django-crispy-forms >= 1.2.8, < 1.3
+django-crispy-forms >= 1.3.2, < 1.4
 #dashboardmods >= 0.2.2
 django_compressor >= 1.3, < 1.4
 -e git+https://github.com/clintecker/django-google-analytics.git@140787ba86ef4995b2cabf927bf0b56ec7728348#egg=google_analytics-0.2

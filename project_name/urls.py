@@ -12,7 +12,6 @@ sitemaps = {
 
 urlpatterns = patterns('',
     # Django admin
-    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^admin/filebrowser/', include(fb_site.urls)),
     url(r'^admin/util/tools/', include('admin_tools.urls')),

@@ -9,7 +9,8 @@ ADMINS = (
 )
 MANAGERS = ADMINS
 
-DEFAULT_FROM_EMAIL = 'sysadmin@edoburu.nl'
+SERVER_EMAIL = 'root@localhost'
+DEFAULT_FROM_EMAIL = 'info@{{ project_name }}.example.com'
 EMAIL_SUBJECT_PREFIX = '[Django][{{ project_name }}] '
 
 # Database to use

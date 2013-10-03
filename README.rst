@@ -12,7 +12,7 @@ Features
 Installed apps:
 
 * Django 1.4
-* MySQLdb
+* MySQLdb or PsycoPG2
 * Pillow (PIL replacement)
 * SORL-Thumbnail_
 * South_

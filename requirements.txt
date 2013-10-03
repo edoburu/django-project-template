@@ -1,12 +1,12 @@
 # Install with: `pip install -r requirements.txt`
 
 # Infrastructure
-Django >= 1.5.1, < 1.6
+Django >= 1.5.4, < 1.6
 Pillow==2.1.0
 #for MySQL: MySQL-python==1.2.4
 #for PostgreSQL: psycopg2==2.5
-python-memcached >= 1.53, < 2.0
-South >= 0.8.1, < 0.9
+python-memcached==1.53
+South >= 0.8.2, < 0.9
 
 # CMS libraries
 django-fluent-blogs >= 0.9.5
@@ -20,9 +20,9 @@ django-admin-tools >= 0.5.1, < 0.6
 django-any-imagefield >= 0.8.1
 django-any-urlfield >= 1.0.4
 django-categories >= 1.2.1, < 1.3
-django-crispy-forms >= 1.3.2, < 1.4
-django_compressor >= 1.3, < 1.4
+django-crispy-forms >= 1.4.0, < 1.5
 #dashboardmods >= 0.2.2
+django_compressor >= 1.3, < 1.4
 -e git+https://github.com/clintecker/django-google-analytics.git@140787ba86ef4995b2cabf927bf0b56ec7728348#egg=google_analytics-0.2
 -e git+https://github.com/vdboor/django-filebrowser-no-grappelli-django14.git@105846f46950e1956115f9d79b032673bd9e27d4#egg=django-filebrowser-no-grappelli-django14
 django-taggit >= 0.10a1, < 1.0
@@ -35,5 +35,5 @@ pytz>=2013b
 sorl-thumbnail==11.12
 
 # Debugging
-django-debugtools >= 1.1.0
+django-debugtools >= 1.1.1
 bpython >= 0.11

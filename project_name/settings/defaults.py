@@ -17,8 +17,6 @@ SITE_ID = 1
 USE_I18N = True                   # False for optimizations
 USE_L10N = True
 USE_TZ = True
-TIME_ZONE = 'Europe/Amsterdam'
-LANGUAGE_CODE = 'nl_NL'
 
 # Path autodetection
 SRC_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))

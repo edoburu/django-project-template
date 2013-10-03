@@ -2,16 +2,16 @@
 
 {% block bodyid %}page404{% endblock %}
 {% block bodyclass %}{% endblock %}
-{% block headtitle %}{% trans "Page not found!" %}{% endblock %}
+{% block headtitle %}{% trans "Permission denied!" %}{% endblock %}
 
 {% block main %}
           <div class="constrained">
             <div class="container">
 
-              <h2 class="pagetitle">{% trans "Page not found!" %}</h2>
+              <h2 class="pagetitle">{% trans "Permission denied!" %}</h2>
               <div id="content" class="clearfix">
                 {% blocktrans %}
-                <p>We're sorry but the page you are looking for can't be found.</p>
+                <p>We're sorry but you are not permitted to access this page.</p>
                 {% endblocktrans %}
                 <p class="errorpage-back-link">{% trans 'Back to the <a href="/">home page</a>.' %}
               </div><!-- /content -->

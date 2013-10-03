@@ -5,13 +5,17 @@ from .defaults import *
 
 # Admins receive 500 errors, managers receive 404 errors.
 ADMINS = (
-    ('{{ project_name }}', 'sysadmin@edoburu.nl'),
+    ('{{ project_name }}', 'sysadmin@{{ project-name }}.example.org'),
 )
 MANAGERS = ADMINS
 
 SERVER_EMAIL = 'root@localhost'
 DEFAULT_FROM_EMAIL = 'info@{{ project_name }}.example.com'
 EMAIL_SUBJECT_PREFIX = '[Django][{{ project_name }}] '
+
+# Project language settings
+TIME_ZONE = 'Europe/Amsterdam'
+LANGUAGE_CODE = 'en'
 
 # Database to use
 DATABASES = {
@@ -79,6 +83,44 @@ TEMPLATE_CONTEXT_PROCESSORS += (
 )
 
 FORMAT_MODULE_PATH = '{{ project_name }}.settings.locale'  # Consistent date formatting
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s: %(asctime)s %(module)s %(process)d %(thread)d %(message)s',
+        },
+        'simple': {
+            'format': '%(levelname)s: %(message)s',
+        },
+    },
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse',
+        }
+    },
+    'handlers': {
+        'mail_admins': {
+            'level': 'ERROR',
+            'filters': ['require_debug_false'],
+            'class': 'django.utils.log.AdminEmailHandler'
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['mail_admins'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    }
+}
+
 
 # App specific settings
 ADMIN_TOOLS_INDEX_DASHBOARD = 'fluent_dashboard.dashboard.FluentIndexDashboard'

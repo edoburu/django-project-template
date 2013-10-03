@@ -13,6 +13,10 @@ SERVER_EMAIL = 'root@localhost'
 DEFAULT_FROM_EMAIL = 'info@{{ project_name }}.example.com'
 EMAIL_SUBJECT_PREFIX = '[Django][{{ project_name }}] '
 
+# Project language settings
+TIME_ZONE = 'Europe/Amsterdam'
+LANGUAGE_CODE = 'en'
+
 # Database to use
 DATABASES = {
     'default': {

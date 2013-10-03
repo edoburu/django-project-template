@@ -5,7 +5,7 @@ from .defaults import *
 
 # Admins receive 500 errors, managers receive 404 errors.
 ADMINS = (
-    ('{{ project_name }}', 'sysadmin@edoburu.nl'),
+    ('{{ project_name }}', 'sysadmin@{{ project-name }}.example.org'),
 )
 MANAGERS = ADMINS
 

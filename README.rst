@@ -3,7 +3,7 @@
 Django project template
 =======================
 
-This project template creates a Django 1.4 project with
+This project template creates a Django 1.5 project with
 a base set of applications
 
 Features
@@ -11,8 +11,8 @@ Features
 
 Installed apps:
 
-* Django 1.4
-* MySQLdb or PsycoPG2
+* Django 1.5
+* MySQLdb or Psycopg2
 * Pillow (PIL replacement)
 * SORL-Thumbnail_
 * South_
@@ -139,7 +139,7 @@ the CSS file, even without reloading the entire page!
 .. _django-compressor: http://django_compressor.readthedocs.org/
 .. _django-crispy-forms: http://django-crispy-forms.readthedocs.org/
 .. _django-debugtools: https://github.com/edoburu/django-debugtools
-.. _django-filebrowser-no-grapelli: https://github.com/wardi/django-filebrowser-no-grappelli
+.. _django-filebrowser-no-grapelli: https://github.com/vdboor/django-filebrowser-no-grappelli-django14
 .. _django-fluent-dashboard: https://github.com/edoburu/django-fluent-dashboard
 .. _django-google-analytics: https://github.com/clintecker/django-google-analytics
 .. _LiveReload: http://livereload.com/

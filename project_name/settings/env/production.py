@@ -13,6 +13,15 @@ DATABASES = {
     },
 }
 
+RAVEN_CONFIG = {
+    'dsn': '',
+}
+
+INSTALLED_APPS += (
+    #'raven.contrib.django.raven_compat',
+    #'gunicorn',
+)
+
 TEMPLATE_LOADERS = (
     ('django.template.loaders.cached.Loader', TEMPLATE_LOADERS),
 )
@@ -23,4 +32,3 @@ ALLOWED_HOSTS = (
 
 CACHES['default']['KEY_PREFIX'] = '{{ product_name }}.production'
 
-#INSTALLED_APPS += ('gunicorn',)

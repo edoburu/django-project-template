@@ -17,6 +17,7 @@ Installed apps:
 * SORL-Thumbnail_
 * South_
 * bpython_
+* Raven_
 * django-admin-tools_
 * django-compressor_
 * django-crispy-forms_
@@ -143,6 +144,7 @@ the CSS file, even without reloading the entire page!
 .. _django-fluent-dashboard: https://github.com/edoburu/django-fluent-dashboard
 .. _django-google-analytics: https://github.com/clintecker/django-google-analytics
 .. _LiveReload: http://livereload.com/
+.. _Raven: https://github.com/getsentry/raven-python
 .. _SORL-Thumbnail: https://github.com/sorl/sorl-thumbnail
 .. _South: http://south.readthedocs.org/
 

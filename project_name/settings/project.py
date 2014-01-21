@@ -118,3 +118,4 @@ FILEBROWSER_EXTENSIONS = {
 }
 FILEBROWSER_EXCLUDE = ('cache',)  # sorl.thumbnail generated files
 FILEBROWSER_MAX_UPLOAD_SIZE = 100 * 1024 * 1024  # in bytes
+FILEBROWSER_STRICT_PIL = True

@@ -36,6 +36,7 @@ SECRET_KEY = '{{ secret_key|safe }}'
 INSTALLED_APPS += (
     # Site parts
     'frontend',
+    'apps.wysiwyg_config',
 
     # CMS parts
     'fluent_blogs',

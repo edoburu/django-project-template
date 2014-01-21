@@ -1,11 +1,12 @@
 # Install with: `pip install -r requirements.txt`
 
 # Infrastructure
-Django >= 1.5.4, < 1.6
+Django >= 1.5.5, < 1.6
 Pillow==2.1.0
-#for MySQL: MySQL-python==1.2.4
-#for PostgreSQL: psycopg2==2.5
+#for MySQL: MySQL-python==1.2.5
+#for PostgreSQL: psycopg2==2.5.2
 python-memcached==1.53
+raven==4.0.3
 South >= 0.8.2, < 0.9
 
 # CMS libraries
@@ -31,7 +32,7 @@ django-tinymce >= 1.5.1
 django-wysiwyg >= 0.5.1, < 0.6
 html5lib >= 0.95
 micawber >= 0.3.0
-pytz>=2013.7
+pytz>=2013.9
 sorl-thumbnail==11.12
 
 # Debugging

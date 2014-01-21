@@ -118,11 +118,16 @@ LOGGING = {
             'level': 'ERROR',
             'propagate': True,
         },
+        'django.db': {
+            'handlers': ['console'],
+            'level': 'ERROR',  # to show queries or not.
+        },
     }
 }
 
 
-# App specific settings
+## -- Third party app settings
+
 ADMIN_TOOLS_INDEX_DASHBOARD = 'fluent_dashboard.dashboard.FluentIndexDashboard'
 ADMIN_TOOLS_APP_INDEX_DASHBOARD = 'fluent_dashboard.dashboard.FluentAppIndexDashboard'
 ADMIN_TOOLS_MENU = 'fluent_dashboard.menu.FluentMenu'

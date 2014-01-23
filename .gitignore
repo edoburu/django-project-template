@@ -12,4 +12,4 @@
 dist/
 docs/_build/
 /env/
-settings/local.py
+{{ project_name }}/settings/local.py

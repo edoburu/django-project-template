@@ -30,5 +30,5 @@ ALLOWED_HOSTS = (
     '.project-domain-name.tld',
 )
 
-CACHES['default']['KEY_PREFIX'] = '{{ product_name }}.production'
+CACHES['default']['KEY_PREFIX'] = '{{ project_name }}.production'
 

@@ -144,8 +144,14 @@ FILEBROWSER_EXTENSIONS = {
     'Document': ['.pdf', '.doc', '.xls', '.csv', '.docx', '.xlsx'],
     'Video': ['.swf', '.mp4', '.flv', '.f4v', '.mov', '.3gp'],
 }
-FILEBROWSER_EXCLUDE = ('cache',)  # sorl.thumbnail generated files
+FILEBROWSER_EXCLUDE = ('cache', '_admin_thumbnail\.', '_big\.', '_large\.', '_medium\.', '_small\.', '_thumbnail\.')  # sorl.thumbnail cache, and generated versions
 FILEBROWSER_MAX_UPLOAD_SIZE = 100 * 1024 * 1024  # in bytes
+FILEBROWSER_STRICT_PIL = True
+FILEBROWSER_ADMIN_VERSIONS = []
+FILEBROWSER_ADMIN_THUMBNAIL = 'admin_thumbnail'
+FILEBROWSER_VERSIONS = {
+    'admin_thumbnail': {'verbose_name': 'Admin Thumbnail', 'width': 60, 'height': 60, 'opts': 'crop'},
+}
 
 FLUENT_BLOGS_BASE_TEMPLATE = 'base_blog.html'
 FLUENT_BLOGS_ENTRY_LINK_STYLE = '/{year}/{month}/{slug}/'

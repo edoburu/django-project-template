@@ -18,6 +18,7 @@ Installed apps:
 * South_
 * bpython_
 * Raven_
+* django-axes_
 * django-admin-tools_
 * django-compressor_
 * django-crispy-forms_
@@ -136,6 +137,7 @@ Each time a change is made in ``*.scss`` files, the files are compiled and the b
 the CSS file, even without reloading the entire page!
 
 .. _bpython: http://bpython-interpreter.org/
+.. _django-axes: https://github.com/django-security/django-axes
 .. _django-admin-tools: https://bitbucket.org/izi/django-admin-tools
 .. _django-compressor: http://django_compressor.readthedocs.org/
 .. _django-crispy-forms: http://django-crispy-forms.readthedocs.org/

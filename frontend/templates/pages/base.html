@@ -1,0 +1,6 @@
+{% extends "base.html" %}{% load staff_toolbar_tags %}
+
+{% block staff_toolbar %}
+  {% set_staff_object page %}
+  {{ block.super }}
+{% endblock %}

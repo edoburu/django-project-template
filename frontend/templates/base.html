@@ -1,4 +1,4 @@
-{% load analytics compress fluent_pages_tags %}<!doctype html>
+{% load analytics compress staff_toolbar_tags fluent_pages_tags %}<!doctype html>
 <html xml:lang="{{ LANGUAGE_CODE|default:"en" }}" lang="{{ LANGUAGE_CODE|default:"en" }}">
   <head>
     <meta charset="utf-8" />
@@ -20,6 +20,7 @@
     {% compress css %}
     <link href="{{ STATIC_URL }}frontend/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="{{ STATIC_URL }}frontend/css/screen.css" rel="stylesheet" type="text/css" />
+    <link href="{{ STATIC_URL }}staff_toolbar/staff_toolbar.css" rel="stylesheet" type="text/css" />
     {% endcompress %}
     {% compress css %}{% block link %}{% endblock %}{% endcompress %}
     <!--[if lt IE 9]>
@@ -32,6 +33,7 @@
   </head>
 
   <body id="{% block bodyid %}page{% endblock %}" class="{% block bodyclass %}default{% endblock %}" itemscope itemtype="http://schema.org/WebPage">
+    {% block staff_toolbar %}{% staff_toolbar %}{% endblock %}
     <div id="wrapper">
 
       <header id="top">

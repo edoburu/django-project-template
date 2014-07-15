@@ -67,11 +67,13 @@ INSTALLED_APPS += (
     'filebrowser',
     'google_analytics',
     'mptt',
+    'parler',
     'polymorphic',
     'polymorphic_tree',
+    'staff_toolbar',
     'sorl.thumbnail',
     'taggit',
-    'taggit_autocomplete_modified',
+    'taggit_autosuggest',
     'tinymce',
 
     # and enable the admin
@@ -174,3 +176,6 @@ FLUENT_DASHBOARD_APP_ICONS = {}
 FLUENT_DASHBOARD_DEFAULT_MODULE = 'ModelList'
 
 FLUENT_PAGES_TEMPLATE_DIR = os.path.join(SRC_DIR, 'frontend', 'templates')
+
+FLUENT_TEXT_CLEAN_HTML = True
+FLUENT_TEXT_SANITIZE_HTML = True

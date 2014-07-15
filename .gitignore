@@ -9,7 +9,10 @@
 .idea/workspace.xml
 .DS_Store
 .sass-cache/
-dist/
-docs/_build/
+/dist/
+/docs/_build/
 /env/
+/logs/
+/stats/
 {{ project_name }}/settings/local.py
+Gemfile.lock

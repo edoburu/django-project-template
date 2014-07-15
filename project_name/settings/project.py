@@ -3,6 +3,10 @@ Project specific settings
 """
 from .defaults import *
 
+# -------------------------------------
+# TODO: update the email settings here!
+# -------------------------------------
+
 # Admins receive 500 errors, managers receive 404 errors.
 ADMINS = (
     ('{{ project_name }}', 'sysadmin@{{ project_name }}.example.org'),

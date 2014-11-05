@@ -1,7 +1,7 @@
 # Install with: `pip install -r requirements.txt`
 
 # Infrastructure
-Django >= 1.6.8
+Django >= 1.6.8, < 1.7
 Pillow == 2.6.1
 #for MySQL: MySQL-python == 1.2.5
 #for PostgreSQL: psycopg2 == 2.5.3
@@ -10,34 +10,34 @@ raven == 5.1.1
 South >= 1.0.1
 
 # CMS libraries
-django-fluent-blogs >= 1.0b2
-django-fluent-pages >= 0.9b2
-django-fluent-contents[text,oembeditem] >= 1.0c2
+django-fluent-blogs >= 1.0b3
+django-fluent-pages >= 0.9b3
+django-fluent-contents[text,oembeditem] >= 1.0c3
 django-fluent-dashboard >= 0.3.6
-django-fluent-comments >= 1.0a2
+django-fluent-comments >= 1.0b1
 django-staff-toolbar >= 1.0
 
 # Support libs
 django-axes >= 1.3.8
 django-admin-tools >= 0.5.2, < 0.6
-django-any-imagefield >= 0.8.1
-django-any-urlfield >= 1.0.10
+django-any-imagefield >= 0.8.2
+django-any-urlfield >= 2.0.3
 django-categories >= 1.2.2, < 1.3
 django-crispy-forms >= 1.4.0, < 1.5
 #dashboardmods >= 0.2.2
 django_compressor == 1.4
 -e git+https://github.com/clintecker/django-google-analytics.git@140787ba86ef4995b2cabf927bf0b56ec7728348#egg=google_analytics-0.2
 -e git+https://github.com/smacker/django-filebrowser-no-grappelli.git@d68ffc7fa7c4096791cc6819ab2b2229b1661c68#egg=django-filebrowser-no-grappelli
-django-parler>=1.0
-django-polymorphic >= 0.5.5
-django-polymorphic-tree >= 0.9
-django-tag-parser >= 1.1
-django-taggit >= 0.12
-django-taggit-autosuggest==0.2.4
-django-tinymce >= 1.5.2
+django-parler >= 1.2.1
+django-polymorphic >= 0.6
+django-polymorphic-tree >= 1.0.1
+django-tag-parser >= 2.0
+django-taggit >= 0.12.2
+django-taggit-autosuggest == 0.2.5
+django-tinymce >= 1.5.3
 django-wysiwyg == 0.7.0
 html5lib >= 1.0b3
-micawber >= 0.3.0
+micawber >= 0.3.1
 pytz >= 2014.9
 sorl-thumbnail == 11.12.1b
 

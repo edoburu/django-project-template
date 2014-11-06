@@ -26,6 +26,7 @@ Installed apps:
 * django-filebrowser-no-grapelli_
 * django-fluent-dashboard_
 * django-google-analytics_
+* django-ping_
 
 Configured URLs:
 
@@ -47,6 +48,7 @@ Features:
 * HTML5shiv + jQuery Installed
 * Meyer-based CSS reset
 * Working Compass_ + SASS_ + LiveReload_ setup (can be discarded)
+* Uptime monitoring URL (``/api/ping/``)
 
 Usage
 -----
@@ -145,6 +147,7 @@ the CSS file, even without reloading the entire page!
 .. _django-filebrowser-no-grapelli: https://github.com/vdboor/django-filebrowser-no-grappelli-django14
 .. _django-fluent-dashboard: https://github.com/edoburu/django-fluent-dashboard
 .. _django-google-analytics: https://github.com/clintecker/django-google-analytics
+.. _django-ping: https://github.com/rizumu/django-ping
 .. _LiveReload: http://livereload.com/
 .. _Raven: https://github.com/getsentry/raven-python
 .. _SORL-Thumbnail: https://github.com/sorl/sorl-thumbnail

@@ -31,6 +31,7 @@ django_compressor == 1.4
 django-parler >= 1.2.1
 django-polymorphic >= 0.6
 django-polymorphic-tree >= 1.0.1
+-e git+https://github.com/rizumu/django-ping.git@b9e228fe1f338d87b323383509a975fd9df22ef1#egg=django_ping-0.3b1
 django-tag-parser >= 2.0
 django-taggit >= 0.12.2
 django-taggit-autosuggest == 0.2.5

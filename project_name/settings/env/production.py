@@ -6,10 +6,13 @@ COMPRESS_ENABLED = True
 
 DATABASES = {
     'default': {
-        'ENGINE':   'django.db.backends.mysql',
+        # Choose between PostgreSQL or MySQL:
+        'ENGINE':   'django.db.backends.postgresql_psycopg2',
+        #'ENGINE':   'django.db.backends.mysql',
         'NAME':     '{{ project_name }}',
         'USER':     '{{ project_name }}',
         'PASSWORD': '',
+        'OPTIONS':  {'autocommit': True,},   # Stop that "current transaction is aborted" error in PostgreSQL
     },
 }
 
@@ -27,7 +30,8 @@ TEMPLATE_LOADERS = (
 )
 
 ALLOWED_HOSTS = (
-    '.project-domain-name.tld',
+    '.{{ project_name }}.tld',
+    '.{{ project_name }}.tld.',
 )
 
 CACHES['default']['KEY_PREFIX'] = '{{ project_name }}.production'

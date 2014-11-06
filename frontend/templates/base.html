@@ -10,7 +10,7 @@
       Technical implementation by:
       (TODO: fill this in)
     -->
-    <title>{% block headtitle %}{{ page.title }}{% endblock %} - {{ site.name|default:site.domain }}</title>
+    <title>{% block meta-title %}{% block headtitle %}{{ page.title }}{% endblock %} - {{ site.name|default:site.domain }}{% endblock %}</title>
 
     <meta property="og:type" content="{% block og-type %}website{% endblock %}" />
     <meta property="og:image" content="http://{{ site.domain|default:"www.example.org" }}{% block og-image %}{{ STATIC_URL }}frontend/img/logo.png{% endblock %}" />

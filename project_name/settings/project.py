@@ -91,6 +91,7 @@ MIDDLEWARE_CLASSES = (
     'raven.contrib.django.middleware.Sentry404CatchMiddleware',  # on 404, report to sentry.
 ) + MIDDLEWARE_CLASSES + (
     'axes.middleware.FailedLoginMiddleware',
+    'fluent_contents.middleware.HttpRedirectRequestMiddleware',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS += (

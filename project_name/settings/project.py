@@ -170,3 +170,9 @@ FILEBROWSER_VERSIONS = {
     'big': {'verbose_name': 'Big', 'width': 460, 'height': '', 'opts': ''},
     'large': {'verbose_name': 'Large', 'width': 680, 'height': '', 'opts': ''},
 }
+
+PING_CHECKS = (
+    'ping.checks.check_database_sessions',
+    'ping.checks.check_database_sites',
+    #'ping.checks.check_celery', # Fails..
+)

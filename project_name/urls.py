@@ -26,6 +26,9 @@ urlpatterns = patterns('',
     url(r'^sitemap.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
     url(r'^robots.txt$', TextFileView.as_view(content_type='text/plain', template_name='robots.txt')),
 
+    # Monitoring API's
+    url(r'^api/ping/', include('ping.urls')),
+
     # CMS modules
     # TODO: add your urls here
 )

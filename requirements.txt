@@ -10,8 +10,8 @@ raven == 5.1.1
 South >= 1.0.1
 
 # CMS libraries
-django-fluent-blogs >= 1.0b3
-django-fluent-pages >= 0.9b3
+django-fluent-blogs >= 1.0b4
+django-fluent-pages >= 0.9b4
 django-fluent-contents[text,oembeditem] >= 1.0c3
 django-fluent-dashboard >= 0.3.6
 django-fluent-comments >= 1.0b1

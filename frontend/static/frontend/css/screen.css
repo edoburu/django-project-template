@@ -1,4 +1,3 @@
-@charset "utf-8";
 /* ---- Meyer-based reset ---- */
 span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -140,7 +139,7 @@ article p,
 
 article ul,
 #main-text ul {
-  margin: 0.5em 0 1.5em 0;
+  margin: .5em 0 1.5em 0;
   padding-left: 1.5em;
 }
 
@@ -156,7 +155,7 @@ pre, code {
 }
 
 iframe {
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;

@@ -18,13 +18,13 @@
 //@import "bootstrap/reset";
 
 // Grid system and page structure
-//@import "bootstrap/scaffolding";
-//@import "bootstrap/grid";
-//@import "bootstrap/layouts";
+@import "bootstrap/scaffolding";
+@import "bootstrap/grid";
+@import "bootstrap/layouts";
 
 // Base CSS
-//@import "bootstrap/type";
-//@import "bootstrap/code";
+@import "bootstrap/type";
+@import "bootstrap/code";
 @import "bootstrap/forms";
 //@import "bootstrap/tables";
 
@@ -41,9 +41,9 @@
 //@import "bootstrap/alerts";  // Note: alerts share common CSS with buttons and thus have styles in buttons
 
 // Components: Nav
-//@import "bootstrap/navs";
-//@import "bootstrap/navbar";
-//@import "bootstrap/breadcrumbs";
+@import "bootstrap/navs";
+@import "bootstrap/navbar";
+@import "bootstrap/breadcrumbs";
 //@import "bootstrap/pagination";
 //@import "bootstrap/pager";
 
@@ -62,4 +62,4 @@
 //@import "bootstrap/hero-unit";
 
 // Utility classes
-//@import "bootstrap/utilities"; // Has to be last to override when necessary
+@import "bootstrap/utilities"; // Has to be last to override when necessary

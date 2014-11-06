@@ -34,14 +34,14 @@
 
   <body id="{% block bodyid %}page{% endblock %}" class="{% block bodyclass %}default{% endblock %}" itemscope itemtype="http://schema.org/WebPage">
     {% block staff_toolbar %}{% staff_toolbar %}{% endblock %}
-    <div id="wrapper">
+    <div id="wrapper" class="container">
 
       <header id="top">
-        {% render_menu %}
+        {% render_menu template="partials/base/menu.html" %}
       </header>
 
       <section id="content">
-        {% render_breadcrumb %}
+        {% render_breadcrumb template="partials/base/breadcrumb.html" %}
         <div id="main">
           {% block main %}{% endblock %}
         </div>

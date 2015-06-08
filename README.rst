@@ -11,11 +11,10 @@ Features
 
 Installed apps:
 
-* Django 1.5
+* Django 1.8
 * MySQLdb or Psycopg2
 * Pillow (PIL replacement)
 * SORL-Thumbnail_
-* South_
 * bpython_
 * Raven_
 * django-axes_
@@ -47,7 +46,7 @@ Features:
 * CSS and JavaScript paths configured
 * HTML5shiv + jQuery Installed
 * Meyer-based CSS reset
-* Working Compass_ + SASS_ + LiveReload_ setup (can be discarded)
+* Working SASS_ + LiveReload_ setup (can be discarded)
 * Uptime monitoring URL (``/api/ping/``)
 
 Usage
@@ -151,7 +150,6 @@ the CSS file, even without reloading the entire page!
 .. _LiveReload: http://livereload.com/
 .. _Raven: https://github.com/getsentry/raven-python
 .. _SORL-Thumbnail: https://github.com/sorl/sorl-thumbnail
-.. _South: http://south.readthedocs.org/
 
 
 ------------
@@ -188,21 +186,23 @@ To setup a local development environment::
     ./manage.py syncdb --migrate
     ./manage.py runserver
 
-Compiling CSS files
-~~~~~~~~~~~~~~~~~~~
+Compiling SASS files
+~~~~~~~~~~~~~~~~~~~~
 
-To compile SASS_ files::
+Sass files are compiled to CSS during the development.
+At the server, there is no need for installing development tools.
 
-    gem install compass bootstrap-sass oily_png guard-livereload guard-compass
+To setup your development system, install NodeJS from https://nodejs.org/.
+On Mac OSX, you can also use ``brew install libsass node``.
 
-    guard
+Run the following command to compile SASS_ files::
 
-To enable LiveReload_ of ``*.css`` files during development, install a browser plugin:
+    npm run gulp
 
-* Firefox (2.0.9 dev release): https://github.com/siasia/livereload-extensions/downloads
-* Everyone else: http://help.livereload.com/kb/general-use/browser-extensions
-
-And toggle the "LiveReload" button in the browser at the desired page.
+This will compile the files, and watch for changes.
+It also has LiveReload_ support.
+Install a browser plugin from: http://livereload.com/extensions/
+and toggle the "LiveReload" button in the browser to see CSS changes instantly.
 
 License
 -------
@@ -212,8 +212,6 @@ Describe project license here.
 
 .. Add links here:{% endif %}
 
-.. _Compass: http://compass-style.org/
 .. _django-fluent: http://django-fluent.org/
 .. _LiveReload: http://livereload.com/
-.. _guard-livereload: https://github.com/guard/guard-livereload
 .. _SASS: http://sass-lang.com/

@@ -1,13 +1,5 @@
 @import "partials/bootstrap_config";
 
-
-// Sprites and CSS3 features
-@import "compass/css3";
-@import "compass/css3/transform";
-@import "compass/css3/transition";
-@import "compass/utilities/general/clearfix";
-@import "compass/utilities/sprites/base";
-
 // Project files
 @import "partials/base";
 @import "partials/bootstrap_overrides";

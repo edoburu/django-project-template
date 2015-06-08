@@ -1,0 +1,19 @@
+{
+  "name": "website-frontend",
+  "description": "All configuration to build the JavaScript/Sass frontend. Install node-js, and run `npm install` to install all tools.",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.4",
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-livereload": "^3.8.0",
+    "gulp-sass": "^2.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "node-sass": "^3.1.2"
+  }
+}

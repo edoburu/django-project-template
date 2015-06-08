@@ -63,7 +63,7 @@ INSTALLED_APPS += (
     'categories',
     'categories.editor',
     'crispy_forms',
-    'django.contrib.comments',
+    'django_comments',
     'django_wysiwyg',
     'filebrowser',
     'googletools',

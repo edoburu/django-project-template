@@ -1,47 +1,47 @@
 # Install with: `pip install -r requirements.txt`
 
 # Infrastructure
-Django >= 1.6.8, < 1.7
-Pillow == 2.6.1
+Django >= 1.8.1, < 1.9
+Pillow == 2.8.2
 #for MySQL: MySQL-python == 1.2.5
-#for PostgreSQL: psycopg2 == 2.5.3
-python-memcached == 1.53
-raven == 5.1.1
-South >= 1.0.1
+#for PostgreSQL: psycopg2 == 2.6
+python-memcached == 1.54
+raven == 5.3.1
 
 # CMS libraries
-django-fluent-blogs >= 1.0b4
-django-fluent-pages >= 0.9b4
-django-fluent-contents[text,oembeditem] >= 1.0c3
-django-fluent-dashboard >= 0.3.6
-django-fluent-comments >= 1.0b1
+django-fluent-blogs >= 1.0
+django-fluent-pages >= 0.9
+django-fluent-contents[text,oembeditem] >= 1.0.1
+django-fluent-dashboard >= 0.5
+django-fluent-comments >= 1.0.2
 django-staff-toolbar >= 1.0
 
 # Support libs
-django-axes >= 1.3.8
+django-axes >= 1.3.9
 django-admin-tools >= 0.5.2, < 0.6
 django-any-imagefield >= 0.8.2
-django-any-urlfield >= 2.0.3
-django-categories >= 1.2.2, < 1.3
+django-any-urlfield >= 2.1.1
+django-categories >= 1.2.3, < 1.3
 django-crispy-forms >= 1.4.0, < 1.5
 #dashboardmods >= 0.2.2
-django_compressor == 1.4
--e git+https://github.com/clintecker/django-google-analytics.git@140787ba86ef4995b2cabf927bf0b56ec7728348#egg=google_analytics-0.2
--e git+https://github.com/smacker/django-filebrowser-no-grappelli.git@d68ffc7fa7c4096791cc6819ab2b2229b1661c68#egg=django-filebrowser-no-grappelli
-django-parler >= 1.2.1
-django-polymorphic >= 0.6
-django-polymorphic-tree >= 1.0.1
+django_compressor == 1.5
+-e git+https://github.com/smacker/django-filebrowser-no-grappelli.git@25613ff879325f2da8e465c028b9657ae6dd79cf#egg=django-filebrowser-no-grappelli
+django-google-tools >= 1.0.0
+django-mptt >= 0.7.4
+django-parler >= 1.4
+django-polymorphic >= 0.7.1
+django-polymorphic-tree >= 1.1
 -e git+https://github.com/rizumu/django-ping.git@b9e228fe1f338d87b323383509a975fd9df22ef1#egg=django_ping-0.3b1
-django-tag-parser >= 2.0
-django-taggit >= 0.12.2
-django-taggit-autosuggest == 0.2.5
+django-tag-parser >= 2.1
+django-taggit >= 0.14.0
+django-taggit-autosuggest == 0.2.7
 django-tinymce >= 1.5.3
 django-wysiwyg == 0.7.0
 html5lib >= 1.0b3
-micawber >= 0.3.1
-pytz >= 2014.9
-sorl-thumbnail == 11.12.1b
+micawber >= 0.3.2
+pytz >= 2015.4
+sorl-thumbnail == 12.2
 
 # Debugging
-django-debugtools >= 1.2.1
+django-debugtools >= 1.3
 bpython >= 0.13.1

@@ -66,7 +66,7 @@ INSTALLED_APPS += (
     'django.contrib.comments',
     'django_wysiwyg',
     'filebrowser',
-    'google_analytics',
+    'googletools',
     'mptt',
     'parler',
     'polymorphic',

@@ -2,6 +2,7 @@
 *.pyo
 *.mo
 *.db
+*.css.map
 *.egg-info/
 .project
 .idea/
@@ -9,10 +10,13 @@
 .idea/workspace.xml
 .DS_Store
 .sass-cache/
+.vagrant/
+Gemfile.lock
 /dist/
 /docs/_build/
 /env/
 /logs/
+/node_modules/
+/web/media
 /stats/
 {{ project_name }}/settings/local.py
-Gemfile.lock

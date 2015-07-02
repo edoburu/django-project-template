@@ -71,7 +71,7 @@ TEMPLATE_CONTEXT_PROCESSORS += (
 FORMAT_MODULE_PATH = '{{ project_name }}.settings.locale'  # Consistent date formatting
 
 # Avoid 600 permission for filebrowser uploads.
-FILE_UPLOAD_PERMISSIONS = 0644
+FILE_UPLOAD_PERMISSIONS = 0o644
 
 IGNORABLE_404_URLS = (
     #re.compile(r'^/favicon.ico$'),

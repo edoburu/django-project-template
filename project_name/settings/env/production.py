@@ -12,7 +12,6 @@ DATABASES = {
         'NAME':     '{{ project_name }}',
         'USER':     '{{ project_name }}',
         'PASSWORD': '',
-        'OPTIONS':  {'autocommit': True,},   # Stop that "current transaction is aborted" error in PostgreSQL
     },
 }
 

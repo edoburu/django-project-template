@@ -13,7 +13,7 @@ Installed apps:
 
 * Django 1.8
 * MySQLdb or Psycopg2
-* Pillow (PIL replacement)
+* Pillow_ (PIL replacement)
 * SORL-Thumbnail_
 * bpython_
 * Raven_
@@ -148,6 +148,7 @@ the CSS file, even without reloading the entire page!
 .. _django-google-analytics: https://github.com/clintecker/django-google-analytics
 .. _django-ping: https://github.com/rizumu/django-ping
 .. _LiveReload: http://livereload.com/
+.. _Pillow: https://github.com/python-pillow/Pillow
 .. _Raven: https://github.com/getsentry/raven-python
 .. _SORL-Thumbnail: https://github.com/sorl/sorl-thumbnail
 

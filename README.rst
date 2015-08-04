@@ -15,7 +15,7 @@ Installed apps:
 * MySQLdb or Psycopg2
 * Pillow_ (PIL replacement)
 * SORL-Thumbnail_
-* ipython_ + ptpython_
+* IPython_ + ptpython_
 * Raven_
 * django-axes_
 * django-admin-tools_
@@ -103,7 +103,9 @@ Changes are automatically visible in the browser using LiveReload_.
 .. _django-google-analytics: https://github.com/clintecker/django-google-analytics
 .. _django-ping: https://github.com/rizumu/django-ping
 .. _LiveReload: http://livereload.com/
+.. _IPython: http://ipython.org/
 .. _Pillow: https://github.com/python-pillow/Pillow
+.. _ptpython: https://github.com/jonathanslenders/ptpython
 .. _Raven: https://github.com/getsentry/raven-python
 .. _SORL-Thumbnail: https://github.com/sorl/sorl-thumbnail
 

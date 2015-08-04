@@ -1,0 +1,20 @@
+# Base website
+# also includes django-debugtools and ipython for production debugging.
+-r ./requirements.txt
+
+# For deployment:
+#-r ../deployment/requirements.txt
+
+# Useful extra developer packages:
+
+# Debugging
+django-debug-toolbar >= 1.2.2
+django-extensions >= 1.4.9
+
+# Documentation
+Sphinx >= 1.2.3
+
+# Profiling
+gprof2dot == 2014.09.29
+geordi >= 0.3
+yet-another-django-profiler >= 0.3.0

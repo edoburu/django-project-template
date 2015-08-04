@@ -15,7 +15,7 @@ Installed apps:
 * MySQLdb or Psycopg2
 * Pillow_ (PIL replacement)
 * SORL-Thumbnail_
-* bpython_
+* ipython_ + ptpython_
 * Raven_
 * django-axes_
 * django-admin-tools_
@@ -46,7 +46,7 @@ Features:
 * CSS and JavaScript paths configured
 * HTML5shiv + jQuery Installed
 * Meyer-based CSS reset
-* Working SASS_ + LiveReload_ setup (can be discarded)
+* Gulpfile with SASS_ + LiveReload_ setup (can be discarded)
 * Uptime monitoring URL (``/api/ping/``)
 
 Usage
@@ -80,62 +80,17 @@ In a second branch, you'll find a project template for the django-fluent_ CMS::
     django-admin.py startproject mywebsite . -e py,rst,example,gitignore --template=https://github.com/edoburu/django-project-template/archive/django-fluent.zip
 
 
-Working with SCSS files
-=======================
+Optional features
+=================
 
-As extra treat, the CSS files are easier to edit using SASS_ and Compass_.
-
-It gives these advantages to regular CSS:
-
-* Variables.
-* Nesting CSS selectors.
-* Default mixins for CSS3 properties and vendor-prefixes.
-* Typography features such as ellipses,
-* Generating sprites, including ``background-position`` offsets.
+As extra treat, the CSS files are easier to edit using SASS_.
+Changes are automatically visible in the browser using LiveReload_.
 
 .. note::
 
     This feature is optional. If you don't like to use it, the project already has a ``screen.css`` file which can be used and edited.
-    Feel free to remove those files in your own projects or fork (``config.rb``, ``Guardfile``, and ``frontend/sass``).
+    Feel free to remove those files in your own projects or fork (``gulpfile.js``, ``package.json``, and ``frontend/sass``).
     However, we highly recommended to take a look at it.
-
-Using compass
--------------
-
-Install Compass_ using::
-
-    gem install compass bootstrap-sass oily_png
-
-Leave Compass_ running in the terminal::
-
-    compass watch
-
-It automatically compiles the ``*.css`` files for you.
-
-
-Using guard+livereload
-----------------------
-
-To make it even better, use guard-livereload_.
-Now the browser can automatically refresh all styles inline.
-
-Install guard-livereload_ using::
-
-    gem install guard-livereload guard-compass
-
-Leave it running in the terminal during development::
-
-    guard
-
-Install a browser plugin, see:
-
-* Firefox (2.0.9 dev release): https://github.com/siasia/livereload-extensions/downloads
-* Everyone else: http://help.livereload.com/kb/general-use/browser-extensions
-
-And toggle the "LiveReload" button in the browser at the desired page.
-
-Each time a change is made in ``*.scss`` files, the files are compiled and the browser reloads
-the CSS file, even without reloading the entire page!
 
 .. _bpython: http://bpython-interpreter.org/
 .. _django-axes: https://github.com/django-security/django-axes
@@ -168,7 +123,7 @@ Describe your project here.
 Prerequisites
 -------------
 
-- Python >= 2.6
+- Python >= 2.7
 - pip
 - virtualenv (virtualenvwrapper is recommended)
 
@@ -180,7 +135,7 @@ To setup a local development environment::
     virtualenv env --prompt="({{ project_name }})"  # or mkvirtualenv {{ project_name }}
     source env/bin/activate
 
-    pip install -r requirements.txt
+    pip install -r dev-requirements.txt
     edit {{ project_name }}/settings/project.py    # Enter your DB credentials
     cp {{ project_name }}/settings/local.py.example {{ project_name }}/settings/local.py  # To enable debugging
 

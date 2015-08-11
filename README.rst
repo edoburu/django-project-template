@@ -3,7 +3,7 @@
 Django project template
 =======================
 
-This project template creates a Django 1.8 project with
+This project template creates a Django 1.7 project with
 a base set of applications
 
 Features
@@ -11,7 +11,7 @@ Features
 
 Installed apps:
 
-* Django 1.8
+* Django 1.7
 * MySQLdb or Psycopg2
 * Pillow_ (PIL replacement)
 * SORL-Thumbnail_

@@ -141,6 +141,11 @@ To setup a local development environment::
     edit {{ project_name }}/settings/project.py    # Enter your DB credentials
     cp {{ project_name }}/settings/local.py.example {{ project_name }}/settings/local.py  # To enable debugging
 
+    sudo su - postgres
+    createuser {{ project_name }}  -P   # testtest is the default password
+    createdb --template=template0 --encoding='UTF-8' --lc-collate='en_US.UTF-8' --lc-ctype='en_US.UTF-8' --owner={{ project_name }} {{ project_name }}
+    exit
+
     ./manage.py syncdb --migrate
     ./manage.py runserver
 

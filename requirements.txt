@@ -1,20 +1,20 @@
 # Install with: `pip install -r requirements.txt`
 
 # Infrastructure
-Django >= 1.8.3, < 1.9
+Django >= 1.8.4, < 1.9
 Pillow == 2.9.0
-#for MySQL: MySQL-python == 1.2.:
-#for PostgreSQL: psycopg2 == 2.6
+#for MySQL: MySQL-python == 1.2.5
+#for PostgreSQL: psycopg2 == 2.6.1
 python-memcached == 1.57
 raven == 5.5.0
 
 # CMS libraries
-django-fluent-dashboard >= 0.5.1
+django-fluent-dashboard >= 0.5.2
 
 # Support libs
 django-axes >= 1.3.9
-django-admin-tools >= 0.5.2, < 0.6
-django-crispy-forms >= 1.4.0, < 1.5
+django-admin-tools >= 0.5.2
+django-crispy-forms >= 1.5.1, <1.6.0
 #dashboardmods >= 0.2.2
 django_compressor == 1.5
 django-google-tools >= 1.0.0

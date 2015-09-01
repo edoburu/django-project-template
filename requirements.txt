@@ -13,7 +13,7 @@ django-fluent-blogs >= 1.0.1
 django-fluent-pages >= 0.9
 django-fluent-contents[text,oembeditem] >= 1.0.2
 django-fluent-dashboard >= 0.5.2
-django-fluent-comments >= 1.0.2
+django-fluent-comments >= 1.0.3
 django-staff-toolbar >= 1.0.1
 
 # Support libs

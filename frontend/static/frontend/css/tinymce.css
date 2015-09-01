@@ -764,6 +764,30 @@ iframe {
   box-sizing: border-box;
 }
 
+figure.picture {
+  margin: 1em 0;
+}
+
+figure.picture.align-left {
+  clear: left;
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+figure.picture.align-right {
+  clear: right;
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+figure.picture.align-center {
+  text-align: center;
+}
+
+#homepage figure.picture {
+  text-align: center;
+}
+
 body {
   padding: 8px;
 }

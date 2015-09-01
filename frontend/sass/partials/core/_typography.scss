@@ -19,3 +19,28 @@ iframe {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+figure.picture {
+  // Picture plugin in the CMS
+  margin: 1em 0;
+
+  &.align-left {
+    clear: left;
+    float: left;
+    margin: 0 1em 1em 0;
+  }
+
+  &.align-right {
+    clear: right;
+    float: right;
+    margin: 0 0 1em 1em;
+  }
+
+  &.align-center {
+    text-align: center;
+  }
+}
+
+#homepage figure.picture {
+  text-align: center;
+}

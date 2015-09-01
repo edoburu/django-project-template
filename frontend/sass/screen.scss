@@ -1,5 +1,14 @@
-@import "partials/bootstrap_config";
+@charset "utf-8";
+/*!
+ * Main style of this site.
+ * Copyright (c) YEAR - PROJECT_NAME
+ */
 
-// Project files
-@import "partials/base";
-@import "partials/bootstrap_overrides";
+// Core
+@import "partials/core/variables";
+@import "partials/core/reset";
+@import "partials/core/layout";
+@import "partials/core/typography";
+
+// Modules
+@import "partials/modules/forms";

@@ -10,18 +10,38 @@
     {% block scripts %}{% endblock %}
   </head>
 
-  <body id="theme" class="page500">
-    <div id="wrapper" class="container">
+  <body id="page" class="page500">
+    <div id="wrapper">
 
-      <h2 class="pagetitle">{% trans 'Internal error!' %}</h2>
-      <div id="content">
-        {% blocktrans %}
-        <p>We're sorry but something went wrong. Please try again later.</p>
-        <p>This incident has been logged and will be addressed by an engineer as soon as possible.</p>
-        {% endblocktrans %}
-        <p class="errorpage-back-link">{% trans 'Back to the <a href="/">home page</a>.' %}
-      </div><!-- /content -->
+      <header id="top">
+        <div class="container">
+          <a href="/" class="navbar-brand">Brand</a>
+        </div>
+      </header>
 
+      <section id="main">
+        <div id="main-content">
+          <div class="constrained">
+            <div class="container">
+
+              <h1 class="pagetitle">{% trans 'Internal error!' %}</h1>
+              <div id="content" class="clearfix">
+                {% blocktrans %}
+                <p>We're sorry but something went wrong. Please try again later.</p>
+                <p>This incident has been logged and will be addressed by an engineer as soon as possible.</p>
+                {% endblocktrans %}
+                <p class="errorpage-back-link">{% trans 'Back to the <a href="/">home page</a>.' %}
+              </div><!-- /content -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="bottom">
+        <div class="container">
+
+        </div>
+      </footer>
     </div>
   </body>
 </html>

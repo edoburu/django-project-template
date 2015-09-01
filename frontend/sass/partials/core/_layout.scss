@@ -1,0 +1,17 @@
+// --- stretch page by default
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  min-height: 100%;
+}
+
+// ---- content layout
+
+#main-content {
+  position: relative;
+}

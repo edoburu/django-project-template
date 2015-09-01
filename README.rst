@@ -45,7 +45,7 @@ Features:
 * WSGI deployment scripts
 * CSS and JavaScript paths configured
 * HTML5shiv + jQuery Installed
-* Meyer-based CSS reset
+* Bootstrap 3 based CSS reset
 * Gulpfile with SASS_ + LiveReload_ setup (can be discarded)
 * Uptime monitoring URL (``/api/ping/``)
 

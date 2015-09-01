@@ -36,21 +36,33 @@
 
   <body id="{% block bodyid %}page{% endblock %}" class="{% block bodyclass %}default{% endblock %}" itemscope itemtype="http://schema.org/WebPage">
     {% block staff_toolbar %}{% staff_toolbar %}{% endblock %}
-    <div id="wrapper" class="container">
+    <div id="wrapper">
 
       <header id="top">
-        {% render_menu template="partials/base/menu.html" %}
+        <div class="container">
+          <a href="/" class="navbar-brand">Brand</a>
+          {% render_menu template="partials/base/menu.html" %}
+        </div>
       </header>
 
-      <section id="content">
+      <section id="main">
         {% render_breadcrumb template="partials/base/breadcrumb.html" %}
-        <div id="main">
-          {% block main %}{% endblock %}
+
+        <div id="main-content">
+          {% block main %}
+            <div class="constrained">
+              <div class="container">
+                {% block content %}{% endblock %}
+              </div>
+            </div>
+          {% endblock %}
         </div>
       </section>
 
       <footer id="bottom">
-        <p>Copyright © ... 2012-{% now "Y" %}</p>
+        <div class="container">
+          <p>Copyright © ... 2012-{% now "Y" %}</p>
+        </div>
       </footer>
     </div>
 

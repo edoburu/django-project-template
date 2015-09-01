@@ -208,6 +208,9 @@ FLUENT_CONTENTS_CACHE_OUTPUT = True
 text_plugins = ('TextPlugin', 'PicturePlugin', 'OEmbedPlugin', 'SharedContentPlugin', 'RawHtmlPlugin',)
 FLUENT_CONTENTS_PLACEHOLDER_CONFIG = {
     # This limits which plugins can be used for certain placeholder slots.
+    'homepage': {
+        'plugins': text_plugins
+    },
     'main': {
         'plugins': text_plugins
     },

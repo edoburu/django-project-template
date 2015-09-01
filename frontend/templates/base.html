@@ -48,7 +48,7 @@
           {% block main %}
             <div class="constrained">
               <div class="container">
-                {% render_breadcrumb template="partials/base/breadcrumb.html" %}
+                {% block breadcrumb %}{% render_breadcrumb template="partials/base/breadcrumb.html" %}{% endblock %}
 
                 {% block content %}{% endblock %}
               </div>

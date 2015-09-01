@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-29 17:26+0100\n"
+"POT-Creation-Date: 2015-09-01 14:36+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,49 +18,36 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: frontend/templates/403.html:5 frontend/templates/403.html.py:11
+#: frontend/templates/403.html:5 frontend/templates/403.html.py:8
 msgid "Permission denied!"
 msgstr "Geen toegang!"
 
-#: frontend/templates/403.html:13
-msgid ""
-"\n"
-"                <p>We're sorry but you are not permitted to access this page."
-"</p>\n"
-"                "
+#: frontend/templates/403.html:10
+msgid "<p>We're sorry but you are not permitted to access this page.</p>"
 msgstr "<p>Het spijt ons, je hebt geen toegang om deze pagina te bezoeken.</p>"
 
-#: frontend/templates/403.html:16 frontend/templates/404.html:16
-#: frontend/templates/500.html:21
+#: frontend/templates/403.html:13 frontend/templates/404.html:13
+#: frontend/templates/500.html:33
 msgid "Back to the <a href=\"/\">home page</a>."
 msgstr "Terug naar de <a href=\"/\">homepage</a>."
 
-#: frontend/templates/404.html:5 frontend/templates/404.html.py:11
+#: frontend/templates/404.html:5 frontend/templates/404.html.py:8
 msgid "Page not found!"
 msgstr "Pagina niet gevonden!"
 
-#: frontend/templates/404.html:13
-msgid ""
-"\n"
-"                <p>We're sorry but the page you are looking for can't be "
-"found.</p>\n"
-"                "
+#: frontend/templates/404.html:10
+msgid "<p>We're sorry but the page you are looking for can't be found.</p>"
 msgstr "<p>Het spijt ons, de pagina die je zoekt hebben we niet gevonden.</p>"
 
-#: frontend/templates/500.html:7 frontend/templates/500.html.py:15
+#: frontend/templates/500.html:7 frontend/templates/500.html.py:27
 msgid "Internal error!"
 msgstr "Interne fout!"
 
-#: frontend/templates/500.html:17
+#: frontend/templates/500.html:29
 msgid ""
-"\n"
-"        <p>We're sorry but something went wrong. Please try again later.</"
-"p>\n"
-"        <p>This incident has been logged and will be addressed by an "
-"engineer as soon as possible.</p>\n"
-"        "
+"<p>We're sorry but something went wrong. Please try again later.</p> <p>This "
+"incident has been logged and will be addressed by an engineer as soon as "
+"possible.</p>"
 msgstr ""
-"\n"
-"<p>Er ging iets fout. Probeer het zometeen nog eens.</p>\n"
-"<p>We hebben dit incident geregistreerd en pakken het zo snel mogelijk op.</"
-"p>"
+"<p>Er ging iets fout. Probeer het zometeen nog eens.</p> <p>We hebben dit "
+"incident geregistreerd en pakken het zo snel mogelijk op.</p>"

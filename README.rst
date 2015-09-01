@@ -13,7 +13,7 @@ Installed apps:
 
 * Django 1.7
 * MySQLdb or Psycopg2
-* Pillow_ (PIL replacement)
+* Pillow_
 * SORL-Thumbnail_
 * IPython_ + ptpython_
 * Raven_

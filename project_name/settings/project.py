@@ -98,7 +98,7 @@ TEMPLATE_CONTEXT_PROCESSORS += (
 )
 
 TEMPLATE_LOADERS = (
-    'apptemplates.Loader',   # Allow {% extends "appname:template" %}
+    'apptemplates.Loader',   # Allow {% verbatim %}{% extends "appname:template" %}{% endverbatim %}
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 )

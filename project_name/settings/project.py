@@ -97,6 +97,12 @@ TEMPLATE_CONTEXT_PROCESSORS += (
     'frontend.context_processors.frontend',
 )
 
+TEMPLATE_LOADERS = (
+    'apptemplates.Loader',   # Allow {% extends "appname:template" %}
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+)
+
 FORMAT_MODULE_PATH = '{{ project_name }}.settings.locale'  # Consistent date formatting
 
 # Avoid 600 permission for filebrowser uploads.

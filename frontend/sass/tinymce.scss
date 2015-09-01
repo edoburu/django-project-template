@@ -1,0 +1,17 @@
+/**
+ * Extra styles to be included in the TinyMCE editor
+ */
+@import "partials/base";
+@import "bootstrap/mixins";
+@import "bootstrap/reset";
+@import "bootstrap/scaffolding";
+@import "bootstrap/type";
+
+
+body {
+  padding: 8px;
+}
+
+img {
+  outline: 1px dotted #eee;
+}

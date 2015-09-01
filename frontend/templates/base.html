@@ -1,4 +1,4 @@
-{% load compress googletools staff_toolbar_tags fluent_pages_tags %}<!doctype html>
+{% load compress googletools staff_toolbar_tags fluent_pages_tags fluent_contents_tags %}<!doctype html>
 <html xml:lang="{{ LANGUAGE_CODE|default:"en" }}" lang="{{ LANGUAGE_CODE|default:"en" }}">
   <head>
     <meta charset="utf-8" />
@@ -30,8 +30,6 @@
     <![endif]-->
     {% block extrahead %}{% endblock %}
     {% site_verification_code %}
-    <script type="text/javascript" src="{{ STATIC_URL }}frontend/vendor/jquery-1.11.3.min.js"></script>
-    {% block script %}{% endblock %}
   </head>
 
   <body id="{% block bodyid %}page{% endblock %}" class="{% block bodyclass %}default{% endblock %}" itemscope itemtype="http://schema.org/WebPage">
@@ -66,7 +64,18 @@
       </footer>
     </div>
 
-    {% compress js %}{% block bodyscripts %}{% endblock %}{% endcompress %}
-    {% analytics_code %}
+    {% compress css %}{% render_content_items_media css %}{% endcompress %}
+
+    {% compress js %}
+      <script type="text/javascript" src="{{ STATIC_URL }}frontend/vendor/jquery-1.11.3.min.js"></script>
+    {% endcompress %}<!-- common JS -->
+
+    {% compress js %}
+      {% block script %}{% endblock %}{# for django-fluent-blogs/comments. #}
+      {% block bodyscripts %}{% endblock %}
+      {% render_content_items_media js local %}{# for django-fluent-contents #}
+    {% endcompress %}<!-- page specific JS -->
+
+    {% block tracking %}{% analytics_code %}{% endblock %}
   </body>
 </html>

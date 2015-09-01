@@ -205,15 +205,18 @@ FLUENT_BLOGS_ENTRY_LINK_STYLE = '/{year}/{month}/{slug}/'
 
 FLUENT_CONTENTS_CACHE_OUTPUT = True
 
-text_plugins = ('TextPlugin', 'PicturePlugin', 'OEmbedPlugin', 'SharedContentPlugin', 'RawHtmlPlugin',)
+text_plugins = ('TextPlugin', 'PicturePlugin', 'OEmbedPlugin', 'RawHtmlPlugin',)
 FLUENT_CONTENTS_PLACEHOLDER_CONFIG = {
     # This limits which plugins can be used for certain placeholder slots.
     'homepage': {
-        'plugins': text_plugins
+        'plugins': text_plugins + ('SharedContentPlugin', )
     },
     'main': {
-        'plugins': text_plugins
+        'plugins': text_plugins + ('SharedContentPlugin', )
     },
+    'shared_content': {
+        'plugins': text_plugins,
+    }
 }
 
 FLUENT_DASHBOARD_APP_ICONS = {}

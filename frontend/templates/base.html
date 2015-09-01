@@ -1,4 +1,4 @@
-{% load compress googletools staff_toolbar_tags fluent_pages_tags fluent_contents_tags %}<!doctype html>
+{% load compress googletools staff_toolbar_tags fluent_pages_tags fluent_contents_tags sharedcontent_tags %}<!doctype html>
 <html xml:lang="{{ LANGUAGE_CODE|default:"en" }}" lang="{{ LANGUAGE_CODE|default:"en" }}">
   <head>
     <meta charset="utf-8" />
@@ -59,7 +59,9 @@
 
       <footer id="bottom">
         <div class="container">
-          <p>Copyright © ... 2012-{% now "Y" %}</p>
+          {% sharedcontent "footer" %}
+
+          <p>Copyright © PROJECT_NAME 2012-{% now "Y" %}</p>
         </div>
       </footer>
     </div>

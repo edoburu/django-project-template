@@ -23,12 +23,8 @@ ul.messages {
 .messages {
   li.error,
   p.error {
-    color: $error_text_color;
+    color: $state-danger-text;
     font-weight: bold;
     margin: 2px 0;
   }
-}
-
-a.btn {
-  text-decoration: none;
 }

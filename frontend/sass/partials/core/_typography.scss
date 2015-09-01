@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+// Place any styles here that should only be used for textual content.
+// The default styles come from: bootstrap/_type.scss
+// Also consider overriding the variables, so bootstrap styles are rendered correctly.
+
+iframe {
+  border: 1px solid #ccc;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

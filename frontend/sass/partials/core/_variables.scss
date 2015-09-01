@@ -1,0 +1,15 @@
+// All variables that are used throughout the CSS.
+//
+// This file also overrides Bootstrap variables.
+// For a complete overview of all variables to override, see:
+// * node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
+// * https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss
+
+// Body
+$font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-base: 14px;
+$text-color: #333;
+$body-bg: #fff;
+
+// Amend with the defaults from bootstrap.
+@import "bootstrap/variables";

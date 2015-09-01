@@ -37,16 +37,27 @@
     <div id="wrapper">
 
       <header id="top">
+        <div class="container">
+          <a href="/" class="navbar-brand">Brand</a>
+        </div>
       </header>
 
-      <section id="content">
-        <div id="main">
-          {% block main %}{% endblock %}
+      <section id="main">
+        <div id="main-content">
+          {% block main %}
+            <div class="constrained">
+              <div class="container">
+                {% block content %}{% endblock %}
+              </div>
+            </div>
+          {% endblock %}
         </div>
       </section>
 
       <footer id="bottom">
-        <p>Copyright © ... 2012-{% now "Y" %}</p>
+        <div class="container">
+          <p>Copyright © ... 2012-{% now "Y" %}</p>
+        </div>
       </footer>
     </div>
 

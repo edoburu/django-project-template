@@ -4963,10 +4963,10 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 
 .breadcrumb {
-  padding: 8px 15px;
+  padding: 8px 5px;
   margin-bottom: 20px;
   list-style: none;
-  background-color: #f5f5f5;
+  background-color: #fff;
   border-radius: 4px;
 }
 

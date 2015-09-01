@@ -1,0 +1,14 @@
+/* ---- blog module ---- */
+
+h1, h2 {
+  // Improve heading style for blog
+
+  a {
+    color: $headings-color;
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $headings-color;
+  }
+}

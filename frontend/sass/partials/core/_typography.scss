@@ -4,6 +4,14 @@
 // The default styles come from: bootstrap/_type.scss
 // Also consider overriding the variables, so bootstrap styles are rendered correctly.
 
+
+/* ---- plugins ---- */
+
+.text {
+  // Place any styles here that should only be used for the 'text' plugin.
+  // The tinymce.scss will also pick up these styles.
+}
+
 iframe {
   border: 1px solid #ccc;
 

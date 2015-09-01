@@ -12,6 +12,7 @@ html, body {
 
 // ---- content layout
 
-#main-content {
+#main {
+  padding-top: 51px;  // to deal with navbar-fixed
   position: relative;
 }

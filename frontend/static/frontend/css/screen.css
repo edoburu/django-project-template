@@ -33,15 +33,27 @@ html, body {
   min-height: 100%;
 }
 
-#main-content {
+#main {
+  padding-top: 51px;
   position: relative;
 }
 
+/* ---- plugins ---- */
 iframe {
   border: 1px solid #ccc;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+/* ---- blog module ---- */
+h1 a, h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1:hover, h2:hover {
+  color: inherit;
 }
 
 /* ---- Overrides of Bootstrap ---- */

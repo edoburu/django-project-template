@@ -11,5 +11,9 @@ $font-size-base: 14px;
 $text-color: #333;
 $body-bg: #fff;
 
+// Breadcrumb
+$breadcrumb-bg: #fff;
+$breadcrumb-padding-horizontal: 5px;
+
 // Amend with the defaults from bootstrap.
 @import "bootstrap/variables";

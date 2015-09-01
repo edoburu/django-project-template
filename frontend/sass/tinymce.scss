@@ -1,11 +1,18 @@
 /**
  * Extra styles to be included in the TinyMCE editor
  */
-@import "partials/base";
+
+@import "partials/core/variables";
+
+// Take relevant bootstrap.css styles
 @import "bootstrap/mixins";
-@import "bootstrap/reset";
+@import "bootstrap/normalize";
 @import "bootstrap/scaffolding";
 @import "bootstrap/type";
+
+// Take screen.css text styles
+@import "partials/core/reset";
+@import "partials/core/typography";
 
 
 body {

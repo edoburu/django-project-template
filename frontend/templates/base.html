@@ -38,7 +38,7 @@
     {% block staff_toolbar %}{% staff_toolbar %}{% endblock %}
     <div id="wrapper">
 
-      <header id="top">
+      <header id="top" class="navbar navbar-default navbar-fixed-top">
         <div class="container">
           <a href="/" class="navbar-brand">Brand</a>
           {% render_menu template="partials/base/menu.html" %}
@@ -46,12 +46,12 @@
       </header>
 
       <section id="main">
-        {% render_breadcrumb template="partials/base/breadcrumb.html" %}
-
         <div id="main-content">
           {% block main %}
             <div class="constrained">
               <div class="container">
+                {% render_breadcrumb template="partials/base/breadcrumb.html" %}
+
                 {% block content %}{% endblock %}
               </div>
             </div>

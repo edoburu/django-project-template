@@ -1,0 +1,6 @@
+{% extends "pages/base.html" %}
+{% load placeholder_tags fluent_pages_tags %}
+
+{% block content %}
+    {% page_placeholder "main" title="Main" role="m" %}{# Let the TinyMCE area provide the title! #}
+{% endblock %}

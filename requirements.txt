@@ -9,7 +9,7 @@ python-memcached == 1.57
 raven == 5.6.0
 
 # CMS libraries
-django-fluent-dashboard >= 0.5.2
+django-fluent-dashboard >= 0.5.3
 
 # Support libs
 django-axes >= 1.4.0

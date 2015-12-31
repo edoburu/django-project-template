@@ -41,6 +41,7 @@ django-wysiwyg >= 0.7.1
 html5lib >= 1.0b8
 micawber >= 0.3.3
 pytz >= 2015.7
+smartypants >= 1.8.6
 sorl-thumbnail >= 12.3
 
 # Debugging

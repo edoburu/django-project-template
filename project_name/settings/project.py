@@ -235,6 +235,10 @@ FLUENT_PAGES_TEMPLATE_DIR = os.path.join(SRC_DIR, 'frontend', 'templates')
 
 FLUENT_TEXT_CLEAN_HTML = True
 FLUENT_TEXT_SANITIZE_HTML = True
+FLUENT_TEXT_PRE_FILTERS = (
+    'fluent_contents.plugins.text.filters.smartypants.smartypants_filter',
+)
+
 
 PING_CHECKS = (
     'ping.checks.check_database_sessions',

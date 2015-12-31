@@ -67,6 +67,10 @@ TEMPLATE_CONTEXT_PROCESSORS += (
     'frontend.context_processors.frontend',
 )
 
+TEMPLATE_LOADERS += (
+    'admin_tools.template_loaders.Loader',
+)
+
 FORMAT_MODULE_PATH = '{{ project_name }}.settings.locale'  # Consistent date formatting
 
 # Avoid 600 permission for filebrowser uploads.

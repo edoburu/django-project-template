@@ -68,7 +68,7 @@ TEMPLATES[0]['OPTIONS']['context_processors'] += (
 )
 
 TEMPLATES[0]['OPTIONS']['loaders'] += (
-    'admin_tools.template_loaders.Loader',  # Allow {% extends "appname:template" %}
+    'admin_tools.template_loaders.Loader',  # Allow {% verbatim %}{% extends "appname:template" %}{% endverbatim %}
 )
 
 FORMAT_MODULE_PATH = '{{ project_name }}.settings.locale'  # Consistent date formatting

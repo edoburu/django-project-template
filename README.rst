@@ -3,7 +3,7 @@
 Django project template
 =======================
 
-This project template creates a Django 1.8 project with
+This project template creates a Django 1.8 / 1.9 project with
 a base set of applications
 
 Features
@@ -11,12 +11,13 @@ Features
 
 Installed apps:
 
-* Django 1.8
+* Django 1.8+
 * MySQLdb or Psycopg2
 * Pillow_
 * SORL-Thumbnail_
 * IPython_ + ptpython_
 * Raven_
+* django-analytical_
 * django-axes_
 * django-admin-tools_
 * django-compressor_
@@ -24,7 +25,6 @@ Installed apps:
 * django-debugtools_
 * django-filebrowser-no-grapelli_
 * django-fluent-dashboard_
-* django-google-analytics_
 * django-ping_
 
 Configured URLs:
@@ -36,6 +36,7 @@ Configured URLs:
 Templates:
 
 * ``base.html``
+* ``403.html``
 * ``404.html``
 * ``500.html``
 
@@ -93,6 +94,7 @@ Changes are automatically visible in the browser using LiveReload_.
     However, we highly recommended to take a look at it.
 
 .. _bpython: http://bpython-interpreter.org/
+.. _django-analytical: https://github.com/jcassee/django-analytical
 .. _django-axes: https://github.com/django-security/django-axes
 .. _django-admin-tools: https://bitbucket.org/izi/django-admin-tools
 .. _django-compressor: http://django_compressor.readthedocs.org/
@@ -100,7 +102,6 @@ Changes are automatically visible in the browser using LiveReload_.
 .. _django-debugtools: https://github.com/edoburu/django-debugtools
 .. _django-filebrowser-no-grapelli: https://github.com/vdboor/django-filebrowser-no-grappelli-django14
 .. _django-fluent-dashboard: https://github.com/edoburu/django-fluent-dashboard
-.. _django-google-analytics: https://github.com/clintecker/django-google-analytics
 .. _django-ping: https://github.com/rizumu/django-ping
 .. _LiveReload: http://livereload.com/
 .. _IPython: http://ipython.org/

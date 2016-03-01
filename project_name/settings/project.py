@@ -41,10 +41,10 @@ INSTALLED_APPS += (
     'frontend',
 
     # Support libs
+    'analytical',
     'axes',
     'crispy_forms',
     'filebrowser',
-    'googletools',
     'sorl.thumbnail',
 
     # and enable the admin
@@ -63,12 +63,12 @@ MIDDLEWARE_CLASSES = (
     'axes.middleware.FailedLoginMiddleware',
 )
 
-TEMPLATE_CONTEXT_PROCESSORS += (
+TEMPLATES[0]['OPTIONS']['context_processors'] += (
     'frontend.context_processors.frontend',
 )
 
-TEMPLATE_LOADERS += (
-    'admin_tools.template_loaders.Loader',
+TEMPLATES[0]['OPTIONS']['loaders'] += (
+    'admin_tools.template_loaders.Loader',  # Allow {% extends "appname:template" %}
 )
 
 FORMAT_MODULE_PATH = '{{ project_name }}.settings.locale'  # Consistent date formatting

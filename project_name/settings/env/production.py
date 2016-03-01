@@ -1,7 +1,6 @@
 from .. import *
 
 DEBUG = False
-TEMPLATE_DEBUG = DEBUG
 COMPRESS_ENABLED = True
 
 DATABASES = {
@@ -24,14 +23,14 @@ INSTALLED_APPS += (
     #'gunicorn',
 )
 
-TEMPLATE_LOADERS = (
-    ('django.template.loaders.cached.Loader', TEMPLATE_LOADERS),
+TEMPLATES[0]['OPTIONS']['loaders'] = (
+    ('django.template.loaders.cached.Loader', TEMPLATES[0]['OPTIONS']['loaders']),
 )
 
 ALLOWED_HOSTS = (
     '.{{ project_name }}.tld',
-    '.{{ project_name }}.tld.',
 )
 
 CACHES['default']['KEY_PREFIX'] = '{{ project_name }}.production'
 
+GOOGLE_ANALYTICS_PROPERTY_ID = None  # TODO

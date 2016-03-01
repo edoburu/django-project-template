@@ -147,7 +147,7 @@ To setup a local development environment::
     createdb --template=template0 --encoding='UTF-8' --lc-collate='en_US.UTF-8' --lc-ctype='en_US.UTF-8' --owner={{ project_name }} {{ project_name }}
     exit
 
-    ./manage.py syncdb --migrate
+    ./manage.py migrate
     ./manage.py runserver
 
 Compiling SASS files

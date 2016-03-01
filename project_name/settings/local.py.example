@@ -30,7 +30,7 @@ DATABASES = {
 ## -- Logging output
 
 # See queries
-LOGGING['loggers']['django.db']['level'] = 'DEBUG'
+#LOGGING['loggers']['django.db']['level'] = 'DEBUG'
 
 LOGGING['handlers'].update({
     'console': {

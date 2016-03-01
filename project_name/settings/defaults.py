@@ -4,9 +4,7 @@ Place project customizations in ``project.py``.
 """
 import os, re
 
-DEBUG          = True
-TEMPLATE_DEBUG = DEBUG
-TEMPLATE_STRING_IF_INVALID = ''
+DEBUG = True
 
 
 ## --- Internal settings
@@ -53,12 +51,8 @@ INSTALLED_APPS = (
     'compressor',
 )
 
-TEMPLATE_DIRS = (
-)
-
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
+LOCALE_PATHS = (
+    os.path.join(SRC_DIR, 'locale'),
 )
 
 STATICFILES_FINDERS = (
@@ -76,15 +70,28 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.core.context_processors.debug',
-    'django.core.context_processors.i18n',
-    'django.core.context_processors.media',
-    'django.core.context_processors.request',
-    'django.core.context_processors.static',
-    'django.contrib.auth.context_processors.auth',
-    'django.contrib.messages.context_processors.messages',
-)
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': (),
+        'OPTIONS': {
+            'debug': DEBUG,
+            'loaders': (
+                'django.template.loaders.filesystem.Loader',
+                'django.template.loaders.app_directories.Loader',
+            ),
+            'context_processors': (
+                'django.template.context_processors.debug',
+                'django.template.context_processors.i18n',
+                'django.template.context_processors.media',
+                'django.template.context_processors.request',
+                'django.template.context_processors.static',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ),
+        },
+    },
+]
 
 CACHES = {
     'default': {
@@ -97,7 +104,7 @@ CACHES = {
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
 
-TEST_RUNNER = 'django.test.simple.DjangoTestSuiteRunner'
+TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
 
 ## --- App settings

@@ -1,6 +1,6 @@
-{% load compress googletools staff_toolbar_tags fluent_pages_tags fluent_contents_tags sharedcontent_tags %}<!doctype html>
+{% load analytical compress staff_toolbar_tags fluent_pages_tags fluent_contents_tags sharedcontent_tags %}<!doctype html>
 <html xml:lang="{{ LANGUAGE_CODE|default:"en" }}" lang="{{ LANGUAGE_CODE|default:"en" }}">
-  <head>
+  <head>{% analytical_head_top %}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,8 +14,8 @@
     <title>{% block meta-title %}{% block headtitle %}{{ page.title }}{% endblock %} | {{ site.name|default:site.domain }}{% endblock %}</title>
 
     <meta property="og:type" content="{% block og-type %}website{% endblock %}" />
-    <meta property="og:image" content="http://{{ site.domain|default:"www.example.org" }}{% block og-image %}{{ STATIC_URL }}frontend/img/logo.png{% endblock %}" />
-    <meta property="og:url" content="http://{{ site.domain|default:"www.example.org" }}{{ request.path }}" />
+    <meta property="og:image" content="{{ site_root }}{% block og-image %}{{ STATIC_URL }}frontend/img/social-logo.png{% endblock %}" />
+    <meta property="og:url" content="{{ site_root }}{{ request.path }}" />
     <meta property="og:site_name" content="{{ site.name|default:site.domain }}" />
     <meta property="og:description" content="{% block og-description %}{{ page.description }}{% endblock %}" />
     {% compress css %}
@@ -29,17 +29,29 @@
     <script src="{{ STATIC_URL }}frontend/vendor/html5shiv.js"></script>
     <![endif]-->
     {% block extrahead %}{% endblock %}
-    {% site_verification_code %}
+    {% analytical_head_bottom %}
   </head>
 
   <body id="{% block body-id %}page{% endblock %}" class="{% block body-class %}default{% endblock %}" itemscope itemtype="http://schema.org/WebPage">
     {% block staff_toolbar %}{% staff_toolbar %}{% endblock %}
+    {% analytical_body_top %}
     <div id="wrapper">
 
-      <header id="top" class="navbar navbar-default navbar-fixed-top">
+      <header id="top" class="navbar navbar-default">
         <div class="container">
-          <a href="/" class="navbar-brand">Brand</a>
-          {% render_menu template="partials/base/menu.html" %}
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">{% trans "Show Navigation" %}</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Brand</a>
+          </div>
+
+          <div id="main-menu" class="navbar-collapse collapse">
+            {% render_menu template="partials/base/menu.html" %}
+          </div>
         </div>
       </header>
 
@@ -61,7 +73,7 @@
         <div class="container">
           {% sharedcontent "footer" %}
 
-          <p>Copyright © PROJECT_NAME 2012-{% now "Y" %}</p>
+          <p>Copyright © ... {% now "Y" %}</p>
         </div>
       </footer>
     </div>
@@ -70,6 +82,7 @@
 
     {% compress js %}
       <script type="text/javascript" src="{{ STATIC_URL }}frontend/vendor/jquery-1.11.3.min.js"></script>
+      <script type="text/javascript" src="{{ STATIC_URL }}frontend/vendor/bootstrap/collapse.js"></script>
     {% endcompress %}<!-- common JS -->
 
     {% compress js %}
@@ -78,6 +91,6 @@
       {% render_content_items_media js local %}{# for django-fluent-contents #}
     {% endcompress %}<!-- page specific JS -->
 
-    {% block tracking %}{% analytics_code %}{% endblock %}
+    {% analytical_body_bottom %}
   </body>
 </html>

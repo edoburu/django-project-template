@@ -21,7 +21,7 @@ var del = require('del');
 var paths = {
   sass: './frontend/sass/',
   css: './frontend/static/frontend/css/',
-}
+};
 
 paths.sass_glob = paths.sass + '**/*.scss';
 

@@ -13,9 +13,21 @@
   <body id="page" class="page500">
     <div id="wrapper">
 
-      <header id="top">
+      <header id="top" class="navbar navbar-default">
         <div class="container">
-          <a href="/" class="navbar-brand">Brand</a>
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">{% trans "Show Navigation" %}</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Brand</a>
+          </div>
+
+          <div id="main-menu" class="navbar-collapse collapse">
+            <!-- menu here -->
+          </div>
         </div>
       </header>
 
@@ -39,7 +51,7 @@
 
       <footer id="bottom">
         <div class="container">
-
+          <p>Copyright © ... {% now "Y" %}</p>
         </div>
       </footer>
     </div>

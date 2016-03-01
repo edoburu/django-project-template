@@ -6,9 +6,8 @@ from .project import INSTALLED_APPS, MIDDLEWARE_CLASSES, LOGGING
 
 ## -- Flags
 
-SITE_ID = 10
+SITE_ID = 1
 DEBUG = True
-TEMPLATE_DEBUG = True
 THUMBNAIL_DEBUG = True
 COMPRESS_ENABLED = False
 FLUENT_CONTENTS_CACHE_OUTPUT = True   # Disable caching if needed

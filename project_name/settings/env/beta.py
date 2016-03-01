@@ -1,7 +1,6 @@
 from .. import *
 
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
+DEBUG = False
 COMPRESS_ENABLED = True
 
 DATABASES = {
@@ -19,13 +18,12 @@ INSTALLED_APPS += (
     #'gunicorn',
 )
 
-TEMPLATE_LOADERS = (
-    ('django.template.loaders.cached.Loader', TEMPLATE_LOADERS),
+TEMPLATES[0]['OPTIONS']['loaders'] = (
+    ('django.template.loaders.cached.Loader', TEMPLATES[0]['OPTIONS']['loaders']),
 )
 
 ALLOWED_HOSTS = (
     '{{ project_name }}.testing.mycompany.tld',
-    '{{ project_name }}.testing.mycompany.tld.',
 )
 
 CACHES['default']['KEY_PREFIX'] = '{{ project_name }}.beta'

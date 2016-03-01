@@ -56,6 +56,7 @@ INSTALLED_APPS += (
     'fluent_contents.plugins.rawhtml',
 
     # Support libs
+    'analytical',
     'any_imagefield',
     'any_urlfield',
     'axes',
@@ -64,7 +65,6 @@ INSTALLED_APPS += (
     'django_comments',
     'django_wysiwyg',
     'filebrowser',
-    'googletools',
     'mptt',
     'parler',
     'polymorphic',
@@ -93,15 +93,12 @@ MIDDLEWARE_CLASSES = (
     'fluent_contents.middleware.HttpRedirectRequestMiddleware',
 )
 
-TEMPLATE_CONTEXT_PROCESSORS += (
+TEMPLATES[0]['OPTIONS']['context_processors'] += (
     'frontend.context_processors.frontend',
 )
 
-TEMPLATE_LOADERS = (
-    'apptemplates.Loader',   # Allow {% verbatim %}{% extends "appname:template" %}{% endverbatim %}
-    'admin_tools.template_loaders.Loader',
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
+TEMPLATES[0]['OPTIONS']['loaders'] += (
+    'admin_tools.template_loaders.Loader',  # Allow {% extends "appname:template" %}
 )
 
 FORMAT_MODULE_PATH = '{{ project_name }}.settings.locale'  # Consistent date formatting

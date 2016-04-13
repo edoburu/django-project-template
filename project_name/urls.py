@@ -62,7 +62,8 @@ if settings.DEBUG:
     # Sass files are exported so browsers can open the Sass sources via sourcemaps.
     urlpatterns = [
         url(r'^media/(?P<path>.*)$', django.views.static.serve, {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
-        url(r'^sass/(?P<path>.*)$', django.views.static.serve, {'document_root': path.join(settings.SRC_DIR, 'frontend', 'sass'), 'show_indexes': True}),
+        url(r'^sass/(?P<path>.*)$', django.views.static.serve, {'document_root': path.join(settings.SRC_DIR, 'frontend/sass'), 'show_indexes': True}),
+        url(r'^node_modules/bootstrap-sass/assets/(?P<path>.*)$', django.views.static.serve, {'document_root': path.join(settings.SRC_DIR, 'node_modules/bootstrap-sass/assets/'), 'show_indexes': True}),
     ] + urlpatterns
 
     if 'debug_toolbar' in settings.INSTALLED_APPS:

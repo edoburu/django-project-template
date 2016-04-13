@@ -1,12 +1,12 @@
 # Install with: `pip install -r requirements.txt`
 
 # Infrastructure
-Django >= 1.8.11, < 1.10
-Pillow >= 3.1.1
+Django >= 1.8.12, < 1.10
+Pillow >= 3.2.0
 #for MySQL: MySQL-python >= 1.2.5
 #for PostgreSQL: psycopg2 >= 2.6.1
 python-memcached >= 1.57
-raven >= 5.11.1
+raven >= 5.12.0
 
 # CMS libraries
 django-fluent-blogs >= 1.2
@@ -25,12 +25,12 @@ django-categories-i18n >= 1.0
 django-compressor >= 2.0
 django-contrib-comments >= 1.6.2
 django-crispy-forms >= 1.6.0
--e git+https://github.com/smacker/django-filebrowser-no-grappelli.git@15b40b80cfe5d92b1ac57325b0fa6e80f1290c01#egg=django_filebrowser_no_grappelli
+-e git+https://github.com/smacker/django-filebrowser-no-grappelli.git@121c1bcf2c859e8dec8cf43040377ba23e16745b#egg=django-filebrowser-no-grappelli
 django-mptt >= 0.8.2
 django-parler >= 1.6.1
 django-polymorphic >= 0.9.1
 django-polymorphic-tree >= 1.2.3
--e git+https://github.com/rizumu/django-ping.git@2ff3985c762654282ba52813043a605b73896654#egg=django_ping
+-e git+https://github.com/rizumu/django-ping.git@2ff3985c762654282ba52813043a605b73896654#egg=django_ping-0.3b1
 django-slug-preview >= 1.0.1
 django-staff-toolbar >= 1.0.1
 django-tag-parser >= 2.1
@@ -40,11 +40,11 @@ django-tinymce >= 2.2.0
 django-wysiwyg >= 0.7.1
 html5lib >= 1.0b8
 micawber >= 0.3.3
-pytz >= 2015.7
+pytz >= 2016.3
 smartypants >= 1.8.6
 sorl-thumbnail >= 12.3
 
 # Debugging
-django-debugtools >= 1.5.1
+django-debugtools >= 1.6
 ipython >= 4.1.2
-ptpython >= 0.30
+ptpython >= 0.32

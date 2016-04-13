@@ -2,12 +2,14 @@ import admin_tools.urls
 import django.contrib.sitemaps.views
 import django.views.defaults
 import django.views.static
+import fluent_comments.urls
+import fluent_pages.urls
 import ping.urls
 import taggit_autosuggest.urls
 import tinymce.urls
 
-from django.conf.urls import url, include
 from django.conf import settings
+from django.conf.urls import url, include
 from django.contrib import admin
 from django.utils.functional import curry
 from filebrowser.sites import site as fb_site
@@ -31,7 +33,6 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^admin/filebrowser/', include(fb_site.urls)),
     url(r'^admin/util/tags/', include(taggit_autosuggest.urls)),
-    url(r'^admin/util/tools/', include(admin_tools.urls)),
     url(r'^admin/util/tinymce/', include(tinymce.urls)),
     url(r'^admin/util/tools/', include(admin_tools.urls)),
 
@@ -52,8 +53,8 @@ urlpatterns = [
     # TODO: add your urls here
 
     # CMS modules
-    url(r'^blog/comments/', include('fluent_comments.urls')),
-    url(r'', include('fluent_pages.urls')),
+    url(r'^blog/comments/', include(fluent_comments.urls)),
+    url(r'', include(fluent_pages.urls)),
 ]
 
 if settings.DEBUG:

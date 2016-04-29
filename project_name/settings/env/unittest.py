@@ -2,10 +2,15 @@ from .. import *
 from os.path import dirname
 import sys
 
-DATABASES['default'] = {
-    'ENGINE': 'django.db.backends.sqlite3',
-    'NAME': dirname(dirname(dirname(__file__))) + '/testdatabase.db'
+if 'runtests.py' in sys.argv[0] or 'test' in sys.argv:
+    print "Using in memory database.\n"
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': ':memory:',
+    }
 }
 
-if sys.argv[1] in ['test']:
-    print "Using in memory database.\n"
+# Avoid sending real emails
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

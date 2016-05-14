@@ -1,0 +1,49 @@
+// These mixins make it easy to write media queries for device specific CSS.
+// Usage:
+//
+//  @include media-xs-up { sass rules }
+//
+
+@function image-url($path) {
+    @return url("#{$image-url-path}#{$path}");
+}
+
+@function font-url($path) {
+    @return url("#{$fonts-url-path}#{$path}");
+}
+
+@mixin media-xs-up {
+  // Phone and up
+  @media only screen and (min-width: $screen-xs-min) { @content; }
+}
+
+@mixin media-xs-down {
+  // Phone and down
+  @media only screen and (max-width: $screen-xs-max) { @content; }
+}
+
+@mixin media-sm-down {
+  // Phone and Tablet
+  @media only screen and (max-width: $screen-sm-max) { @content; }
+}
+
+@mixin media-sm-only {
+  // Tablet only
+  @media only screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { @content; }
+}
+
+@mixin media-sm-up {
+  // Tablet, desktop
+  @media only screen and (min-width: $screen-sm-min) { @content; }
+}
+
+@mixin media-md-up {
+  // Desktop and large desktop only
+  @media (min-width: $screen-md-min) { @content; }
+}
+
+@mixin media-lg-up {
+  // Large desktop only
+  // NOTE: this is rendered disabled when the container has a max width
+  @media (min-width: $screen-lg-min) { @content; }
+}

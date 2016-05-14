@@ -6,9 +6,13 @@
 
 // Core
 @import "partials/core/variables";
+@import "partials/core/mixins";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
 @import "partials/core/reset";
 @import "partials/core/layout";
 @import "partials/core/typography";
 
 // Modules
+@import "partials/modules/header";
 @import "partials/modules/forms";

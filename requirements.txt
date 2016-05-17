@@ -6,7 +6,8 @@ Pillow >= 3.2.0
 #for MySQL: MySQL-python >= 1.2.5
 #for PostgreSQL: psycopg2 >= 2.6.1
 python-memcached >= 1.57
-raven >= 5.16.0
+raven >= 5.17.0
+#uWSGI >= 2.0.13.1
 
 # CMS libraries
 django-fluent-blogs >= 1.2.1

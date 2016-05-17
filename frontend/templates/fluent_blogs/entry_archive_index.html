@@ -1,8 +1,1 @@
 {% extends "fluent_blogs:fluent_blogs/entry_archive_index.html" %}{# using django-apptemplates for this tag #}
-{% load staff_toolbar_tags %}
-
-{# also insert current page support #}
-{% block staff_toolbar %}
-  {% set_staff_object page %}
-  {{ block.super }}
-{% endblock %}

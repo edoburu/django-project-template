@@ -19,7 +19,7 @@ django-axes >= 1.6.1
 django-compressor >= 2.0
 django-crispy-forms >= 1.6.0
 -e git+https://github.com/smacker/django-filebrowser-no-grappelli.git@121c1bcf2c859e8dec8cf43040377ba23e16745b#egg=django-filebrowser-no-grappelli
--e git+https://github.com/rizumu/django-ping.git@2ff3985c762654282ba52813043a605b73896654#egg=django_ping-0.3b1
+-e git+https://github.com/rizumu/django-ping.git@b9e228fe1f338d87b323383509a975fd9df22ef1#egg=django_ping-0.3b1
 pytz >= 2016.4
 sorl-thumbnail >= 12.3
 

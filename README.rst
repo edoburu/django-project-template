@@ -97,8 +97,8 @@ Changes are automatically visible in the browser using LiveReload_.
 .. _django-analytical: https://github.com/jcassee/django-analytical
 .. _django-axes: https://github.com/django-security/django-axes
 .. _django-admin-tools: https://bitbucket.org/izi/django-admin-tools
-.. _django-compressor: http://django_compressor.readthedocs.org/
-.. _django-crispy-forms: http://django-crispy-forms.readthedocs.org/
+.. _django-compressor: https://django_compressor.readthedocs.io/
+.. _django-crispy-forms: https://django-crispy-forms.readthedocs.io/
 .. _django-debugtools: https://github.com/edoburu/django-debugtools
 .. _django-filebrowser-no-grapelli: https://github.com/vdboor/django-filebrowser-no-grappelli-django14
 .. _django-fluent-dashboard: https://github.com/edoburu/django-fluent-dashboard

@@ -10,7 +10,7 @@ env:
 install:
 - travis_retry pip install coverage -r requirements.txt
 script:
-- coverage run --source=project_name runtests.py
+- coverage run runtests.py
 after_success:
 - bash <(curl -s https://codecov.io/bash)
 notifications:

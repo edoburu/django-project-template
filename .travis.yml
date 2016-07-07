@@ -1,0 +1,27 @@
+sudo: false
+language: python
+cache: pip
+python:
+- '2.7'
+- '3.4'
+env:
+## TODO: Remove this for your own projects. This is needed for the project template only.
+- DJANGO_SETTINGS_MODULE=project_name.settings.env.unittest
+install:
+- pip install -U pip wheel
+- travis_retry pip install coverage -r requirements.txt
+script:
+- coverage run runtests.py
+after_success:
+- bash <(curl -s https://codecov.io/bash)
+notifications:
+  email:
+    ## TODO: Replace this for your own projects
+    recipients:
+    - travis@edoburu.nl
+    on_success: never
+    on_failure: always
+#  slack:
+#    secure: ....
+#    on_success: never
+#    on_failure: always

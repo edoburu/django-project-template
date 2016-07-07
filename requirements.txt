@@ -2,28 +2,28 @@
 
 # Infrastructure
 Django >= 1.8.13, < 1.10
-Pillow >= 3.2.0
+Pillow >= 3.3.0
 #for MySQL: MySQL-python >= 1.2.5
-#for PostgreSQL: psycopg2 >= 2.6.1
-python-memcached >= 1.57
-raven >= 5.17.0
+#for PostgreSQL: psycopg2 >= 2.6.2
+python-memcached >= 1.58
+raven >= 5.21.0
 #uWSGI >= 2.0.13.1
 
 # CMS libraries
 django-fluent-dashboard >= 1.0a1
 
 # Support libs
-django-analytical >= 2.0.0
+django-analytical >= 2.2.1
 django-admin-tools >= 0.7.2
-django-axes >= 1.6.1
+django-axes >= 2.0.0
 django-compressor >= 2.0
 django-crispy-forms >= 1.6.0
 -e git+https://github.com/smacker/django-filebrowser-no-grappelli.git@121c1bcf2c859e8dec8cf43040377ba23e16745b#egg=django-filebrowser-no-grappelli
--e git+https://github.com/rizumu/django-ping.git@b9e228fe1f338d87b323383509a975fd9df22ef1#egg=django_ping-0.3b1
+-e git+https://github.com/vdboor/django-ping.git@79f486d7becc0f58100adca22f700c7f9de235cf#egg=django_ping-0.3b1
 pytz >= 2016.4
 sorl-thumbnail >= 12.3
 
 # Debugging
 django-debugtools >= 1.6
-ipython >= 4.2.0
+ipython >= 4.2.1
 ptpython >= 0.34

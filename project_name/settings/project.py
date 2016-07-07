@@ -42,7 +42,7 @@ INSTALLED_APPS += (
 
     # Support libs
     'analytical',
-    'axes',
+    'axes.apps.AppConfig',
     'crispy_forms',
     'filebrowser',
     'sorl.thumbnail',
@@ -59,9 +59,7 @@ INSTALLED_APPS += (
 MIDDLEWARE_CLASSES = (
     'raven.contrib.django.middleware.SentryLogMiddleware',       # make 'request' available on all logs.
     'raven.contrib.django.middleware.Sentry404CatchMiddleware',  # on 404, report to sentry.
-) + MIDDLEWARE_CLASSES + (
-    'axes.middleware.FailedLoginMiddleware',
-)
+) + MIDDLEWARE_CLASSES
 
 TEMPLATES[0]['OPTIONS']['context_processors'] += (
     'frontend.context_processors.frontend',

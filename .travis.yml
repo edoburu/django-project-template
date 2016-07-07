@@ -4,10 +4,13 @@ cache: pip
 python:
 - '2.7'
 - '3.4'
+env:
+## TODO: Remove this for your own projects. This is needed for the project template only.
+- DJANGO_SETTINGS_MODULE=project_name.settings.env.unittest
 install:
 - travis_retry pip install -r requirements.txt
 script:
-- coverage run --source=project_name,apps runtests.py --settings=project_name.settings.env.unittest
+- coverage run --source=project_name,apps runtests.py
 after_success:
 - bash <(curl -s https://codecov.io/bash)
 notifications:

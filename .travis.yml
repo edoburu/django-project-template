@@ -4,26 +4,20 @@ cache: pip
 python:
 - '2.7'
 - '3.4'
-env:
-- DJANGO="django>=1.8.0,<1.9.0"
-- DJANGO="django>=1.9.0,<1.10.0"
 install:
-- travis_retry pip install $DJANGO -r requirements.txt
+- travis_retry pip install -r requirements.txt
 script:
-- python runtests.py --settings=project_name.settings.env.unittest
+- coverage run --source=project_name,apps runtests.py --settings=project_name.settings.env.unittest
 after_success:
-- codecov
-branches:
-  only:
-  - master
-  - django-fluent
+- bash <(curl -s https://codecov.io/bash)
 notifications:
   email:
+    ## TODO: Replace this for your own projects
     recipients:
     - travis@edoburu.nl
     on_success: never
     on_failure: always
-  slack:
-    secure: WWNa4MHf50AOybB+XW9UKXCk/9Q8r++Jc4xTdEib43rj4odH9wxIaTRrzAbbpo3EO2gYuLgq6mMbaIZPD5l2UmgSnyuIbeYAAKIQblT+8XMamtXwnSS5j9vfBXYdj54rTlh+jKwEMW/JiQKl+SQpfQ2v1NMvYO63m89Ev9vXvcU=
-    on_success: never
-    on_failure: always
+#  slack:
+#    secure: ....
+#    on_success: never
+#    on_failure: always

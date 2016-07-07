@@ -59,7 +59,7 @@ INSTALLED_APPS += (
     'analytical',
     'any_imagefield',
     'any_urlfield',
-    'axes',
+    'axes.apps.AppConfig',
     'categories_i18n',
     'crispy_forms',
     'django_comments',
@@ -89,7 +89,6 @@ MIDDLEWARE_CLASSES = (
     'raven.contrib.django.middleware.SentryLogMiddleware',       # make 'request' available on all logs.
     'raven.contrib.django.middleware.Sentry404CatchMiddleware',  # on 404, report to sentry.
 ) + MIDDLEWARE_CLASSES + (
-    'axes.middleware.FailedLoginMiddleware',
     'fluent_contents.middleware.HttpRedirectRequestMiddleware',
 )
 

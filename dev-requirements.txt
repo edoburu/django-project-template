@@ -9,12 +9,12 @@
 
 # Debugging
 django-debug-toolbar >= 1.4
-django-extensions >= 1.6.1
+django-extensions >= 1.6.7
 
 # Documentation
 Sphinx >= 1.3.6
 
 # Profiling
-gprof2dot == 2014.09.29
+gprof2dot == 2015.12.1
 geordi >= 0.3
 yet-another-django-profiler >= 0.3.0

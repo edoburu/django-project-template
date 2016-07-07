@@ -11,7 +11,7 @@ install:
 - pip install -U pip wheel
 - travis_retry pip install coverage -r requirements.txt
 script:
-- coverage run runtests.py
+- coverage run --source=project_name,apps --omit='*/migrations/*' runtests.py
 after_success:
 - bash <(curl -s https://codecov.io/bash)
 notifications:

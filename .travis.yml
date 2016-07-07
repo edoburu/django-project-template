@@ -8,6 +8,7 @@ env:
 ## TODO: Remove this for your own projects. This is needed for the project template only.
 - DJANGO_SETTINGS_MODULE=project_name.settings.env.unittest
 install:
+- pip install -U pip wheel
 - travis_retry pip install coverage -r requirements.txt
 script:
 - coverage run runtests.py

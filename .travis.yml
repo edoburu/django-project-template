@@ -13,8 +13,8 @@ env:
 install:
 - pip install -U pip wheel setuptools
 - pip install $PACKAGES -r requirements.txt
-  ## TODO: remove this for yoru own projects. This removes the {{ project_name }} for the Django settings
-- sed -i '' -e 's/{{ project_name }}/project_name/' project_name/settings/defaults.py project_name/settings/project.py
+  ## TODO: remove this for your own projects. This removes the {{ project_name }} for the Django settings
+- sed -i '' -e 's/{{ project_name }}/project_name/g' project_name/settings/defaults.py project_name/settings/project.py
 
 script:
 - python manage.py check

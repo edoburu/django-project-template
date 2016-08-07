@@ -1,5 +1,10 @@
 .. TODO: Complete the README descriptions and "about" section.{% if False %}{# Hiding GitHub README #}
 
+.. image:: https://img.shields.io/travis/edoburu/django-project-template/master.svg?branch=master
+    :target: http://travis-ci.org/edoburu/django-project-template
+.. image:: https://img.shields.io/codecov/c/github/edoburu/django-project-template/master.svg
+    :target: https://codecov.io/github/edoburu/django-project-template?branch=master
+
 Django project template
 =======================
 

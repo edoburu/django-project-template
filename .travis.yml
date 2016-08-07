@@ -10,17 +10,13 @@ env:
   ## TODO: Remove this for your own projects. This is needed for the project template only.
 - DJANGO_SETTINGS_MODULE=project_name.settings.env.unittest
 
+before_install:
+  ## TODO: remove this for your own projects. This removes the {{ project_name }} for the Django settings
+- sed -i -e 's/{{ project_name }}/project_name/g' project_name/settings/defaults.py project_name/settings/project.py
+
 install:
 - pip install -U pip wheel setuptools
-- pip install $PACKAGES -r requirements.txt
-- |
-  cat <<EOF > project_name/settings/local.py
-  # Compensate for the {{ project_name }} settings in the template
-  SECRET_KEY = 'dfsfsdfsdfdfs233dsfsd'
-  FORMAT_MODULE_PATH = 'project_name.settings.locale'
-  ROOT_URLCONF = 'project_name.urls'
-  WSGI_APPLICATION = 'project_name.wsgi.development.application'
-  EOF
+- pip install $PACKAGES coverage -r requirements.txt
 
 script:
 - python manage.py check

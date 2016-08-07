@@ -1,19 +1,34 @@
 sudo: false
 language: python
 cache: pip
+
 python:
 - '2.7'
 - '3.4'
+
 env:
-## TODO: Remove this for your own projects. This is needed for the project template only.
+  ## TODO: Remove this for your own projects. This is needed for the project template only.
 - DJANGO_SETTINGS_MODULE=project_name.settings.env.unittest
+
 install:
-- pip install -U pip wheel
-- travis_retry pip install coverage -r requirements.txt
+- pip install -U pip wheel setuptools
+- pip install $PACKAGES -r requirements.txt
+- |
+  cat <<EOF > project_name/settings/local.py
+  # Compensate for the {{ project_name }} settings in the template
+  SECRET_KEY = 'dfsfsdfsdfdfs233dsfsd'
+  FORMAT_MODULE_PATH = 'project_name.settings.locale'
+  ROOT_URLCONF = 'project_name.urls'
+  WSGI_APPLICATION = 'project_name.wsgi.development.application'
+  EOF
+
 script:
+- python manage.py check
 - coverage run --source=project_name,apps --omit='*/migrations/*' runtests.py
+
 after_success:
 - bash <(curl -s https://codecov.io/bash)
+
 notifications:
   email:
     ## TODO: Replace this for your own projects

@@ -152,7 +152,7 @@ To setup a local development environment::
     virtualenv env --prompt="({{ project_name }})"  # or mkvirtualenv {{ project_name }}
     source env/bin/activate
 
-    pip install -r dev-requirements.txt
+    pip install -r requirements/dev.txt
     edit {{ project_name }}/settings/project.py    # Enter your DB credentials
     cp {{ project_name }}/settings/local.py.example {{ project_name }}/settings/local.py  # To enable debugging
 

@@ -16,7 +16,7 @@ before_install:
 
 install:
 - pip install -U pip wheel setuptools
-- pip install $PACKAGES coverage -r requirements.txt
+- pip install $PACKAGES -r requirements/unittest.txt
 
 script:
 - python manage.py check

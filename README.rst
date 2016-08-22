@@ -18,6 +18,7 @@ Installed apps:
 
 * Django 1.8+
 * MySQLdb or Psycopg2
+* py.test_ and coverage setup
 * Pillow_
 * SORL-Thumbnail_
 * IPython_ + ptpython_
@@ -52,23 +53,27 @@ Features:
 * CSS and JavaScript paths configured
 * HTML5shiv + jQuery Installed
 * Bootstrap 3 based CSS reset
-* Gulpfile with SASS_ + LiveReload_ setup (can be discarded)
+* Gulpfile with SASS_, LiveReload_ and spritesmith_ setup (can be discarded)
 * Uptime monitoring URL (``/api/ping/``)
 
 Usage
 -----
 
-Create a Django project::
+Create a Django project:
+
+.. code-block:: bash
 
     mkdir my-website.com
     cd my-website.com
-    django-admin.py startproject mywebsite . -e py,rst,example,gitignore --template=https://github.com/edoburu/django-project-template/archive/master.zip
+    django-admin.py startproject mywebsite . -e py,rst,example,gitignore,ini --template=https://github.com/edoburu/django-project-template/archive/master.zip
 
-Alternatively, you can place the files in a ``src`` folder too::
+Alternatively, you can place the files in a ``src`` folder too:
+
+.. code-block:: bash
 
     mkdir -p my-website.com/src
     cd my-website.com
-    django-admin.py startproject mywebsite src -e py,rst,example,gitignore --template=https://github.com/edoburu/django-project-template/archive/master.zip
+    django-admin.py startproject mywebsite src -e py,rst,example,gitignore,ini --template=https://github.com/edoburu/django-project-template/archive/master.zip
 
 This allows you to create folders like ``docs``, ``web``, ``logs``, ``etc`` at the toplevel.
 This setup is recommended.
@@ -79,11 +84,13 @@ The remaining instructions - to start the development server - can be found in t
 Django-fluent template
 ----------------------
 
-In a second branch, you'll find a project template for the django-fluent_ CMS::
+In a second branch, you'll find a project template for the django-fluent_ CMS:
+
+.. code-block:: bash
 
     mkdir my-website.com
     cd my-website.com
-    django-admin.py startproject mywebsite . -e py,rst,example,gitignore --template=https://github.com/edoburu/django-project-template/archive/django-fluent.zip
+    django-admin.py startproject mywebsite . -e py,rst,example,gitignore,ini --template=https://github.com/edoburu/django-project-template/archive/django-fluent.zip
 
 
 Optional features
@@ -112,8 +119,10 @@ Changes are automatically visible in the browser using LiveReload_.
 .. _IPython: http://ipython.org/
 .. _Pillow: https://github.com/python-pillow/Pillow
 .. _ptpython: https://github.com/jonathanslenders/ptpython
+.. _py.test: http://docs.pytest.org/
 .. _Raven: https://github.com/getsentry/raven-python
 .. _SORL-Thumbnail: https://github.com/sorl/sorl-thumbnail
+.. _spritesmith: https://github.com/twolfson/gulp.spritesmith
 
 
 ------------

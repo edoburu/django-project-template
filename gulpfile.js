@@ -12,16 +12,19 @@
  */
 'use strict';
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var livereload = require('gulp-livereload');
-var del = require('del');
+var gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
+    livereload = require('gulp-livereload'),
+    del = require('del'),
+    notify = require('gulp-notify');
 
 var paths = {
   sass: './frontend/sass/',
   css: './frontend/static/frontend/css/',
-};
+  img: './frontend/static/frontend/img/',
+  spriteInput: './frontend/static/frontend/img/sprite/*.png',
+}
 
 paths.sass_glob = paths.sass + '**/*.scss';
 
@@ -33,6 +36,16 @@ var sass_options = {
     './node_modules/bootstrap-sass/assets/stylesheets/',
   ],
   precision: 5,
+};
+
+var spritesmith_options = {
+  imgName: 'sprite.png',
+  imgPath: '../img/sprite.png',  // for relative CSS URL
+  cssName: '_sprites.scss',
+  //groupBy: foldername
+  //padding: 1,
+  //retinaSrcFilter: ['*@2x.png'],
+  //retinaImgName: 'sprite@2x.png',
 };
 
 var livereload_options = {
@@ -58,6 +71,19 @@ gulp.task('sass:watch', ['sass'], function () {
     });
 });
 
+gulp.task('sprite', function () {
+  // Sprite task
+  // https://github.com/twolfson/gulp.spritesmith
+  var spritesmith = require('gulp.spritesmith');
+  var sprites =
+  gulp.src(paths.spriteInput)
+    .pipe(spritesmith(spritesmith_options));
+
+  // Continue in separate streams (also allows adding imagemin to the img pipe)
+  sprites.img.pipe(gulp.dest(paths.img));
+  sprites.css.pipe(gulp.dest(paths.sass));
+});
+
 gulp.task('clean', function (cb) {
   // clean task
   del([paths.css + '*.css', '!' + paths.css + 'user-styles.css'], cb);
@@ -65,3 +91,16 @@ gulp.task('clean', function (cb) {
 
 // Default actions
 gulp.task('default', ['sass:watch']);
+
+
+function handleErrors(){
+  var args = Array.prototype.slice.call(arguments);
+
+  // Send error to notification center with gulp-notify
+  notify.onError({
+    title: "Compile Error",
+    message: "<%= error.message %>"
+  }).apply(this, args);
+
+  this.emit('end');
+}

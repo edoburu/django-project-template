@@ -241,3 +241,5 @@ PING_CHECKS = (
     'ping.checks.check_database_sites',
     #'ping.checks.check_celery', # Fails..
 )
+
+TAGGIT_CASE_INSENSITIVE = True

@@ -2,12 +2,12 @@
 
 # Infrastructure
 Django >= 1.8.14, < 1.10
-Pillow >= 3.3.0
+Pillow >= 3.4.2
 #for MySQL: MySQL-python >= 1.2.5
 #for PostgreSQL: psycopg2 >= 2.6.2
 python-memcached >= 1.58
-raven >= 5.24.2
-#uWSGI >= 2.0.13.1
+raven >= 5.32.0
+#uWSGI >= 2.0.14
 
 # CMS libraries
 django-fluent-blogs >= 1.2.3
@@ -17,15 +17,15 @@ django-fluent-dashboard >= 1.0a1
 django-fluent-pages >= 1.0.1
 
 # Support libs
-django-analytical >= 2.2.1
-django-admin-tools >= 0.7.2
+django-analytical >= 2.2.2
+django-admin-tools >= 0.8.0
 django-any-imagefield >= 0.8.2
 django-any-urlfield >= 2.2.1
-django-axes >= 2.2.0
+django-axes >= 2.3.2
 django-categories-i18n >= 1.0
-django-compressor >= 2.0
+django-compressor >= 2.1
 django-contrib-comments >= 1.7.2
-django-crispy-forms >= 1.6.0
+django-crispy-forms >= 1.6.1
 -e git+https://github.com/smacker/django-filebrowser-no-grappelli.git@121c1bcf2c859e8dec8cf43040377ba23e16745b#egg=django-filebrowser-no-grappelli
 django-mptt >= 0.8.4
 django-parler >= 1.6.5
@@ -41,11 +41,11 @@ django-tinymce >= 2.3.0
 django-wysiwyg >= 0.7.1
 html5lib >= 1.0b8
 micawber >= 0.3.3
-pytz >= 2016.6.1
+pytz >= 2016.10
 smartypants >= 1.8.6
 sorl-thumbnail >= 12.3
 
 # Debugging
 django-debugtools >= 1.7
-ipython >= 5.0.0
-ptpython >= 0.35
+ipython >= 5.1.0
+ptpython >= 0.36

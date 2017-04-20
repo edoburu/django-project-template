@@ -1,7 +1,7 @@
 # Install with: `pip install -r requirements/base.txt`
 
 # Infrastructure
-Django >= 1.8.14, < 1.10
+Django==1.11
 Pillow >= 3.4.2
 #for MySQL: MySQL-python >= 1.2.5
 #for PostgreSQL: psycopg2 >= 2.6.2

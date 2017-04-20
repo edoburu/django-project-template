@@ -1,13 +1,13 @@
 # Install with: `pip install -r requirements/base.txt`
 
 # Infrastructure
-Django >= 1.8.14, < 1.10
-Pillow >= 3.4.2
+Django >= 1.11, < 2.0
+Pillow >= 4.1.0
 #for MySQL: MySQL-python >= 1.2.5
-#for PostgreSQL: psycopg2 >= 2.6.2
+#for PostgreSQL: psycopg2 >= 2.7.1
 python-memcached >= 1.58
-raven >= 5.32.0
-#uWSGI >= 2.0.14
+raven >= 6.0.0
+#uWSGI >= 2.0.15
 
 # CMS libraries
 django-fluent-dashboard >= 1.0a1
@@ -16,14 +16,14 @@ django-fluent-dashboard >= 1.0a1
 django-analytical >= 2.2.2
 django-admin-tools >= 0.8.0
 django-axes >= 2.3.2
-django-compressor >= 2.1
+django-compressor >= 2.1.1
 django-crispy-forms >= 1.6.1
--e git+https://github.com/smacker/django-filebrowser-no-grappelli.git@121c1bcf2c859e8dec8cf43040377ba23e16745b#egg=django-filebrowser-no-grappelli
+django-filebrowser-no-grappelli == 3.7.0
 -e git+https://github.com/vdboor/django-ping.git@79f486d7becc0f58100adca22f700c7f9de235cf#egg=django_ping-0.3b1
-pytz >= 2016.10
-sorl-thumbnail >= 12.3
+pytz >= 2017.2
+sorl-thumbnail >= 12.4a1
 
 # Debugging
-django-debugtools >= 1.7
-ipython >= 5.1.0
-ptpython >= 0.36
+django-debugtools >= 1.7.2
+ipython >= 5.3.0
+ptpython >= 0.39

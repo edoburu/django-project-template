@@ -18,7 +18,7 @@ django-admin-tools >= 0.8.0
 django-axes >= 2.3.2
 django-compressor >= 2.1.1
 django-crispy-forms >= 1.6.1
-django-filebrowser-no-grappelli == 3.7.0
+django-filebrowser-no-grappelli==3.7.1
 -e git+https://github.com/vdboor/django-ping.git@79f486d7becc0f58100adca22f700c7f9de235cf#egg=django_ping-0.3b1
 pytz >= 2017.2
 sorl-thumbnail >= 12.4a1

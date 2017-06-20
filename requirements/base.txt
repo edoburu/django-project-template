@@ -6,7 +6,7 @@ Pillow >= 4.1.1
 #for MySQL: MySQL-python >= 1.2.5
 #for PostgreSQL: psycopg2 >= 2.7.1
 python-memcached >= 1.58
-raven >= 6.0.0
+raven >= 6.1.0
 #uWSGI >= 2.0.15
 
 # CMS libraries
@@ -18,7 +18,7 @@ django-fluent-pages >= 1.1.1
 
 # Support libs
 django-analytical >= 2.2.2
-django-admin-tools >= 0.8.0
+django-admin-tools >= 0.8.1
 django-any-imagefield >= 0.9
 django-any-urlfield >= 2.4
 django-axes >= 2.3.2
@@ -26,12 +26,12 @@ django-categories-i18n >= 1.0
 django-compressor >= 2.1.1
 django-contrib-comments >= 1.8.0
 django-crispy-forms >= 1.6.1
-django-filebrowser-no-grappelli >= 3.7.0
+django-filebrowser-no-grappelli >= 3.7.2
 django-mptt >= 0.8.7
 django-parler >= 1.7
 django-polymorphic >= 1.2
 django-polymorphic-tree >= 1.4
--e git+https://github.com/vdboor/django-ping.git@79f486d7becc0f58100adca22f700c7f9de235cf#egg=django_ping
+-e git+https://github.com/vdboor/django-ping.git@79f486d7becc0f58100adca22f700c7f9de235cf#egg=django_ping-0.3b1
 django-slug-preview >= 1.0.2
 django-staff-toolbar >= 1.1.1
 django-tag-parser >= 3.1
@@ -47,5 +47,5 @@ sorl-thumbnail >= 12.4a1
 
 # Debugging
 django-debugtools >= 1.7.2
-ipython >= 5.3.0
+ipython >= 5.4.1
 ptpython >= 0.39

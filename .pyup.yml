@@ -1,0 +1,9 @@
+update: all
+pin: False
+branch: django-fluent
+schedule: "every week"
+
+label_prs: update
+branch_prefix: pyup/
+assignees:
+- vdboor

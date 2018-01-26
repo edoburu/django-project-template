@@ -21,7 +21,7 @@ install:
 
 before_script: cd src
 script:
-- py.test --cov=project_name,frontend
+- py.test --cov
 - coverage run --append --source=project_name,frontend ./manage.py check --fail-level=WARNING --deploy --settings=project_name.settings.docker
 - ./manage.py check --fail-level=WARNING
 

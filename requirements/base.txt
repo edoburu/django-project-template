@@ -8,7 +8,7 @@
 Django >= 1.11.9,< 2.0
 Pillow >= 5.0.0
 #for MySQL: MySQL-python >= 1.2.5
-#for PostgreSQL: psycopg2 >= 2.7.3.2
+psycopg2 >= 2.7.3.2
 #for memcached: python-memcached >= 1.59
 raven >= 6.5.0
 uWSGI >= 2.0.15

@@ -1,10 +1,12 @@
 """
 The settings for this project.
 """
-import environ
 import logging
 import os
+
+import environ
 import raven.exceptions
+
 
 env = environ.Env()
 
@@ -13,8 +15,8 @@ env = environ.Env()
 SITE_ID = 1
 DEBUG = env.bool('DJANGO_DEBUG', True)
 
-SRC_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
-ROOT_DIR = os.path.dirname(SRC_DIR)
+SRC_DIR = str(environ.Path(__file__) - 3)
+ROOT_DIR = str(environ.Path(__file__) - 4)
 
 # Paths
 MEDIA_ROOT   = ROOT_DIR + '/web/media/'

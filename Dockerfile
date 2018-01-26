@@ -13,7 +13,7 @@ RUN apt-get update && \
 # Install (and compile) all dependencies
 RUN mkdir -p /app/src/requirements
 COPY src/requirements/*.txt /app/src/requirements/
-ARG PIP_REQUIREMENTS=/app/src/requirements/base.txt
+ARG PIP_REQUIREMENTS=/app/src/requirements/unittest.txt
 RUN pip install -r $PIP_REQUIREMENTS
 
 # Remove unneeded files

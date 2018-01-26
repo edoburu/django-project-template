@@ -21,8 +21,8 @@ install:
 
 script:
 - python manage.py check --fail-level=WARNING
-- coverage run --source=project_name,frontend --omit='*/migrations/*' python manage.py check --fail-level=WARNING --deploy --settings=project_name.settings.docker
-- coverage run --source=project_name,frontend --omit='*/migrations/*' --append runtests.py
+- coverage run --source=project_name,frontend python manage.py check --fail-level=WARNING --deploy --settings=project_name.settings.docker
+- coverage run --source=project_name,frontend --append py.test
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)

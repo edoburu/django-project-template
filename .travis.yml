@@ -12,7 +12,7 @@ env:
 
 before_install:
   ## TODO: remove this for your own projects. This removes the {{ project_name }} for the Django settings
-- sed -i -e 's/{{ project_name }}/project_name/g' src/project_name/settings/*.py src/*.py
+- sed -i -e 's/{{ project_name }}/project_name/g' src/project_name/settings/*.py src/*.py src/frontend/views.py
 - sed -i -e 's/{{ secret_key|safe }}/c6!x_#)=rim8n1j90f#al%m9i)zb2zu@i)846ps_&%-5@6o=q6/g' src/project_name/settings/defaults.py
 
 install:
@@ -21,9 +21,9 @@ install:
 
 before_script: cd src
 script:
-- python manage.py check --fail-level=WARNING
-- coverage run --source=project_name,frontend python manage.py check --fail-level=WARNING --deploy --settings=project_name.settings.docker
-- coverage run --source=project_name,frontend --append py.test
+- ./manage.py check --fail-level=WARNING
+- coverage run --source=project_name,frontend ./manage.py check --fail-level=WARNING --deploy --settings=project_name.settings.docker
+- coverage run --source=project_name,frontend --append pytest
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)

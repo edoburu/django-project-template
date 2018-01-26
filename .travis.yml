@@ -20,9 +20,9 @@ install:
 - pip install $PACKAGES -r requirements/unittest.txt
 
 script:
-- python manage.py check
-- python manage.py check --settings=project_name.settings.docker --deploy --fail-level=WARNING
-- coverage run --source=project_name,frontend --omit='*/migrations/*' runtests.py
+- python manage.py check --fail-level=WARNING
+- coverage run --source=project_name,frontend --omit='*/migrations/*' python manage.py check --fail-level=WARNING --deploy --settings=project_name.settings.docker
+- coverage run --source=project_name,frontend --omit='*/migrations/*' --append runtests.py
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)

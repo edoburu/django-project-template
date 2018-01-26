@@ -1,5 +1,9 @@
 # Install with: `pip install -r requirements/base.txt`
 
+# TODO: Replace the '>=' operator with '==' before deployment.
+# The greather-then operator is only included here to enure that
+# all requirements get the latest version on installation.
+
 # Infrastructure
 Django >= 1.11.9,< 2.0
 Pillow >= 5.0.0

@@ -13,7 +13,7 @@ env:
 before_install:
   ## TODO: remove this for your own projects. This removes the {{ project_name }} for the Django settings
 - sed -i -e 's/{{ project_name }}/project_name/g' project_name/settings/*.py *.py
-- sed -i -e 's/{{ secret_key | safe }}/abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ/g' project_name/settings/defaults.py
+- sed -i -e 's/{{ secret_key|safe }}/c6!x_#)=rim8n1j90f#al%m9i)zb2zu@i)846ps_&%-5@6o=q6/g' project_name/settings/defaults.py
 
 install:
 - pip install -U pip wheel setuptools

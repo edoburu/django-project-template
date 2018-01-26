@@ -22,6 +22,13 @@ django-fluent-dashboard >= 1.0
 django-fluent-pages >= 2.0.2
 django-fluent-utils >= 2.0
 
+# CMS Plugins
+fluentcms-button >= 2.0
+fluentcms-contactform >= 2.0
+fluentcms-jumbotron >= 2.0
+fluentcms-pager >= 2.0
+fluentcms-teaser >= 1.1.1
+
 # Support libs
 brotlipy >= 0.7.0
 django-admin-tools >= 0.8.1
@@ -38,6 +45,7 @@ django-filebrowser-no-grappelli >= 3.7.3
 django-healthchecks >= 1.2.0
 django-mptt >= 0.9.0
 django-parler >= 1.9.1
+django-phonenumber-field >= 2.0.0
 django-polymorphic >= 2.0
 django-polymorphic-tree >= 1.5
 django-redis >= 4.8.0
@@ -57,3 +65,8 @@ redis >= 2.10.6
 smartypants >= 2.0.1
 sorl-thumbnail >= 12.4.1
 whitenoise >= 3.3.1
+
+# Installed dependencies
+django-template-analyzer >= 1.6.1
+phonenumberslite >= 8.8.9
+python-akismet >= 0.3.0

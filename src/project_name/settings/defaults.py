@@ -97,6 +97,11 @@ INSTALLED_APPS = (
     'fluent_contents.plugins.picture',
     'fluent_contents.plugins.sharedcontent',
     'fluent_contents.plugins.rawhtml',
+    'fluentcms_button',
+    'fluentcms_contactform',
+    'fluentcms_jumbotron',
+    'fluentcms_pager',
+    'fluentcms_teaser',
 
     # Support libs
     'analytical',

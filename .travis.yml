@@ -12,7 +12,7 @@ env:
 
 before_install:
   ## TODO: remove this for your own projects. This removes the {{ project_name }} for the Django settings
-- sed -i -e 's/{{ project_name }}/project_name/g' src/project_name/settings/*.py src/*.py src/frontend/views.py
+- sed -i -e 's/{{ project_name }}/project_name/g' src/project_name/settings/*.py src/*.py src/frontend/views.py src/tests/test_wsgi.py
 - sed -i -e 's/{{ secret_key|safe }}/c6!x_#)=rim8n1j90f#al%m9i)zb2zu@i)846ps_&%-5@6o=q6/g' src/project_name/settings/defaults.py
 
 install:

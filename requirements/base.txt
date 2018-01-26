@@ -8,6 +8,7 @@ Pillow >= 5.0.0
 python-memcached >= 1.59
 raven >= 6.5.0
 uWSGI >= 2.0.15
+WsgiUnproxy == 1.0
 
 # CMS libraries
 django-fluent-dashboard >= 1.0
@@ -22,6 +23,7 @@ django-crispy-forms >= 1.7.0
 django-environ >= 0.4.4
 django-filebrowser-no-grappelli >= 3.7.2
 django-healthchecks >= 1.2.0
+netaddr >= 0.7.19
 pytz >= 2017.3
 sorl-thumbnail >= 12.4.1
 whitenoise >= 3.3.1

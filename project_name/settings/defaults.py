@@ -293,6 +293,12 @@ HEALTH_CHECKS = {
 }
 HEALTH_CHECKS_ERROR_CODE = 503
 
+IPWARE_META_PRECEDENCE_ORDER = (
+    # Avoid IP address spoofing for django-axes. Use wsgi-unproxy instead,
+    # which tests against a fixed set of incoming sender addresses.
+    'REMOTE_ADDR',
+)
+
 THUMBNAIL_DEBUG = True
 THUMBNAIL_FORMAT = 'JPEG'
 THUMBNAIL_QUALITY = 80  # default quality for mozjpeg's "cjpeg -optimize" is 75

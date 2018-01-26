@@ -1,4 +1,4 @@
-{% load analytical compress i18n %}<!doctype html>
+{% load analytical compress i18n static %}<!doctype html>
 <html xml:lang="{{ LANGUAGE_CODE|default:"en" }}" lang="{{ LANGUAGE_CODE|default:"en" }}">
   <head>{% analytical_head_top %}
     <meta charset="utf-8" />
@@ -14,7 +14,7 @@
     <title>{% block headtitle %}{% endblock %} - {{ site.name|default:site.domain }}</title>
 
     <meta property="og:type" content="{% block og-type %}website{% endblock %}" />
-    <meta property="og:image" content="{{ site_root }}{% block og-image %}{{ STATIC_URL }}frontend/img/social-logo.png{% endblock %}" />
+	<meta property="og:image" content="{{ site_root }}{% block og-image %}{% static 'frontend/images/social-logo.png' %}{% endblock %}" />
     <meta property="og:url" content="{{ site_root }}{{ request.path }}" />
     <meta property="og:site_name" content="{{ site.name|default:site.domain }}" />
     <meta property="og:description" content="{% block og-description %}{{ page.description }}{% endblock %}" />
@@ -23,10 +23,6 @@
     <link href="{{ STATIC_URL }}frontend/css/screen.css" rel="stylesheet" type="text/css" />
     {% endcompress %}
     {% compress css %}{% block link %}{% endblock %}{% endcompress %}
-    <!--[if lt IE 9]>
-    <link href="{{ STATIC_URL }}frontend/css/msie.css" rel="stylesheet" type="text/css" />
-    <script src="{{ STATIC_URL }}frontend/vendor/html5shiv.js"></script>
-    <![endif]-->
     {% block extrahead %}{% endblock %}
     {% analytical_head_bottom %}
   </head>
@@ -73,7 +69,7 @@
     </div>
 
     {% compress js %}
-      <script type="text/javascript" src="{{ STATIC_URL }}frontend/vendor/jquery-1.11.3.min.js"></script>
+      <script type="text/javascript" src="{{ STATIC_URL }}frontend/vendor/jquery.min.js"></script>
       <script type="text/javascript" src="{{ STATIC_URL }}frontend/vendor/bootstrap/collapse.js"></script>
     {% endcompress %}<!-- common JS -->
 

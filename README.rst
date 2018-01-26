@@ -154,7 +154,9 @@ To setup a local development environment::
     virtualenv env --prompt="({{ project_name }})"  # or mkvirtualenv {{ project_name }}
     source env/bin/activate
 
-    pip install -r requirements/dev.txt
+    cd src
+    make
+
     cp {{ project_name }}/settings/local.py.example {{ project_name }}/settings/local.py  # To enable debugging
     edit {{ project_name }}/settings/local.py    # Enter your DB credentials
 
@@ -177,7 +179,7 @@ On Mac OSX, you can also use ``brew install libsass node``.
 
 Run the following command to compile SASS_ files::
 
-    npm run gulp
+    make watch
 
 This will compile the files, and watch for changes.
 It also has LiveReload_ support.

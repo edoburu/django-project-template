@@ -1,5 +1,6 @@
 import logging
 from io import BytesIO
+import sys
 
 from PIL import Image
 
@@ -12,6 +13,11 @@ def test_write_jpeg():
     buffer = BytesIO()
     im.save(buffer, format='JPEG')
 
-    size = buffer.getbuffer().nbytes
+    if sys.version_info[0] == 2:
+        buffer.seek(0)
+        size = len(buffer.read())
+    else:
+        size = buffer.getbuffer().nbytes
+
     if size != 375:
         logger.error("JPEG optimization is not working as expected! size=%s", size)

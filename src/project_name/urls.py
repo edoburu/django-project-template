@@ -1,16 +1,17 @@
+from os import path
+
 import admin_tools.urls
 import django.contrib.sitemaps.views
 import django.views.defaults
 import django.views.static
 import django_healthchecks.urls
 import webmaster_verification.urls
-
-from django.conf.urls import url, include
 from django.conf import settings
+from django.conf.urls import include, url
 from django.contrib import admin
 from filebrowser.sites import site as fb_site
-from os import path
-from frontend.views import TextFileView, Http500View, serve_web_file
+
+from frontend.views import Http500View, TextFileView, serve_web_file
 
 admin.autodiscover()
 

@@ -1,5 +1,6 @@
-from . import *
 import sys
+
+from . import *
 
 if 'runtests.py' in sys.argv[0] or 'test' in sys.argv:
     print("Using in memory database.\n")

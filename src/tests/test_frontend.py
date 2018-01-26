@@ -3,6 +3,12 @@ import pytest
 
 
 @pytest.mark.django_db
+def test_healthchecks():
+    response = client.get('/api/health/')
+    assert response.status_code == 200
+
+
+@pytest.mark.django_db
 def test_error_pages(client):
     response = client.get('/404/')
     assert response.status_code == 404

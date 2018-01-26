@@ -1,0 +1,92 @@
+{% load analytical compress i18n static staff_toolbar_tags fluent_pages_tags fluent_contents_tags sharedcontent_tags %}<!doctype html>
+<html xml:lang="{{ LANGUAGE_CODE|default:"en" }}" lang="{{ LANGUAGE_CODE|default:"en" }}">
+  <head>{% analytical_head_top %}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Powered by Django" />
+    <meta name="keywords" content="{% block meta-keywords %}{% endblock %}" />
+    <meta name="description" content="{% block meta-description %}{% endblock %}" />
+    <!--
+      Technical implementation by:
+      (TODO: fill this in)
+    -->
+    <title>{% block meta-title %}{% block headtitle %}{{ page.title }}{% endblock %} | {{ site.name|default:site.domain }}{% endblock %}</title>
+
+    <meta property="og:type" content="{% block og-type %}website{% endblock %}" />
+	<meta property="og:image" content="{{ site_root }}{% block og-image %}{% static 'frontend/images/social-logo.png' %}{% endblock %}" />
+    <meta property="og:url" content="{{ site_root }}{{ request.path }}" />
+    <meta property="og:site_name" content="{{ site.name|default:site.domain }}" />
+    <meta property="og:description" content="{% block og-description %}{{ page.description }}{% endblock %}" />
+    {% compress css %}
+    <link href="{{ STATIC_URL }}frontend/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="{{ STATIC_URL }}frontend/css/screen.css" rel="stylesheet" type="text/css" />
+    <link href="{{ STATIC_URL }}staff_toolbar/staff_toolbar.css" rel="stylesheet" type="text/css" />
+    {% endcompress %}
+    {% compress css %}{% block link %}{% endblock %}{% endcompress %}
+    {% block extrahead %}{% endblock %}
+    {% analytical_head_bottom %}
+  </head>
+
+  <body id="{% block body-id %}page{% endblock %}" class="{% block body-class %}default{% endblock %}" itemscope itemtype="http://schema.org/WebPage">
+    {% block staff_toolbar %}{% staff_toolbar %}{% endblock %}
+    {% analytical_body_top %}
+    <div id="wrapper">
+
+      <header id="top" class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">{% trans "Show Navigation" %}</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Brand</a>
+          </div>
+
+          <div id="main-menu" class="navbar-collapse collapse">
+            {% render_menu template="partials/base/menu.html" %}
+          </div>
+        </div>
+      </header>
+
+      <section id="main">
+        <div id="main-content">
+          {% block main %}
+            <div class="constrained">
+              <div class="container">
+                {% block breadcrumb %}{% render_breadcrumb template="partials/base/breadcrumb.html" %}{% endblock %}
+
+                {% block content %}{% endblock %}
+              </div>
+            </div>
+          {% endblock %}
+        </div>
+      </section>
+
+      <footer id="bottom">
+        <div class="container">
+          {% sharedcontent "footer" %}
+
+          <p>Copyright © ... {% now "Y" %}</p>
+        </div>
+      </footer>
+    </div>
+
+    {% compress css %}{% render_content_items_media css %}{% endcompress %}
+
+    {% compress js %}
+      <script type="text/javascript" src="{{ STATIC_URL }}frontend/vendor/jquery.min.js"></script>
+      <script type="text/javascript" src="{{ STATIC_URL }}frontend/vendor/bootstrap/collapse.js"></script>
+    {% endcompress %}<!-- common JS -->
+
+    {% compress js %}
+      {% block script %}{% endblock %}{# for django-fluent-blogs/comments. #}
+      {% block bodyscripts %}{% endblock %}
+      {% render_content_items_media js local %}{# for django-fluent-contents #}
+    {% endcompress %}<!-- page specific JS -->
+
+    {% analytical_body_bottom %}
+  </body>
+</html>

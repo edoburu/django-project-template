@@ -1,0 +1,59 @@
+# Install with: `pip install -r requirements/base.txt`
+
+# TODO: Replace the '>=' operator with '==' before deployment.
+# The greather-then operator is only included here to enure that
+# all requirements get the latest version on installation.
+
+# Infrastructure
+Django >= 1.11.9,< 2.0
+Pillow >= 5.0.0
+#for MySQL: MySQL-python >= 1.2.5
+psycopg2 >= 2.7.3.2
+#for memcached: python-memcached >= 1.59
+raven >= 6.5.0
+uWSGI >= 2.0.15
+WsgiUnproxy == 1.0
+
+# CMS libraries
+django-fluent-blogs >= 1.2.4
+django-fluent-comments >= 1.4.1
+django-fluent-contents >= 1.2
+django-fluent-dashboard >= 1.0
+django-fluent-pages >= 1.1.1
+django-fluent-utils >= 1.3.1
+
+# Support libs
+brotlipy >= 0.7.0
+django-admin-tools >= 0.8.1
+django-analytical >= 2.4.0
+django-any-imagefield >= 0.9
+django-any-urlfield >= 2.4.1
+django-axes >= 4.0.2
+django-categories-i18n >= 1.1
+django-compressor >= 2.2
+django-contrib-comments >= 1.8.0
+django-crispy-forms >= 1.7.0
+django-environ >= 0.4.4
+django-filebrowser-no-grappelli >= 3.7.2
+django-healthchecks >= 1.2.0
+django-mptt >= 0.8.7
+django-parler >= 1.7
+django-polymorphic >= 1.2
+django-polymorphic-tree >= 1.4
+django-redis >= 4.8.0
+django-slug-preview >= 1.0.2
+django-staff-toolbar >= 1.1.1
+django-tag-parser >= 3.1
+django-taggit >= 0.22.1
+django-taggit-autosuggest >= 0.3.1
+django-tinymce >= 2.6.0
+django-webmaster-verification >= 0.3.0
+django-wysiwyg >= 0.8.0
+html5lib >= 1.0b10
+micawber >= 0.3.4
+netaddr >= 0.7.19
+pytz >= 2017.3
+redis >= 2.10.6
+smartypants >= 2.0.0
+sorl-thumbnail >= 12.4.1
+whitenoise >= 3.3.1

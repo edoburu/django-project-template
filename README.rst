@@ -8,30 +8,31 @@
 Django project template
 =======================
 
-This project template creates a Django 1.8 / 1.9 project with
-a base set of applications
+This project template creates a Django 1.11 / 2.0 project with a base set of applications
 
 Features
 ---------
 
 Installed apps:
 
-* Django 1.8+
+* Django 1.11+
 * MySQLdb or Psycopg2
 * py.test_ and coverage setup
 * Pillow_
 * SORL-Thumbnail_
 * IPython_ + ptpython_
 * Raven_
+* django-admin-tools_
 * django-analytical_
 * django-axes_
-* django-admin-tools_
 * django-compressor_
 * django-crispy-forms_
 * django-debugtools_
+* django-environ_
 * django-filebrowser-no-grapelli_
 * django-fluent-dashboard_
-* django-ping_
+* django-healthchecks_
+* django-webmaster-verification_
 
 Configured URLs:
 
@@ -48,13 +49,14 @@ Templates:
 
 Features:
 
-* Settings package
+* 12factor app settings
 * WSGI deployment scripts
 * CSS and JavaScript paths configured
 * HTML5shiv + jQuery Installed
 * Bootstrap 3 based CSS reset
+* Dockerfile available
 * Gulpfile with SASS_, LiveReload_ and spritesmith_ setup (can be discarded)
-* Uptime monitoring URL (``/api/ping/``)
+* Uptime monitoring URL (``/api/health/``)
 
 Usage
 -----
@@ -65,7 +67,7 @@ Create a Django project:
 
     mkdir my-website.com
     cd my-website.com
-    django-admin.py startproject mywebsite . -e py,rst,example,gitignore,ini --template=https://github.com/edoburu/django-project-template/archive/master.zip
+    django-admin.py startproject mywebsite . -e py,rst,example,gitignore,ini,Dockerfile --template=https://github.com/edoburu/django-project-template/archive/master.zip
 
 Alternatively, you can place the files in a ``src`` folder too:
 
@@ -73,7 +75,7 @@ Alternatively, you can place the files in a ``src`` folder too:
 
     mkdir -p my-website.com/src
     cd my-website.com
-    django-admin.py startproject mywebsite src -e py,rst,example,gitignore,ini --template=https://github.com/edoburu/django-project-template/archive/master.zip
+    django-admin.py startproject mywebsite src -e py,rst,example,gitignore,ini,Dockerfile --template=https://github.com/edoburu/django-project-template/archive/master.zip
 
 This allows you to create folders like ``docs``, ``web``, ``logs``, ``etc`` at the toplevel.
 This setup is recommended.
@@ -90,7 +92,7 @@ In a second branch, you'll find a project template for the django-fluent_ CMS:
 
     mkdir my-website.com
     cd my-website.com
-    django-admin.py startproject mywebsite . -e py,rst,example,gitignore,ini --template=https://github.com/edoburu/django-project-template/archive/django-fluent.zip
+    django-admin.py startproject mywebsite . -e py,rst,example,gitignore,ini,Dockerfile --template=https://github.com/edoburu/django-project-template/archive/django-fluent.zip
 
 
 Optional features
@@ -112,9 +114,11 @@ Changes are automatically visible in the browser using LiveReload_.
 .. _django-compressor: https://django_compressor.readthedocs.io/
 .. _django-crispy-forms: https://django-crispy-forms.readthedocs.io/
 .. _django-debugtools: https://github.com/edoburu/django-debugtools
+.. _django-environ: https://github.com/joke2k/django-environ
 .. _django-filebrowser-no-grapelli: https://github.com/vdboor/django-filebrowser-no-grappelli-django14
 .. _django-fluent-dashboard: https://github.com/edoburu/django-fluent-dashboard
-.. _django-ping: https://github.com/rizumu/django-ping
+.. _django-healthchecks: https://github.com/mvantellingen/django-healthchecks
+.. _django-webmaster-verification: https://github.com/nkuttler/django-webmaster-verification
 .. _LiveReload: http://livereload.com/
 .. _IPython: http://ipython.org/
 .. _Pillow: https://github.com/python-pillow/Pillow
@@ -152,9 +156,11 @@ To setup a local development environment::
     virtualenv env --prompt="({{ project_name }})"  # or mkvirtualenv {{ project_name }}
     source env/bin/activate
 
-    pip install -r requirements/dev.txt
-    edit {{ project_name }}/settings/project.py    # Enter your DB credentials
+    cd src
+    make
+
     cp {{ project_name }}/settings/local.py.example {{ project_name }}/settings/local.py  # To enable debugging
+    edit {{ project_name }}/settings/local.py    # Enter your DB credentials
 
     sudo su - postgres
     createuser {{ project_name }}  -P   # testtest is the default password
@@ -175,7 +181,7 @@ On Mac OSX, you can also use ``brew install libsass node``.
 
 Run the following command to compile SASS_ files::
 
-    npm run gulp
+    make watch
 
 This will compile the files, and watch for changes.
 It also has LiveReload_ support.

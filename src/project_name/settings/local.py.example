@@ -1,0 +1,87 @@
+"""
+Local settings for development.
+"""
+from .defaults import INSTALLED_APPS, MIDDLEWARE, LOGGING
+
+
+## -- Flags
+
+SITE_ID = 1
+DEBUG = True
+THUMBNAIL_DEBUG = True
+COMPRESS_ENABLED = False
+FLUENT_CONTENTS_CACHE_OUTPUT = True   # Disable caching if needed
+
+
+## -- Local system settings
+
+DATABASES = {
+    'default': {
+        # Choose between PostgreSQL or MySQL:
+        'ENGINE':   'django.db.backends.postgresql_psycopg2',
+        #'ENGINE':   'django.db.backends.mysql',
+        'NAME':     '{{ project_name }}',
+        'USER':     '{{ project_name }}',
+        'PASSWORD': 'testtest',
+    },
+}
+
+
+## -- Logging output
+
+# See queries
+#LOGGING['loggers']['django.db']['level'] = 'DEBUG'
+
+LOGGING['handlers'].update({
+    'console': {
+        'level': 'DEBUG',
+        'class': 'logging.StreamHandler',
+        'formatter': 'simple'
+    },
+})
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+## -- Extra Debugging assistance
+
+WSGI_APPLICATION = '{{ project_name }}.wsgi.development.application'
+
+INSTALLED_APPS += (
+    'debug_toolbar',       # pip install django-debug-toolbar
+    'django_extensions',   # pip install django-extensions
+    'debugtools',
+)
+
+MIDDLEWARE = (
+    'debugtools.middleware.XViewMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+
+    # Profiling, needs http://www.graphviz.org/Download_macos.php
+    # pip install --pre gprof2dot geordi
+    #'geordi.VisorMiddleware',  # use ?__geordi__ in query string
+    # pip install --pre gprof2dot yet-another-django-profiler
+    #'yet_another_django_profiler.middleware.ProfilerMiddleware',  # use ?profile in query string
+) + MIDDLEWARE
+
+DEBUG_TOOLBAR_PATCH_SETTINGS = False
+
+DEBUG_TOOLBAR_CONFIG = {
+    'SHOW_TEMPLATE_CONTEXT': False
+}
+
+DEBUG_TOOLBAR_PANELS = (
+    #'debug_toolbar.panels.versions.VersionsPanel',
+    #'debug_toolbar.panels.timer.TimerPanel',
+    #'debug_toolbar.panels.settings.SettingsPanel',
+    #'debug_toolbar.panels.headers.HeadersPanel',
+    #'debug_toolbar.panels.request.RequestPanel',
+    'debug_toolbar.panels.sql.SQLPanel',
+    #'debug_toolbar.panels.staticfiles.StaticFilesPanel',
+    'debugtools.panels.ViewPanel',
+    'debug_toolbar.panels.templates.TemplatesPanel',
+    #'debug_toolbar.panels.cache.CachePanel',
+    #'debug_toolbar.panels.signals.SignalsPanel',
+    'debug_toolbar.panels.logging.LoggingPanel',
+    #'debug_toolbar.panels.redirects.RedirectsPanel',
+)

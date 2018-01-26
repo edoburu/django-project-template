@@ -5,14 +5,14 @@
 # Useful extra developer packages:
 
 # Debugging
-django-debug-toolbar >= 1.8
-django-extensions >= 1.7.9
+django-debug-toolbar >= 1.9.1
+django-extensions >= 1.9.9
 
 # Documentation
-Sphinx >= 1.6.2
+Sphinx >= 1.6.6
 sphinx-rtd-theme >= 0.2.4
 
 # Profiling
-gprof2dot >= 2016.10.13
+gprof2dot >= 2017.9.19
 geordi >= 0.3
 yet-another-django-profiler >= 1.1.0

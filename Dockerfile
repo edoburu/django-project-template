@@ -1,9 +1,6 @@
 # Build environment has gcc and develop header files.
 # The installed files are copied to the smaller runtime container.
-FROM python:3.6.4 as build-image
-ENV DEBIAN_FRONTEND=noninteractive \
-    PYTHONUNBUFFERED=1 \
-    PIP_NO_CACHE_DIR=off
+FROM edoburu/django-base-images:py36-stretch-build AS build-image
 
 # Install all Pillow dependencies
 RUN apt-get update && \
@@ -14,39 +11,27 @@ RUN apt-get update && \
 RUN mkdir -p /app/src/requirements
 COPY src/requirements/*.txt /app/src/requirements/
 ARG PIP_REQUIREMENTS=/app/src/requirements/unittest.txt
-RUN pip install -r $PIP_REQUIREMENTS
+RUN pip install --no-binary=Pillow -r $PIP_REQUIREMENTS
 
 # Remove unneeded files
-RUN find /usr/local/lib/python2.7/site-packages/ -name '*.po' -delete
+RUN find /usr/local/lib/python3.6/site-packages/ -name '*.po' -delete
 
 # Start runtime container
-FROM python:3.6.4-slim
-ENV DEBIAN_FRONTEND=noninteractive \
-    PYTHONUNBUFFERED=1 \
-    PIP_NO_CACHE_DIR=off \
-    UWSGI_PROCESSES=1 \
+FROM edoburu/django-base-images:py36-stretch-runtime
+ENV UWSGI_PROCESSES=1 \
     UWSGI_THREADS=10 \
     UWSGI_OFFLOAD_THREADS=5 \
     UWSGI_MODULE={{ project_name }}.wsgi.docker:application \
     DJANGO_SETTINGS_MODULE={{ project_name }}.settings.docker
 
-# Install runtime dependencies (can become separate base image)
-# Also include gettext for now, so locale is still compiled here.
-# It avoids busting the previous cache layers on code changes.
-RUN apt-get update && \
-    apt-get install --no-install-recommends -y libxml2 libjpeg62-turbo gettext mime-support && \
-    rm -rf /var/lib/apt/lists/* /var/cache/debconf/*-old && \
-    echo "font/woff2  woff2" >> /etc/mime.types && \
-    useradd --system --user-group app
-
 # System config (done early, avoid running on every code change)
 MAINTAINER vdboor@edoburu.nl
 EXPOSE 8080 1717
-HEALTHCHECK --interval=5m --timeout=3s CMD curl -f http://localhost:8080/api/ping/ || exit 1
+HEALTHCHECK --interval=5m --timeout=3s CMD curl -f http://localhost:8080/api/health/ || exit 1
 
 # Install dependencies
 COPY --from=build-image /usr/local/bin/ /usr/local/bin/
-COPY --from=build-image /usr/local/lib/python2.7/site-packages/ /usr/local/lib/python2.7/site-packages/
+COPY --from=build-image /usr/local/lib/python3.6/site-packages/ /usr/local/lib/python3.6/site-packages/
 
 # Insert application code.
 # - Prepare gzipped versions of static files for uWSGI to use
@@ -65,7 +50,8 @@ RUN rm /app/src/*/settings/local.py* && \
     manage.py collectstatic --noinput --link && \
     manage.py migrate && \
     manage.py loaddata example_data.json && \
-    #whitenoise does this; gzip --keep --best --force --recursive /app/web/static/ && \
+    #whitenoise does this;
+    #gzip --keep --best --force --recursive /app/web/static/ && \
     mkdir -p /app/web/media /app/web/static/CACHE && \
     chown -R app:app /app/web/media/ /app/web/static/CACHE /tmp/demo.db && \
     chmod -R go+rw /app/web/media/ /app/web/static/CACHE /tmp/demo.db

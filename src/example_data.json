@@ -1,0 +1,28 @@
+[
+{
+  "fields": {
+    "username": "demo",
+    "first_name": "Demo",
+    "last_name": "User",
+    "is_active": true,
+    "is_superuser": true,
+    "is_staff": true,
+    "last_login": "2016-05-13T14:01:02Z",
+    "groups": [],
+    "user_permissions": [],
+    "password": "pbkdf2_sha256$20000$gQtbDF74uZ34$hIK82swAQsVIIBWo5lF+kVR6Ih3tHC5VekwQWoulMW8=",
+    "email": "demo@example.org",
+    "date_joined": "2016-05-13T14:00:57Z"
+  },
+  "model": "auth.user",
+  "pk": 1
+},
+{
+  "fields": {
+    "domain": "example.com",
+    "name": "example"
+  },
+  "model": "sites.site",
+  "pk": 1
+}
+]

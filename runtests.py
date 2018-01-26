@@ -4,10 +4,10 @@ import os
 from django.core.management import execute_from_command_line
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "{{ project_name }}.settings.env.unittest")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "{{ project_name }}.settings.unittest")
 
     TEST_APPS = [
-        'apps',  # also takes subfolders
+        '{{ project_name }}',  # also takes subfolders
         'frontend',
     ]
 

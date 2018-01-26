@@ -1,7 +1,7 @@
 """
 Local settings for development.
 """
-from .project import INSTALLED_APPS, MIDDLEWARE_CLASSES, LOGGING
+from .defaults import INSTALLED_APPS, MIDDLEWARE, LOGGING
 
 
 ## -- Flags
@@ -52,7 +52,7 @@ INSTALLED_APPS += (
     'debugtools',
 )
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE = (
     'debugtools.middleware.XViewMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 
@@ -61,7 +61,7 @@ MIDDLEWARE_CLASSES = (
     #'geordi.VisorMiddleware',  # use ?__geordi__ in query string
     # pip install --pre gprof2dot yet-another-django-profiler
     #'yet_another_django_profiler.middleware.ProfilerMiddleware',  # use ?profile in query string
-) + MIDDLEWARE_CLASSES
+) + MIDDLEWARE
 
 DEBUG_TOOLBAR_PATCH_SETTINGS = False
 

@@ -2,7 +2,7 @@ import admin_tools.urls
 import django.contrib.sitemaps.views
 import django.views.defaults
 import django.views.static
-import ping.urls
+import django_healthchecks.urls
 
 from django.conf.urls import url, include
 from django.conf import settings
@@ -35,7 +35,7 @@ urlpatterns = [
     url(r'^robots.txt$', TextFileView.as_view(content_type='text/plain', template_name='robots.txt')),
 
     # Monitoring API's
-    url(r'^api/ping/', include(ping.urls)),
+    url(r'^api/health/', include(django_healthchecks.urls)),
 
     # CMS modules
     # TODO: add your urls here

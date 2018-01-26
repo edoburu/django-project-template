@@ -8,11 +8,12 @@ python:
 
 env:
   ## TODO: Remove this for your own projects. This is needed for the project template only.
-- DJANGO_SETTINGS_MODULE=project_name.settings.env.unittest
+- DJANGO_SETTINGS_MODULE=project_name.settings.unittest
 
 before_install:
   ## TODO: remove this for your own projects. This removes the {{ project_name }} for the Django settings
-- sed -i -e 's/{{ project_name }}/project_name/g' project_name/settings/defaults.py project_name/settings/project.py
+- sed -i -e 's/{{ project_name }}/project_name/g' project_name/settings/*.py *.py
+- sed -i -e 's/{{ secret_key | safe }}/abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ/g' project_name/settings/defaults.py
 
 install:
 - pip install -U pip wheel setuptools
@@ -20,7 +21,8 @@ install:
 
 script:
 - python manage.py check
-- coverage run --source=project_name,apps --omit='*/migrations/*' runtests.py
+- python manage.py check --settings=project_name.settings.docker --deploy --fail-level=WARNING
+- coverage run --source=project_name,frontend --omit='*/migrations/*' runtests.py
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)

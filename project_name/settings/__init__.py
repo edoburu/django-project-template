@@ -1,8 +1,8 @@
 # This is what manage.py and friends read.
-from .project import *
+from .defaults import *
 
 # Easily allow local settings
 try:
     from .local import *
-except ImportError:
+except ModuleNotFoundError:
     pass

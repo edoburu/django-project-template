@@ -21,9 +21,9 @@ install:
 
 before_script: cd src
 script:
+- py.test --cov=project_name,frontend
+- coverage run --append --source=project_name,frontend ./manage.py check --fail-level=WARNING --deploy --settings=project_name.settings.docker
 - ./manage.py check --fail-level=WARNING
-- coverage run --source=project_name,frontend ./manage.py check --fail-level=WARNING --deploy --settings=project_name.settings.docker
-- coverage run --source=project_name,frontend --append pytest
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)

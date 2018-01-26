@@ -90,6 +90,7 @@ INSTALLED_APPS = (
     'crispy_forms',
     'filebrowser',
     'sorl.thumbnail',
+    'webmaster_verification',
 
     # and enable the admin
     'fluent_dashboard',
@@ -305,6 +306,8 @@ THUMBNAIL_DEBUG = True
 THUMBNAIL_FORMAT = 'JPEG'
 THUMBNAIL_QUALITY = 80  # default quality for mozjpeg's "cjpeg -optimize" is 75
 THUMBNAIL_ALTERNATIVE_RESOLUTIONS = [2]  # Generate 2x images for everything!
+
+WEBMASTER_VERIFICATION = env.dict('WEBMASTER_VERIFICATION', default={})
 
 if not DEBUG:
     # Production specific settings.

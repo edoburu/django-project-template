@@ -3,6 +3,7 @@ import django.contrib.sitemaps.views
 import django.views.defaults
 import django.views.static
 import django_healthchecks.urls
+import webmaster_verification.urls
 
 from django.conf.urls import url, include
 from django.conf import settings
@@ -33,6 +34,7 @@ urlpatterns = [
     # SEO API's
     url(r'^sitemap.xml$', django.contrib.sitemaps.views.sitemap, {'sitemaps': sitemaps}),
     url(r'^robots.txt$', TextFileView.as_view(content_type='text/plain', template_name='robots.txt')),
+    url(r'', include(webmaster_verification.urls)),
 
     # Favicon (avoids nginx config)
     url(r'^(?P<path>(android-chrome|apple-touch|browserconfig|favicon|manifest|safari-pinned)[^/\.]*\.(json|png|ico|xml|svg))$',

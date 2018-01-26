@@ -32,6 +32,7 @@ Installed apps:
 * django-filebrowser-no-grapelli_
 * django-fluent-dashboard_
 * django-healthchecks_
+* django-webmaster-verification_
 
 Configured URLs:
 
@@ -117,6 +118,7 @@ Changes are automatically visible in the browser using LiveReload_.
 .. _django-filebrowser-no-grapelli: https://github.com/vdboor/django-filebrowser-no-grappelli-django14
 .. _django-fluent-dashboard: https://github.com/edoburu/django-fluent-dashboard
 .. _django-healthchecks: https://github.com/mvantellingen/django-healthchecks
+.. _django-webmaster-verification: https://github.com/nkuttler/django-webmaster-verification
 .. _LiveReload: http://livereload.com/
 .. _IPython: http://ipython.org/
 .. _Pillow: https://github.com/python-pillow/Pillow

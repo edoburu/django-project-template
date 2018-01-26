@@ -159,7 +159,7 @@ TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])
 
 CACHES = {
-    'default': env.cache(default='memcache://127.0.0.1:11211?TIMEOUT=86400&KEY_PREFIX={{ project_name }}'),
+    'default': env.cache(default='redis://localhost:6379/1?KEY_PREFIX=={{ project_name }}'),
 }
 
 DATABASES = {

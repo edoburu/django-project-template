@@ -9,7 +9,7 @@ from django.conf import settings
 from django.contrib import admin
 from filebrowser.sites import site as fb_site
 from os import path
-from frontend.views import TextFileView, Http500View
+from frontend.views import TextFileView, Http500View, serve_web_file
 
 admin.autodiscover()
 
@@ -33,6 +33,10 @@ urlpatterns = [
     # SEO API's
     url(r'^sitemap.xml$', django.contrib.sitemaps.views.sitemap, {'sitemaps': sitemaps}),
     url(r'^robots.txt$', TextFileView.as_view(content_type='text/plain', template_name='robots.txt')),
+
+    # Favicon (avoids nginx config)
+    url(r'^(?P<path>(android-chrome|apple-touch|browserconfig|favicon|manifest|safari-pinned)[^/\.]*\.(json|png|ico|xml|svg))$',
+        serve_web_file),
 
     # Monitoring API's
     url(r'^api/health/', include(django_healthchecks.urls)),

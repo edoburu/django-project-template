@@ -142,7 +142,7 @@ Describe your project here.
 Prerequisites
 -------------
 
-- Python >= 3.4
+- Python >= 2.7
 - pip
 - virtualenv (virtualenvwrapper is recommended)
 

@@ -19,12 +19,12 @@ SRC_DIR = str(environ.Path(__file__) - 3)
 ROOT_DIR = str(environ.Path(__file__) - 4)
 
 # Paths
-MEDIA_ROOT   = ROOT_DIR + '/web/media/'
-MEDIA_URL    = '/media/'        # Must end with /
+MEDIA_ROOT = ROOT_DIR + '/web/media/'
+MEDIA_URL = '/media/'        # Must end with /
 ROOT_URLCONF = '{{ project_name }}.urls'
 
 STATIC_ROOT = ROOT_DIR + '/web/static/'
-STATIC_URL  = '/static/'
+STATIC_URL = '/static/'
 
 # --- Locale settings
 
@@ -232,7 +232,7 @@ LOGGING = {
 }
 
 
-## -- Third party app settings
+# -- Third party app settings
 
 ADMIN_TOOLS_INDEX_DASHBOARD = 'fluent_dashboard.dashboard.FluentIndexDashboard'
 ADMIN_TOOLS_APP_INDEX_DASHBOARD = 'fluent_dashboard.dashboard.FluentAppIndexDashboard'

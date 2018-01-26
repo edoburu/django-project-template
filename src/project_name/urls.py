@@ -59,6 +59,4 @@ if settings.DEBUG:
     if 'debug_toolbar' in settings.INSTALLED_APPS:
         # Debug toolbar is explicitly linked, no magic that breaks on first request errors.
         import debug_toolbar
-        urlpatterns.insert(0,
-            url(r'^__debug__/', include(debug_toolbar.urls))
-        )
+        urlpatterns.insert(0, url(r'^__debug__/', include(debug_toolbar.urls)))

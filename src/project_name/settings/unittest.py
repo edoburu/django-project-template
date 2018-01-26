@@ -4,7 +4,7 @@ import sys
 if 'runtests.py' in sys.argv[0] or 'test' in sys.argv:
     print("Using in memory database.\n")
 
-CACHES={
+CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
     },

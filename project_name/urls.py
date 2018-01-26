@@ -7,7 +7,6 @@ import ping.urls
 from django.conf.urls import url, include
 from django.conf import settings
 from django.contrib import admin
-from django.utils.functional import curry
 from filebrowser.sites import site as fb_site
 from os import path
 from frontend.views import TextFileView, Http500View
@@ -26,9 +25,9 @@ urlpatterns = [
 
     # Test pages
     url(r'^500test/$', view=Http500View.as_view()),
-    url(r'^400/$', curry(django.views.defaults.bad_request, exception=None)),
-    url(r'^403/$', curry(django.views.defaults.permission_denied, exception=None)),
-    url(r'^404/$', curry(django.views.defaults.page_not_found, exception=None)),
+    url(r'^400/$', django.views.defaults.bad_request, kwargs={'exception': None}),
+    url(r'^403/$', django.views.defaults.permission_denied, kwargs={'exception': None}),
+    url(r'^404/$', django.views.defaults.page_not_found, kwargs={'exception': None}),
     url(r'^500/$', django.views.defaults.server_error),
 
     # SEO API's

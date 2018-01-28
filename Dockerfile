@@ -2,15 +2,10 @@
 # The installed files are copied to the smaller runtime container.
 FROM edoburu/django-base-images:py36-stretch-build AS build-image
 
-# Install all Pillow dependencies
-RUN apt-get update && \
-    apt-get install --no-install-recommends -y libjpeg62-turbo-dev && \
-    rm -rf /var/lib/apt/lists/* /var/cache/debconf/*-old
-
 # Install (and compile) all dependencies
 RUN mkdir -p /app/src/requirements
 COPY src/requirements/*.txt /app/src/requirements/
-ARG PIP_REQUIREMENTS=/app/src/requirements/unittest.txt
+ARG PIP_REQUIREMENTS=/app/src/requirements/docker.txt
 RUN pip install --no-binary=Pillow -r $PIP_REQUIREMENTS
 
 # Remove unneeded files

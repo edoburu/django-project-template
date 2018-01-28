@@ -67,7 +67,7 @@ Create a Django project:
 
     mkdir my-website.com
     cd my-website.com
-    django-admin.py startproject mywebsite . -e py,rst,example,gitignore,ini,Dockerfile --template=https://github.com/edoburu/django-project-template/archive/master.zip
+    django-admin.py startproject mywebsite . -e py,rst,example,gitignore,ini,min -n Dockerfile --template=https://github.com/edoburu/django-project-template/archive/master.zip
 
 Alternatively, you can place the files in a ``src`` folder too:
 
@@ -75,7 +75,7 @@ Alternatively, you can place the files in a ``src`` folder too:
 
     mkdir -p my-website.com/src
     cd my-website.com
-    django-admin.py startproject mywebsite src -e py,rst,example,gitignore,ini,Dockerfile --template=https://github.com/edoburu/django-project-template/archive/master.zip
+    django-admin.py startproject mywebsite src -e py,rst,example,gitignore,ini,min -n Dockerfile --template=https://github.com/edoburu/django-project-template/archive/master.zip
 
 This allows you to create folders like ``docs``, ``web``, ``logs``, ``etc`` at the toplevel.
 This setup is recommended.
@@ -92,7 +92,7 @@ In a second branch, you'll find a project template for the django-fluent_ CMS:
 
     mkdir my-website.com
     cd my-website.com
-    django-admin.py startproject mywebsite . -e py,rst,example,gitignore,ini,Dockerfile --template=https://github.com/edoburu/django-project-template/archive/django-fluent.zip
+    django-admin.py startproject mywebsite . -e py,rst,example,gitignore,ini,min -n Dockerfile --template=https://github.com/edoburu/django-project-template/archive/django-fluent.zip
 
 
 Optional features
@@ -106,6 +106,17 @@ Changes are automatically visible in the browser using LiveReload_.
     This feature is optional. If you don't like to use it, the project already has a ``screen.css`` file which can be used and edited.
     Feel free to remove those files in your own projects or fork (``gulpfile.js``, ``package.json``, and ``frontend/sass``).
     However, we highly recommended to take a look at it.
+
+
+Local testing
+=============
+
+A quick script to allow local testing:
+
+.. code-block:: bash
+
+    sed -i -e 's/{{ project_name }}/project_name/g' Dockerfile src/project_name/settings/*.py src/*.py src/frontend/views.py src/tests/test_wsgi.py
+    sed -i -e 's/{{ secret_key|safe }}/c6!x_#)=rim8n1j90f#al%m9i)zb2zu@i)846ps_&%-5@6o=q6/g' src/project_name/settings/defaults.py
 
 .. _bpython: http://bpython-interpreter.org/
 .. _django-analytical: https://github.com/jcassee/django-analytical

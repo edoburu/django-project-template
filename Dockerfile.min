@@ -1,0 +1,25 @@
+FROM edoburu/django-base-images:py36-stretch-build-onbuild AS build-image
+
+# Start runtime container
+FROM edoburu/django-base-images:py36-stretch-runtime-onbuild
+ENV DJANGO_SETTINGS_MODULE={{ project_name }}.settings.docker \
+    UWSGI_MODULE={{ project_name }}.wsgi.docker:application
+
+HEALTHCHECK --interval=5m --timeout=3s CMD curl -f http://localhost:8080/api/health/ || exit 1
+
+# Collect static files as root, with gzipped files for uwsgi to serve
+# Add CACHE folder for django-compressor to write into
+RUN manage.py compilemessages && \
+    manage.py collectstatic --settings=$DJANGO_SETTINGS_MODULE --noinput
+    #whitenoise does this;
+    #gzip --keep --best --force --recursive /app/web/static/ && \
+
+COPY deployment/docker/uwsgi-local.ini /usr/local/etc/uwsgi-local.ini
+
+# Tag the docker image
+ARG GIT_VERSION
+LABEL git-version=$GIT_VERSION
+RUN echo $GIT_VERSION > .docker-git-version
+
+# Reduce default permissions
+USER app

@@ -1,29 +1,34 @@
-sudo: false
+sudo: required
 language: python
 cache: pip
+services:
+- docker
 
 python:
 - '2.7'
 - '3.4'
 
-env:
-  ## TODO: Remove this for your own projects. This is needed for the project template only.
-- DJANGO_SETTINGS_MODULE=project_name.settings.unittest
-
-before_install:
-  ## TODO: remove this for your own projects. This removes the {{ project_name }} for the Django settings
-- sed -i -e 's/{{ project_name }}/project_name/g' Dockerfile src/project_name/settings/*.py src/*.py src/frontend/views.py src/tests/test_wsgi.py
-- sed -i -e 's/{{ secret_key|safe }}/c6!x_#)=rim8n1j90f#al%m9i)zb2zu@i)846ps_&%-5@6o=q6/g' src/project_name/settings/defaults.py
-
+## TODO: remove this for your own projects.
 install:
-- pip install -U pip wheel setuptools
-- pip install -r src/requirements/unittest.txt
+- pip install -U pip wheel setuptools 'Django<2.0'
+- mkdir ../build; django-admin.py startproject -e py,rst,example,gitignore,ini,min -n Dockerfile --template=. myproject ../build
+before_script:
+- export DJANGO_SETTINGS_MODULE=myproject.settings.unittest
+- cd ../build/src
 
-before_script: cd src
 script:
+  # Fast local testing against Travis python
+- pip install -r requirements/unittest.txt
 - py.test --cov
-- coverage run --append --source=project_name,frontend ./manage.py check --fail-level=WARNING --deploy --settings=project_name.settings.docker
+- coverage run --append --source=myproject,frontend ./manage.py check --fail-level=WARNING --deploy --settings=myproject.settings.docker
 - ./manage.py check --fail-level=WARNING
+  # Build image
+- docker build -t myproject:latest ..
+- docker build -t myproject:latest-min -f ../Dockerfile.min ..
+  # See if the image works
+- docker run --name=myproject --rm -p 8080:8080 -e EMAIL_URL=consolemail:// myproject:latest-min
+- curl -Lsv http://localhost:8080/
+- docker stop myproject
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)

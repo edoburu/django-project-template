@@ -23,13 +23,8 @@ script:
 - coverage run --append --source=myproject,frontend ./manage.py check --fail-level=WARNING --deploy --settings=myproject.settings.docker
 - ./manage.py check --fail-level=WARNING
   # Build image
-- |
-  docker build -t myproject:latest-min -f ../Dockerfile.min .. &&
-  docker run --net=host --name=myproject --detach --rm -p 8080:8080 -e EMAIL_URL=consolemail:// myproject:latest-min &&
-  sleep 2 &&
-  curl -Lsv http://localhost:8080/ &&
-  docker stop myproject
-- docker build -t myproject:latest .. &&
+- docker build -t myproject:latest-min -f ../Dockerfile.min ..
+- docker build -t myproject:latest ..
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)

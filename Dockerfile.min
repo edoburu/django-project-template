@@ -1,5 +1,9 @@
 FROM edoburu/django-base-images:py36-stretch-build-onbuild AS build-image
 
+# Remove more unneeded files
+RUN find /usr/local/lib/python3.6/site-packages/babel/locale-data/ -not -name 'en*' -not -name 'nl*' -name '*.dat' -delete && \
+    find /usr/local/lib/python3.6/site-packages/tinymce/ -regextype posix-egrep -not -regex '.*/langs/(en|nl).*\.js' -wholename '*/langs/*.js' -delete
+
 # Start runtime container
 FROM edoburu/django-base-images:py36-stretch-runtime-onbuild
 ENV DJANGO_SETTINGS_MODULE={{ project_name }}.settings.docker \

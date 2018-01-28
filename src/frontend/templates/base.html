@@ -14,14 +14,14 @@
     <title>{% block meta-title %}{% block headtitle %}{{ page.title }}{% endblock %} | {{ site.name|default:site.domain }}{% endblock %}</title>
 
     <meta property="og:type" content="{% block og-type %}website{% endblock %}" />
-	<meta property="og:image" content="{{ site_root }}{% block og-image %}{% static 'frontend/images/social-logo.png' %}{% endblock %}" />
+    <meta property="og:image" content="{{ site_root }}{% block og-image %}{% static 'frontend/images/social-logo.png' %}{% endblock %}" />
     <meta property="og:url" content="{{ site_root }}{{ request.path }}" />
     <meta property="og:site_name" content="{{ site.name|default:site.domain }}" />
     <meta property="og:description" content="{% block og-description %}{{ page.description }}{% endblock %}" />
     {% compress css %}
-    <link href="{{ STATIC_URL }}frontend/css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="{{ STATIC_URL }}frontend/css/screen.css" rel="stylesheet" type="text/css" />
-    <link href="{{ STATIC_URL }}staff_toolbar/staff_toolbar.css" rel="stylesheet" type="text/css" />
+    <link href="{% static 'frontend/css/bootstrap.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'frontend/css/screen.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'staff_toolbar/staff_toolbar.css' %}" rel="stylesheet" type="text/css" />
     {% endcompress %}
     {% compress css %}{% block link %}{% endblock %}{% endcompress %}
     {% block extrahead %}{% endblock %}
@@ -77,8 +77,9 @@
     {% compress css %}{% render_content_items_media css %}{% endcompress %}
 
     {% compress js %}
-      <script type="text/javascript" src="{{ STATIC_URL }}frontend/vendor/jquery.min.js"></script>
-      <script type="text/javascript" src="{{ STATIC_URL }}frontend/vendor/bootstrap/collapse.js"></script>
+      <script type="text/javascript" src="{% static 'frontend/vendor/jquery.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'frontend/vendor/bootstrap/transition.js' %}"></script>
+      <script type="text/javascript" src="{% static 'frontend/vendor/bootstrap/collapse.js' %}"></script>
     {% endcompress %}<!-- common JS -->
 
     {% compress js %}

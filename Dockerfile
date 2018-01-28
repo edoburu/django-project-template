@@ -5,7 +5,7 @@ FROM edoburu/django-base-images:py36-stretch-build AS build-image
 # Install (and compile) all dependencies
 RUN mkdir -p /app/src/requirements
 COPY src/requirements/*.txt /app/src/requirements/
-ARG PIP_REQUIREMENTS=/app/src/requirements/unittest.txt
+ARG PIP_REQUIREMENTS=/app/src/requirements/docker.txt
 RUN pip install --no-binary=Pillow -r $PIP_REQUIREMENTS
 
 # Remove unneeded files

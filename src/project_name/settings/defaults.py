@@ -307,16 +307,3 @@ THUMBNAIL_QUALITY = 80  # default quality for mozjpeg's "cjpeg -optimize" is 75
 THUMBNAIL_ALTERNATIVE_RESOLUTIONS = [2]  # Generate 2x images for everything!
 
 WEBMASTER_VERIFICATION = env.dict('WEBMASTER_VERIFICATION', default={})
-
-if not DEBUG:
-    # Production specific settings.
-    INSTALLED_APPS += (
-        'raven.contrib.django.raven_compat',
-    )
-
-    # Uncomment in case the site runs behind an HTTP proxy (e.g. Gunicorn)
-    #SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-    TEMPLATES[0]['OPTIONS']['loaders'] = (
-        ('django.template.loaders.cached.Loader', TEMPLATES[0]['OPTIONS']['loaders']),
-    )

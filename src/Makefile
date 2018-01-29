@@ -19,3 +19,9 @@ messages:
 
 clean:
 	npm run gulp clean
+
+test:
+	py.test --reuse-db --nomigrations
+
+coverage:
+	pytest --reuse-db --nomigrations --cov --cov-report=term-missing

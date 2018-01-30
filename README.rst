@@ -69,16 +69,9 @@ Create a Django project:
     cd my-website.com
     django-admin.py startproject mywebsite . -e py,rst,example,gitignore,ini,min -n Dockerfile --template=https://github.com/edoburu/django-project-template/archive/master.zip
 
-Alternatively, you can place the files in a ``src`` folder too:
-
-.. code-block:: bash
-
-    mkdir -p my-website.com/src
-    cd my-website.com
-    django-admin.py startproject mywebsite src -e py,rst,example,gitignore,ini,min -n Dockerfile --template=https://github.com/edoburu/django-project-template/archive/master.zip
-
+The layout uses an ``src`` folder.
 This allows you to create folders like ``docs``, ``web``, ``logs``, ``etc`` at the toplevel.
-This setup is recommended.
+However, feel free to undo this change.
 
 The remaining instructions - to start the development server - can be found in the generated ``README.rst`` file.
 

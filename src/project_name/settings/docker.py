@@ -1,8 +1,6 @@
 """When using docker, change some defaults for easier integration"""
 from .production import *
 
-env = environ.Env()
-
 # Allow to override settings via the docker run -e
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['.{{ project_name }}.example.org'])
 ALLOWED_HOSTS.append('localhost')  # for container healthchecks

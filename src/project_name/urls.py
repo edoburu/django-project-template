@@ -13,8 +13,6 @@ from filebrowser.sites import site as fb_site
 
 from frontend.views import Http500View, TextFileView, serve_web_file
 
-admin.autodiscover()
-
 sitemaps = {
     # Place sitemaps here
 }

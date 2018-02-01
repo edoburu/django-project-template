@@ -1,6 +1,6 @@
 # Install with: `pip install -r requirements/base.txt`
 
-# TODO: Replace the '==' operator with '==' before deployment.
+# TODO: Replace the '>=' operator with '==' before deployment.
 # The greather-then operator is only included here to enure that
 # all requirements get the latest version on installation.
 

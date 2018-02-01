@@ -11,6 +11,7 @@ DEBUG = True
 THUMBNAIL_DEBUG = True
 COMPRESS_ENABLED = False
 FLUENT_CONTENTS_CACHE_OUTPUT = True   # Disable caching if needed
+FLUENT_CONTENTS_CACHE_PLACEHOLDER_OUTPUT = False  # Not in dev.
 
 
 ## -- Logging output
@@ -70,4 +71,5 @@ DEBUG_TOOLBAR_PANELS = (
     #'debug_toolbar.panels.signals.SignalsPanel',
     'debug_toolbar.panels.logging.LoggingPanel',
     #'debug_toolbar.panels.redirects.RedirectsPanel',
+    'fluent_contents.panels.ContentPluginPanel',
 )

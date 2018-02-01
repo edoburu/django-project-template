@@ -20,8 +20,6 @@ from fluent_pages.sitemaps import PageSitemap
 from fluent_pages.views import RobotsTxtView
 from frontend.views import Http500View, serve_web_file
 
-admin.autodiscover()
-
 sitemaps = {
     # Place sitemaps here
     'pages': PageSitemap,

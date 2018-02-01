@@ -13,20 +13,6 @@ COMPRESS_ENABLED = False
 FLUENT_CONTENTS_CACHE_OUTPUT = True   # Disable caching if needed
 
 
-## -- Local system settings
-
-DATABASES = {
-    'default': {
-        # Choose between PostgreSQL or MySQL:
-        'ENGINE':   'django.db.backends.postgresql_psycopg2',
-        #'ENGINE':   'django.db.backends.mysql',
-        'NAME':     '{{ project_name }}',
-        'USER':     '{{ project_name }}',
-        'PASSWORD': 'testtest',
-    },
-}
-
-
 ## -- Logging output
 
 # See queries
@@ -40,7 +26,7 @@ LOGGING['handlers'].update({
     },
 })
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+locals().update(env.email_url(default='consolemail://'))  # use smtp://localhost:1025 for mailhog
 
 
 ## -- Extra Debugging assistance

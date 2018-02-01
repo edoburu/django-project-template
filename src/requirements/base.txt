@@ -1,6 +1,6 @@
 # Install with: `pip install -r requirements/base.txt`
 
-# TODO: Replace the '>=' operator with '==' before deployment.
+# TODO: Replace the '==' operator with '==' before deployment.
 # The greather-then operator is only included here to enure that
 # all requirements get the latest version on installation.
 
@@ -12,7 +12,7 @@ psycopg2 >= 2.7.3.2
 #for memcached: python-memcached >= 1.59
 raven >= 6.5.0
 uWSGI >= 2.0.15
-WsgiUnproxy == 1.0
+WsgiUnproxy >= 1.0
 
 # CMS libraries
 django-fluent-blogs >= 2.0

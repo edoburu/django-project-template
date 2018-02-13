@@ -1,0 +1,3 @@
+# Avoids mentions for pyup.io bot
+comment:
+  require_changes: yes

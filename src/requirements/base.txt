@@ -15,9 +15,9 @@ uWSGI >= 2.0.16
 WsgiUnproxy >= 1.0
 
 # CMS libraries
-django-fluent-blogs >= 2.0.1
+django-fluent-blogs >= 2.0.2
 django-fluent-comments >= 2.0
-django-fluent-contents >= 2.0.1
+django-fluent-contents >= 2.0.2
 django-fluent-dashboard >= 1.0
 django-fluent-pages >= 2.0.3
 django-fluent-utils >= 2.0
@@ -44,12 +44,12 @@ django-environ >= 0.4.4
 django-filebrowser-no-grappelli >= 3.7.4
 django-healthchecks >= 1.3.0
 django-mptt >= 0.9.0
-django-parler >= 1.9.1
+django-parler >= 1.9.2
 django-phonenumber-field >= 2.0.0
 django-polymorphic >= 2.0.2
 django-polymorphic-tree >= 1.5
 django-redis >= 4.8.0
-django-slug-preview >= 1.0.2
+django-slug-preview >= 1.0.4
 django-staff-toolbar >= 1.2
 django-tag-parser >= 3.1
 django-taggit >= 0.22.2
@@ -68,5 +68,5 @@ whitenoise >= 3.3.1
 
 # Installed dependencies
 django-template-analyzer >= 1.6.1
-phonenumberslite >= 8.8.10
+phonenumberslite >= 8.8.11
 python-akismet >= 0.3.0

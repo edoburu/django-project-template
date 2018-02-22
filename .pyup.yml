@@ -1,9 +1,9 @@
-update: all
-pin: False
-branch: django-fluent
-schedule: "every week"
-
-label_prs: update
+update: insecure
+schedule: "every day"
+pin: False  # Set True for actual sites!
 branch_prefix: pyup/
-assignees:
-- vdboor
+requirements:
+- src/requirements/base.txt
+- src/requirements/dev.txt
+- src/requirements/docker.txt
+- src/requirements/unittest.txt

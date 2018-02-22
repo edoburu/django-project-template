@@ -7,6 +7,8 @@ ALLOWED_HOSTS.append('localhost')  # for container healthchecks
 
 # Safe defaults to allow startups without many settings.
 CACHES['default'] = env.cache(default='locmemcache://')
+CACHES['axes'] = env.cache(default='dummycache://')
+AXES_CACHE = 'axes'
 
 # When the container restarts, and memcache still indicates the files are present,
 # django-compressor will not recreate the files on the fly. Better use offline compression

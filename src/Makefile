@@ -11,8 +11,11 @@ node_modules:
 frontend:
 	npm run gulp
 
+images:
+	npm run gulp imagemin
+
 watch:
-	npm run gulp sass:watch
+	npm run gulp watch
 
 messages:
 	django-admin.py compilemessages
@@ -24,4 +27,4 @@ test:
 	py.test --reuse-db --nomigrations
 
 coverage:
-	pytest --reuse-db --nomigrations --cov --cov-report=term-missing
+	py.test --reuse-db --nomigrations --cov --cov-report=term-missing

@@ -11,18 +11,26 @@
     "jquery": "^3.3.1"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.2",
+    "autoprefixer": "^8.0.0",
     "css-mqpacker": "^6.0.1",
     "del": "^3.0.0",
+    "files-exist": "^1.0.2",
     "gulp": "^3.9.1",
-    "gulp-copy": "^1.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^4.1.0",
     "gulp-livereload": "^3.8.1",
     "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.0",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^1.6.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
     "gulp.spritesmith-multi": "^3.1.0",
+    "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-pngquant": "^5.0.1",
     "node-sass": "^4.7.2",
-    "require-dir": "^0.3.2"
+    "pump": "^3.0.0",
+    "require-dir": "^1.0.0",
+    "run-sequence": "^2.2.1"
   }
 }

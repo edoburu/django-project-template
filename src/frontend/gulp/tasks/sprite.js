@@ -1,6 +1,7 @@
 'use strict';
 
 var gulp = require('gulp'),
+    plumber = require('gulp-plumber'),
     merge = require('merge-stream'),
     config = require('../config');
 
@@ -39,13 +40,11 @@ gulp.task('sprite', function () {
   var spritesmith = require('gulp.spritesmith-multi');
   var sprites =
     gulp.src(config.paths.spriteInput)
-      .pipe(spritesmith(spritesmith_options))
-      .on('error', function (err) {
-        console.log(err)
-      });
+      .pipe(plumber())
+      .pipe(spritesmith(spritesmith_options));
 
   // Continue in separate streams (also allows adding imagemin to the img pipe)
-  var imgStream = sprites.img.pipe(gulp.dest(config.paths.img));
+  var imgStream = sprites.img.pipe(gulp.dest(config.paths.images));
   var cssStream = sprites.css.pipe(gulp.dest(config.paths.sass));
 
   // Return a merged stream to handle both `end` events

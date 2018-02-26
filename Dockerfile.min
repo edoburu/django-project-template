@@ -4,6 +4,16 @@ FROM edoburu/django-base-images:py36-stretch-build-onbuild AS build-image
 RUN find /usr/local/lib/python3.6/site-packages/babel/locale-data/ -not -name 'en*' -not -name 'nl*' -name '*.dat' -delete && \
     find /usr/local/lib/python3.6/site-packages/tinymce/ -regextype posix-egrep -not -regex '.*/langs/(en|nl).*\.js' -wholename '*/langs/*.js' -delete
 
+# Node builder
+FROM node:9-stretch as frontend-build
+RUN mkdir -p /app/src
+WORKDIR /app/src
+COPY src/package.json src/package-lock.json* /app/src/
+RUN npm install
+COPY src/gulpfile.js /app/src/
+COPY src/frontend/ /app/src/frontend/
+RUN npm run gulp
+
 # Start runtime container
 FROM edoburu/django-base-images:py36-stretch-runtime-onbuild
 ENV DJANGO_SETTINGS_MODULE={{ project_name }}.settings.docker \
@@ -11,10 +21,12 @@ ENV DJANGO_SETTINGS_MODULE={{ project_name }}.settings.docker \
 
 HEALTHCHECK --interval=5m --timeout=3s CMD curl -f http://localhost:8080/api/health/ || exit 1
 
+COPY --from=frontend-build /app/src/frontend/static /app/src/frontend/static
+
 # Collect static files as root, with gzipped files for uwsgi to serve
 # Add CACHE folder for django-compressor to write into
 RUN manage.py compilemessages && \
-    manage.py collectstatic --settings=$DJANGO_SETTINGS_MODULE --noinput
+    manage.py collectstatic --noinput
     #whitenoise does this;
     #gzip --keep --best --force --recursive /app/web/static/ && \
 

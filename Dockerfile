@@ -13,6 +13,16 @@ RUN find /usr/local/lib/python3.6/site-packages/ -name '*.po' -delete && \
     find /usr/local/lib/python3.6/site-packages/babel/locale-data/ -not -name 'en*' -not -name 'nl*' -name '*.dat' -delete && \
     find /usr/local/lib/python3.6/site-packages/tinymce/ -regextype posix-egrep -not -regex '.*/langs/(en|nl).*\.js' -wholename '*/langs/*.js' -delete
 
+# Node builder
+FROM node:9-stretch as frontend-build
+RUN mkdir -p /app/src
+WORKDIR /app/src
+COPY src/package.json src/package-lock.json* /app/src/
+RUN npm install
+COPY src/gulpfile.js /app/src/
+COPY src/frontend/ /app/src/frontend/
+RUN npm run gulp
+
 # Start runtime container
 FROM edoburu/django-base-images:py36-stretch-runtime
 ENV UWSGI_PROCESSES=1 \
@@ -29,6 +39,7 @@ HEALTHCHECK --interval=5m --timeout=3s CMD curl -f http://localhost:8080/api/hea
 # Install dependencies
 COPY --from=build-image /usr/local/bin/ /usr/local/bin/
 COPY --from=build-image /usr/local/lib/python3.6/site-packages/ /usr/local/lib/python3.6/site-packages/
+COPY --from=frontend-build /app/src/frontend/static /app/src/frontend/static
 
 # Insert application code.
 # - Prepare gzipped versions of static files for uWSGI to use

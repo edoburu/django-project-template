@@ -15,7 +15,7 @@ RUN find /usr/local/lib/python3.6/site-packages/ -name '*.po' -delete
 FROM node:9-stretch as frontend-build
 RUN mkdir -p /app/src
 WORKDIR /app/src
-COPY src/package.json src/package-lock.json /app/src/
+COPY src/package.json src/package-lock.json* /app/src/
 RUN npm install
 COPY src/gulpfile.js /app/src/
 COPY src/frontend/ /app/src/frontend/

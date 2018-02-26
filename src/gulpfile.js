@@ -13,10 +13,14 @@
 'use strict';
 
 var gulp = require('gulp'),
-  requireDir = require('require-dir');
+  requireDir = require('require-dir'),
+  runSequence = require('run-sequence');
+
 
 // Import all tasks
 requireDir('./frontend/gulp/tasks', {recurse: true});
 
 // Define default task
-gulp.task('default', ['clean', 'vendor', 'sass']);
+gulp.task('default', function(cb) {
+  runSequence('clean', ['vendor', 'imagemin', 'sass'], cb);
+});

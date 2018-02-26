@@ -5,7 +5,11 @@ var gulp = require('gulp'),
     config = require('../config');
 
 
-gulp.task('clean', function (cb) {
+gulp.task('clean', function () {
   // clean task
-  del([config.paths.css + '*.css', config.paths.vendor, '!' + config.paths.css + 'user-styles.css'], cb);
+  return del([
+    config.paths.css + '*.css',
+    config.paths.vendor,
+    '!' + config.paths.css + 'user-styles.css'
+  ]);
 });

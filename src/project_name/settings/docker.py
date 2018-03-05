@@ -14,7 +14,6 @@ AXES_CACHE = 'axes'
 # django-compressor will not recreate the files on the fly. Better use offline compression
 CACHES['compressor'] = env.cache('COMPRESSOR_CACHE', 'locmemcache://')
 COMPRESS_CACHE_BACKEND = 'compressor'
-COMPRESS_CSS_HASHING_METHOD = 'hash'  # Not using mtime in case it differs between servers.
 COMPRESS_STORAGE = 'compressor.storage.GzipCompressorFileStorage'  # generate .gz too for uwsgi static-gzip-dir
 
 # Need to different way to get the release, since there is no .git folder to read.

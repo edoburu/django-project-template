@@ -5,7 +5,7 @@
 # all requirements get the latest version on installation.
 
 # Infrastructure
-Django >= 1.11.10,< 2.0
+Django >= 1.11.10,< 2.0  # pyup: <2.0 until 2018-11-02
 Pillow >= 5.0.0
 #for MySQL: MySQL-python >= 1.2.5
 psycopg2 >= 2.7.4

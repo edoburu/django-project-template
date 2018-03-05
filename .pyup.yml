@@ -1,5 +1,5 @@
 update: insecure
-schedule: "every day"
+schedule: "every month"
 pin: False  # Set True for actual sites!
 branch_prefix: pyup/
 requirements:

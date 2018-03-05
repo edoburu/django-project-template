@@ -19,6 +19,6 @@ yet-another-django-profiler >= 1.1.0
 
 # Debugging
 django-debugtools >= 1.7.2
-ipython == 5.5.0; python_version < '3.0'
+ipython == 5.5.0; python_version < '3.0'  # pyup: ignore
 ipython >= 6.2.1; python_version >= '3.0'
 ptpython >= 0.41

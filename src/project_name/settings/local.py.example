@@ -1,7 +1,7 @@
 """
 Local settings for development.
 """
-from .defaults import INSTALLED_APPS, MIDDLEWARE, LOGGING
+from .defaults import INSTALLED_APPS, MIDDLEWARE, LOGGING, env
 
 
 ## -- Flags

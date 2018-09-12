@@ -19,8 +19,8 @@ sitemaps = {
 
 urlpatterns = [
     # Django admin
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^admin/filebrowser/', include(fb_site.urls)),
+    url(r'^admin/', admin.site.urls),
+    url(r'^admin/filebrowser/', fb_site.urls),
     url(r'^admin/util/tools/', include(admin_tools.urls)),
 
     # Test pages

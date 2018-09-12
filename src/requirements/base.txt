@@ -33,4 +33,4 @@ netaddr >= 0.7.19
 pytz >= 2018.5
 redis >= 2.10.6
 sorl-thumbnail >= 12.4.1
-whitenoise >= 4.0
+whitenoise >= 4.1

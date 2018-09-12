@@ -64,7 +64,7 @@ pytz >= 2018.5
 redis >= 2.10.6
 smartypants >= 2.0.1
 sorl-thumbnail >= 12.4.1
-whitenoise >= 4.0
+whitenoise >= 4.1
 
 # Installed dependencies
 django-template-analyzer >= 1.6.1

@@ -32,7 +32,7 @@ pytz==2018.7
 raven==6.9.0
 rcssmin==1.0.6            # via django-compressor
 redis==3.0.1
-requests==2.20.0          # via django-healthchecks
+requests==2.20.1          # via django-healthchecks
 rjsmin==1.0.12            # via django-compressor
 six==1.11.0               # via django-healthchecks
 sorl-thumbnail==12.5.0

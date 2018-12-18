@@ -1,9 +1,9 @@
 'use strict';
 
-var gulp = require('gulp'),
-    plumber = require('gulp-plumber'),
-    merge = require('merge-stream'),
-    config = require('../config');
+const gulp = require('gulp'),
+  plumber = require('gulp-plumber'),
+  merge = require('merge-stream'),
+  config = require('../config');
 
 
 var spritesmith_options = {
@@ -17,7 +17,7 @@ var spritesmith_options = {
       icon.name = sprite + '-' + icon.name;
     };
     options.cssOpts = {
-      'functions': false,
+      'functions': false
     };
 
     if (options.retinaImgName) {
@@ -33,20 +33,20 @@ var spritesmith_options = {
 };
 
 
-gulp.task('sprite', function () {
+gulp.task('sprite', gulp.parallel(function () {
   // Sprite task
   // https://github.com/twolfson/gulp.spritesmith
   // https://github.com/reducejs/gulp.spritesmith-multi
-  var spritesmith = require('gulp.spritesmith-multi');
-  var sprites =
+  const spritesmith = require('gulp.spritesmith-multi');
+  const sprites =
     gulp.src(config.paths.spriteInput)
       .pipe(plumber())
       .pipe(spritesmith(spritesmith_options));
 
   // Continue in separate streams (also allows adding imagemin to the img pipe)
-  var imgStream = sprites.img.pipe(gulp.dest(config.paths.images));
-  var cssStream = sprites.css.pipe(gulp.dest(config.paths.sass));
+  const imgStream = sprites.img.pipe(gulp.dest(config.paths.images));
+  const cssStream = sprites.css.pipe(gulp.dest(config.paths.sass));
 
   // Return a merged stream to handle both `end` events
   return merge(imgStream, cssStream)
-});
+}));

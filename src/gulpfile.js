@@ -12,15 +12,11 @@
  */
 'use strict';
 
-var gulp = require('gulp'),
-  requireDir = require('require-dir'),
-  runSequence = require('run-sequence');
-
+const gulp = require('gulp'),
+  requireDir = require('require-dir');
 
 // Import all tasks
 requireDir('./frontend/gulp/tasks', {recurse: true});
 
 // Define default task
-gulp.task('default', function(cb) {
-  runSequence('clean', ['vendor', 'imagemin', 'sass'], cb);
-});
+gulp.task('default', gulp.series('clean', gulp.parallel(['vendor', 'imagemin', 'sass'])));

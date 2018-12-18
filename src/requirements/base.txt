@@ -6,15 +6,15 @@
 #
 babel==2.6.0              # via django-phonenumber-field
 brotlipy==0.7.0
-certifi==2018.10.15       # via requests
+certifi==2018.11.29       # via requests
 cffi==1.11.5              # via brotlipy
 chardet==3.0.4            # via requests
 django-admin-tools==0.8.1
-django-analytical==2.4.0
+django-analytical==2.5.0
 django-any-imagefield==1.0
 django-any-urlfield==2.6.1
 django-appconf==1.0.2     # via django-axes, django-compressor
-django-axes==4.4.0
+django-axes==4.4.3
 django-categories-i18n==1.1
 django-compressor==2.2
 django-contrib-comments==1.9.0
@@ -35,7 +35,7 @@ django-parler==1.9.2
 django-phonenumber-field==2.1.0
 django-polymorphic-tree==1.5
 django-polymorphic==2.0.3
-django-redis==4.9.0
+django-redis==4.10.0
 django-slug-preview==1.0.4
 django-staff-toolbar==1.2
 django-tag-parser==3.1
@@ -51,27 +51,27 @@ fluentcms-contactform==2.0
 fluentcms-jumbotron==2.0
 fluentcms-pager==2.0
 fluentcms-teaser==1.1.2
-future==0.17.0            # via django-fluent-contents, django-fluent-dashboard, django-fluent-pages, django-polymorphic-tree
+future==0.17.1            # via django-fluent-contents, django-fluent-dashboard, django-fluent-pages, django-polymorphic-tree
 html5lib==1.0.1
-idna==2.7                 # via requests
+idna==2.8                 # via requests
 micawber==0.3.8
 netaddr==0.7.19
 phonenumberslite==8.9.16
 pillow==5.3.0
-psycopg2==2.7.5
+psycopg2==2.7.6.1
 pycparser==2.19           # via cffi
 python-akismet==0.4.1
 pytz==2018.7
 raven==6.9.0
 rcssmin==1.0.6            # via django-compressor
-redis==2.10.6
-requests==2.20.0          # via django-healthchecks, python-akismet
+redis==3.0.1
+requests==2.21.0          # via django-healthchecks, python-akismet
 rjsmin==1.0.12            # via django-compressor
-six==1.11.0               # via django-fluent-contents, django-fluent-pages, django-healthchecks, html5lib
+six==1.12.0               # via django-fluent-contents, django-fluent-pages, django-healthchecks, html5lib
 smartypants==2.0.1
 sorl-thumbnail==12.5.0
-urllib3==1.24             # via requests
+urllib3==1.24.1           # via requests
 uwsgi==2.0.17.1
 webencodings==0.5.1       # via html5lib
-whitenoise==4.1
+whitenoise==4.1.2
 wsgiunproxy==1.0

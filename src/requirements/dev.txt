@@ -8,11 +8,11 @@ pip-tools == 3.1.0
 # Useful extra developer packages:
 
 # Debugging
-django-debug-toolbar >= 1.10.1
-django-extensions >= 2.1.3
+django-debug-toolbar >= 1.11
+django-extensions >= 2.1.4
 
 # Documentation
-Sphinx >= 1.8.1
+Sphinx >= 1.8.2
 sphinx-rtd-theme >= 0.4.2
 
 # Profiling
@@ -22,5 +22,5 @@ yet-another-django-profiler >= 1.1.0
 
 # Debugging
 django-debugtools >= 1.7.3
-ipython >= 7.1.1
-ptpython >= 2.0.3
+ipython >= 7.2.0
+ptpython >= 2.0.4

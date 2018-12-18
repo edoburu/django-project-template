@@ -1,16 +1,17 @@
 'use strict';
 
-var gulp = require('gulp'),
-    filesExist = require('files-exist'),
-    plumber = require('gulp-plumber'),
-    sourcemaps = require('gulp-sourcemaps'),
-    merge = require('merge-stream'),
-    uglify = require('gulp-uglify'),
-    concat = require('gulp-concat'),
-    livereload = require('gulp-livereload');
+const gulp = require('gulp'),
+  filesExist = require('files-exist'),
+  plumber = require('gulp-plumber'),
+  size = require('gulp-size'),
+  sourcemaps = require('gulp-sourcemaps'),
+  merge = require('merge-stream'),
+  uglify = require('gulp-uglify'),
+  concat = require('gulp-concat'),
+  livereload = require('gulp-livereload');
 
 
-gulp.task('vendor', function () {
+function vendor() {
   // Create streams for all copy tasks
   var config = require('../config');  // reloaded if needed
   var streams = config.copy_files.map(function(item){
@@ -33,6 +34,7 @@ gulp.task('vendor', function () {
     }
 
     pipes.push(
+      size({showFiles: true}),
       gulp.dest(item.dest),
       livereload()
     );
@@ -43,15 +45,18 @@ gulp.task('vendor', function () {
 
   // Return a merged stream to handle both `end` events
   return merge(streams);
-});
+}
 
 
-gulp.task('vendor:watch', ['vendor'], function () {
+function vendorWatch() {
   // Watch and recompile on changes
   var configfile = require.resolve('../config');
-  return gulp.watch(configfile, ['vendor'])
-    .on('change', function (evt) {
-      console.log('[watcher] File config.js was ' + evt.type + ', reloading...');
+  return gulp.watch(configfile, vendor)
+    .on('all', function (event, path, stats) {
+      console.log('[watcher] File config.js was ' + event + ', reloading...');
       delete require.cache[configfile];
     });
-});
+}
+
+gulp.task('vendor', vendor);
+gulp.task('vendor:watch', gulp.series(vendor, vendorWatch));

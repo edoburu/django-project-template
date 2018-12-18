@@ -7,30 +7,31 @@
     "gulp": "gulp"
   },
   "dependencies": {
-    "bootstrap-sass": "^3.3.7",
+    "bootstrap-sass": "^3.4.0",
     "jquery": "^3.3.1"
   },
   "devDependencies": {
-    "autoprefixer": "^8.0.0",
-    "css-mqpacker": "^6.0.1",
+    "autoprefixer": "^9.4.3",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.7",
     "del": "^3.0.0",
-    "files-exist": "^1.0.2",
-    "gulp": "^3.9.1",
+    "files-exist": "^1.1.0",
+    "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^4.1.0",
-    "gulp-livereload": "^3.8.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-livereload": "^4.0.1",
     "gulp-notify": "^3.2.0",
-    "gulp-plumber": "^1.2.0",
-    "gulp-postcss": "^7.0.0",
-    "gulp-sass": "^3.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-size": "^3.0.0",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.0",
+    "gulp-uglify": "^3.0.1",
     "gulp.spritesmith-multi": "^3.1.0",
-    "imagemin-mozjpeg": "^7.0.0",
-    "imagemin-pngquant": "^5.0.1",
-    "node-sass": "^4.7.2",
-    "pump": "^3.0.0",
-    "require-dir": "^1.0.0",
-    "run-sequence": "^2.2.1"
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^6.0.0",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-remove-selectors": "^2.0.0",
+    "require-dir": "^1.2.0"
   }
 }

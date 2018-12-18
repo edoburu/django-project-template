@@ -39,7 +39,6 @@ html, body {
 
 iframe {
   border: 1px solid #ccc;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 

@@ -37,6 +37,6 @@ rjsmin==1.0.12            # via django-compressor
 six==1.12.0               # via django-healthchecks
 sorl-thumbnail==12.5.0
 urllib3==1.24.1           # via requests
-uwsgi==2.0.17.1
+uwsgi==2.0.18
 whitenoise==4.1.2
 wsgiunproxy==1.0

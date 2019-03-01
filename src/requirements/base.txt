@@ -15,7 +15,7 @@ django-axes==4.5.4
 django-compressor==2.2
 django-crispy-forms==1.7.2
 django-environ==0.4.5
-django-filebrowser-no-grappelli==3.7.5
+django-filebrowser-no-grappelli==3.7.7
 django-fluent-dashboard==1.0
 django-healthchecks==1.4.2
 django-ipware==2.1.0      # via django-axes

@@ -10,7 +10,7 @@ cffi==1.12.2              # via brotlipy
 chardet==3.0.4            # via requests
 django-admin-tools==0.8.1
 django-analytical==2.5.0
-django-appconf==1.0.2     # via django-axes, django-compressor
+django-appconf==1.0.3     # via django-axes, django-compressor
 django-axes==4.4.3
 django-compressor==2.2
 django-crispy-forms==1.7.2

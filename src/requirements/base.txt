@@ -31,7 +31,7 @@ pycparser==2.19           # via cffi
 pytz==2018.9
 raven==6.10.0
 rcssmin==1.0.6            # via django-compressor
-redis==3.0.1
+redis==3.2.1
 requests==2.21.0          # via django-healthchecks
 rjsmin==1.0.12            # via django-compressor
 six==1.12.0               # via django-healthchecks

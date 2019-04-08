@@ -5,13 +5,13 @@
 # all requirements get the latest version on installation.
 
 # Infrastructure
-Django >= 2.0.9,< 2.1  # pyup: <2.1 until 2018-11-02
-Pillow >= 5.3.0
+Django >= 2.0.13,< 2.1  # pyup: <2.1 until 2018-11-02
+Pillow >= 6.0.0
 #for MySQL: MySQL-python >= 1.2.5
-psycopg2 >= 2.7.6.1
+psycopg2 >= 2.8.1
 #for memcached: python-memcached >= 1.59
-raven >= 6.9.0
-uWSGI >= 2.0.17.1
+raven >= 6.10.0
+uWSGI >= 2.0.18
 WsgiUnproxy >= 1.0
 
 # CMS libraries
@@ -35,13 +35,13 @@ django-admin-tools >= 0.8.1
 django-analytical >= 2.5.0
 django-any-imagefield >= 1.0
 django-any-urlfield >= 2.6.1
-django-axes >= 4.4.3
+django-axes >= 4.5.4
 django-categories-i18n >= 1.1
 django-compressor >= 2.2
 django-contrib-comments >= 1.9.0
 django-crispy-forms >= 1.7.2
 django-environ >= 0.4.5
-django-filebrowser-no-grappelli >= 3.7.5
+django-filebrowser-no-grappelli >= 3.7.8
 django-healthchecks >= 1.4.2
 django-mptt >= 0.9.1
 django-parler >= 1.9.2
@@ -60,8 +60,8 @@ django-wysiwyg >= 0.8.0
 html5lib >= 1.0.1
 micawber >= 0.3.8
 netaddr >= 0.7.19
-pytz >= 2018.7
-redis >= 3.0.1
+pytz >= 2018.9
+redis >= 3.2.1
 smartypants >= 2.0.1
 sorl-thumbnail >= 12.5.0
 whitenoise >= 4.1.2

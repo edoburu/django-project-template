@@ -3,17 +3,17 @@
 -r ./unittest.txt
 
 # Tools for building
-pip-tools == 3.1.0
+pip-tools == 3.6.0
 
 # Useful extra developer packages:
 
 # Debugging
 django-debug-toolbar >= 1.11
-django-extensions >= 2.1.4
+django-extensions >= 2.1.6
 
 # Documentation
-Sphinx >= 1.8.2
-sphinx-rtd-theme >= 0.4.2
+Sphinx >= 2.0.0
+sphinx-rtd-theme >= 0.4.3
 
 # Profiling
 gprof2dot >= 2017.9.19
@@ -21,6 +21,6 @@ geordi >= 0.3
 yet-another-django-profiler >= 1.1.0
 
 # Debugging
-django-debugtools >= 1.7.3
-ipython >= 7.2.0
+django-debugtools >= 1.7.4
+ipython >= 7.4.0
 ptpython >= 2.0.4

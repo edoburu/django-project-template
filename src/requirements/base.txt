@@ -17,7 +17,7 @@ django-appconf==1.0.3     # via django-axes, django-compressor
 django-axes==4.5.4
 django-categories-i18n==1.1
 django-compressor==2.2
-django-contrib-comments==1.9.0
+django-contrib-comments==1.9.1
 django-crispy-forms==1.7.2
 django-environ==0.4.5
 django-filebrowser-no-grappelli==3.7.8
@@ -29,20 +29,20 @@ django-fluent-pages==2.0.5
 django-fluent-utils==2.0.1
 django-healthchecks==1.4.2
 django-ipware==2.1.0      # via django-axes
-django-js-asset==1.1.0    # via django-mptt
+django-js-asset==1.2.2    # via django-mptt
 django-mptt==0.9.1
 django-parler==1.9.2
-django-phonenumber-field==2.1.0
+django-phonenumber-field==2.3.1
 django-polymorphic-tree==1.5
 django-polymorphic==2.0.3
 django-redis==4.10.0
 django-slug-preview==1.0.4
 django-staff-toolbar==1.2
 django-tag-parser==3.1
-django-taggit-autosuggest==0.3.4
-django-taggit==0.23.0
+django-taggit-autosuggest==0.3.7
+django-taggit==1.1.0
 django-template-analyzer==1.6.1
-django-tinymce==2.7.0
+django-tinymce==2.8.0
 django-webmaster-verification==0.3.0
 django-wysiwyg==0.8.0
 django==2.0.13
@@ -54,9 +54,9 @@ fluentcms-teaser==1.1.2
 future==0.17.1            # via django-fluent-contents, django-fluent-dashboard, django-fluent-pages, django-polymorphic-tree
 html5lib==1.0.1
 idna==2.8                 # via requests
-micawber==0.3.8
+micawber==0.4.0
 netaddr==0.7.19
-phonenumberslite==8.10.2
+phonenumberslite==8.10.9
 pillow==6.0.0
 psycopg2==2.8.1
 pycparser==2.19           # via cffi
@@ -67,7 +67,7 @@ rcssmin==1.0.6            # via django-compressor
 redis==3.2.1
 requests==2.21.0          # via django-healthchecks, python-akismet
 rjsmin==1.0.12            # via django-compressor
-six==1.12.0               # via django-fluent-contents, django-fluent-pages, django-healthchecks, html5lib
+six==1.12.0               # via django-appconf, django-fluent-contents, django-fluent-pages, django-healthchecks, html5lib
 smartypants==2.0.1
 sorl-thumbnail==12.5.0
 urllib3==1.24.1           # via requests

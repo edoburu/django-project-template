@@ -5,11 +5,12 @@ services:
 - docker
 
 python:
-- '3.4'
+- '3.6'
+- '3.7'
 
 ## TODO: remove this for your own projects.
 install:
-- pip install -U pip wheel setuptools 'Django<2.1'
+- pip install -U pip wheel setuptools 'Django<2.3'
 - mkdir ../build; django-admin.py startproject -e py,rst,example,gitignore,ini,min -n Dockerfile --template=. myproject ../build
 before_script:
 - export DJANGO_SETTINGS_MODULE=myproject.settings.unittest

@@ -6,7 +6,7 @@ const autoprefixer = require('autoprefixer'),
   flexbugsFixes = require('postcss-flexbugs-fixes'),
   removeSelectors = require("postcss-remove-selectors");
 
-const bootstrap = 'node_modules/bootstrap-sass/assets/javascripts/';
+const bootstrap = 'node_modules/bootstrap/js/dist/';
 const vendor = './frontend/static/frontend/vendor/';
 
 const NODE_ENV = process.env.NODE_ENV;
@@ -37,6 +37,7 @@ let postcss_plugins = [
       ".form-control.is-valid",
       ".form-check-input.is-valid",
       ".nav-pills",
+      ".nav-tabs",
       ".show > .btn",
       ".navbar-dark",
       ".navbar-expand ", // only md
@@ -66,11 +67,6 @@ let postcss_plugins = [
   }),
   flexbugsFixes(),
   autoprefixer({
-    browsers: [
-      ">0.25%",
-      //"not ie 11"
-      "not op_mini all"
-    ],
     cascade: false
   }),
   mqpacker({sort: true})  // combine media queries
@@ -94,16 +90,20 @@ module.exports = {
   copy_files: [
     {
       src: [
-        'node_modules/jquery/dist/jquery.min.js'
+        'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/popper.js/dist/umd/popper.min.js'
       ],
       dest: vendor
     },
     {
       src: [
-        bootstrap + 'bootstrap/collapse.js',
-        bootstrap + 'bootstrap/transition.js'
+        bootstrap + 'util.js',
+        bootstrap + 'collapse.js',  // mobile menu
+        bootstrap + 'dropdown.js'  // menu
       ],
-      dest: vendor + "bootstrap/"
+      dest: vendor,
+      concat: "bootstrap.min.js",
+      minify: true
     }
   ],
 
@@ -112,7 +112,7 @@ module.exports = {
     outputStyle: NODE_ENV === 'production' ? 'compressed' : 'expanded',
     includePaths: [
       './frontend/sass-vendor/',
-      './node_modules/bootstrap-sass/assets/stylesheets/',
+      './node_modules/'
     ],
     precision: 5
   },
@@ -120,7 +120,8 @@ module.exports = {
   postcss_plugins: postcss_plugins,
 
   livereload_options: {
-    host: '127.0.0.1'
+    host: '127.0.0.1',
+    port: 35729
   },
 
   mozjpeg_options: {

@@ -10,12 +10,17 @@ $image-url-path: '../images/';
 $fonts-url-path: '../fonts/';
 
 // Base settings
-$font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-size-base: 14px;
+//$font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+//$font-size-base: 1rem;
 
 // Base colors
-$text-color: #333;
 $body-bg: #fff;
+$body-color: #333;
 
-// Amend with the defaults from bootstrap.
-@import "bootstrap/variables";
+// Breadcrumb
+$breadcrumb-bg: #fff;
+$breadcrumb-padding-x: 0;
+
+// Navbar
+$navbar-padding-x: 1rem;  // for brand
+$navbar-nav-link-padding-x: 0.75rem;

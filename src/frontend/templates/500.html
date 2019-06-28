@@ -1,32 +1,31 @@
-{% load static i18n %}{% get_static_prefix as STATIC_URL %}<!DOCTYPE html>
+{% load static i18n %}<!DOCTYPE html>
 
 <html xml:lang="{{ LANGUAGE_CODE|default:"en" }}" lang="{{ LANGUAGE_CODE|default:"en" }}">
   <head>
     <meta charset="utf-8" />
     <meta name="generator" content="Powered by Django" />
     <title>{% trans 'Internal error!' %}</title>
-    <link href="{{ STATIC_URL }}frontend/css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="{{ STATIC_URL }}frontend/css/screen.css" rel="stylesheet" type="text/css" />
+    <link href="{% static 'frontend/css/screen.css' %}" rel="stylesheet" type="text/css" />
     {% block scripts %}{% endblock %}
   </head>
 
   <body id="page" class="page500">
     <div id="wrapper">
 
-      <header id="top" class="navbar navbar-default">
+      <header id="header" class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">{% trans "Show Navigation" %}</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Brand</a>
-          </div>
+          <a class="navbar-brand" href="/">Brand</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Menu Weergeven">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
           <div id="main-menu" class="navbar-collapse collapse">
             <!-- menu here -->
+            <ul class="nav navbar-nav">
+              <li class="nav-item active">
+                  <a class="nav-link" href="/">Demo 1</a>
+              </li>
+            </ul>
           </div>
         </div>
       </header>
@@ -49,7 +48,7 @@
         </div>
       </section>
 
-      <footer id="bottom">
+      <footer id="footer">
         <div class="container">
           <p>Copyright © ... {% now "Y" %}</p>
         </div>

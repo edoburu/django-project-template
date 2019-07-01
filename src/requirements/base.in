@@ -17,7 +17,7 @@ WsgiUnproxy >= 1.0
 # CMS libraries
 django-fluent-blogs >= 2.0.3
 django-fluent-comments >= 2.1
-django-fluent-contents >= 2.0.4
+django-fluent-contents >= 2.0.5
 django-fluent-dashboard >= 1.0
 django-fluent-pages >= 2.0.5
 django-fluent-utils >= 2.0.1
@@ -43,9 +43,9 @@ django-crispy-forms >= 1.7.2
 django-environ >= 0.4.5
 django-filebrowser-no-grappelli >= 3.7.8
 django-healthchecks >= 1.4.2
-django-mptt >= 0.9.1
+django-mptt >= 0.10.0
 django-parler >= 1.9.2
-django-phonenumber-field >= 2.3.1
+django-phonenumber-field >= 3.0.1
 django-polymorphic >= 2.0.3
 django-polymorphic-tree >= 1.5
 django-redis >= 4.10.0
@@ -58,7 +58,7 @@ django-tinymce >= 2.8.0
 django-webmaster-verification >= 0.3.0
 django-wysiwyg >= 0.8.0
 html5lib >= 1.0.1
-micawber >= 0.4.0
+micawber >= 0.5.0
 netaddr >= 0.7.19
 pytz >= 2019.1
 redis >= 3.2.1
@@ -68,5 +68,5 @@ whitenoise >= 4.1.2
 
 # Installed dependencies
 django-template-analyzer >= 1.6.1
-phonenumberslite >= 8.10.9
+phonenumberslite >= 8.10.14
 python-akismet >= 0.4.1

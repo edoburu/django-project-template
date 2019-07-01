@@ -6,30 +6,36 @@
   "scripts": {
     "gulp": "gulp"
   },
+  "browserslist": [
+    ">0.25%",
+    "not ie 11",
+    "not op_mini all"
+  ],
   "dependencies": {
-    "bootstrap-sass": "^3.4.0",
-    "jquery": "^3.3.1"
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
   },
   "devDependencies": {
-    "autoprefixer": "^9.4.3",
+    "autoprefixer": "^9.6.0",
     "css-mqpacker": "^7.0.0",
-    "cssnano": "^4.1.7",
-    "del": "^3.0.0",
+    "cssnano": "^4.1.10",
+    "del": "^4.1.1",
     "files-exist": "^1.1.0",
-    "gulp": "^4.0.0",
+    "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^5.0.3",
+    "gulp-imagemin": "^6.0.0",
     "gulp-livereload": "^4.0.1",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-size": "^3.0.0",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.1",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
     "gulp.spritesmith-multi": "^3.1.0",
     "imagemin-mozjpeg": "^8.0.0",
-    "imagemin-pngquant": "^6.0.0",
+    "imagemin-pngquant": "^8.0.0",
     "postcss-flexbugs-fixes": "^4.1.0",
     "postcss-remove-selectors": "^2.0.0",
     "require-dir": "^1.2.0"

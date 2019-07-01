@@ -2,13 +2,12 @@
  * Extra styles to be included in the TinyMCE editor
  */
 
+@import "bootstrap/scss/functions";
 @import "partials/core/variables";
 
 // Take relevant bootstrap.css styles
-@import "bootstrap/mixins";
-@import "bootstrap/normalize";
-@import "bootstrap/scaffolding";
-@import "bootstrap/type";
+@import "bootstrap/scss/bootstrap-reboot";
+@import "bootstrap/scss/type";
 
 // Take screen.css text styles
 @import "partials/core/reset";

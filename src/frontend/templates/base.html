@@ -19,7 +19,6 @@
     <meta property="og:site_name" content="{{ site.name|default:site.domain }}" />
     <meta property="og:description" content="{% block og-description %}{{ page.description }}{% endblock %}" />
     {% compress css %}
-    <link href="{% static 'frontend/css/bootstrap.css' %}" rel="stylesheet" type="text/css" />
     <link href="{% static 'frontend/css/screen.css' %}" rel="stylesheet" type="text/css" />
     <link href="{% static 'staff_toolbar/staff_toolbar.css' %}" rel="stylesheet" type="text/css" />
     {% endcompress %}
@@ -33,17 +32,12 @@
     {% analytical_body_top %}
     <div id="wrapper">
 
-      <header id="top" class="navbar navbar-default">
+      <header id="header" class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">{% trans "Show Navigation" %}</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Brand</a>
-          </div>
+          <a class="navbar-brand" href="/">Brand</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Menu Weergeven">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
           <div id="main-menu" class="navbar-collapse collapse">
             {% render_menu template="partials/base/menu.html" %}
@@ -65,7 +59,7 @@
         </div>
       </section>
 
-      <footer id="bottom">
+      <footer id="footer">
         <div class="container">
           {% sharedcontent "footer" %}
 
@@ -78,8 +72,7 @@
 
     {% compress js %}
       <script type="text/javascript" src="{% static 'frontend/vendor/jquery.min.js' %}"></script>
-      <script type="text/javascript" src="{% static 'frontend/vendor/bootstrap/transition.js' %}"></script>
-      <script type="text/javascript" src="{% static 'frontend/vendor/bootstrap/collapse.js' %}"></script>
+      <script type="text/javascript" src="{% static 'frontend/vendor/bootstrap.min.js' %}"></script>
     {% endcompress %}<!-- common JS -->
 
     {% compress js %}

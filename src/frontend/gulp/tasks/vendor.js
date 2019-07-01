@@ -58,5 +58,5 @@ function vendorWatch() {
     });
 }
 
-gulp.task('vendor', vendor);
+gulp.task('vendor', gulp.series(vendor));
 gulp.task('vendor:watch', gulp.series(vendor, vendorWatch));

@@ -45,7 +45,7 @@ django-template-analyzer==1.6.1
 django-tinymce==2.8.0
 django-webmaster-verification==0.3.0
 django-wysiwyg==0.8.0
-django==2.2.2
+django==2.2.3
 fluentcms-button==2.0
 fluentcms-contactform==2.0
 fluentcms-jumbotron==2.0

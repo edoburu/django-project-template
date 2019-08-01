@@ -39,5 +39,5 @@ sorl-thumbnail==12.5.0
 sqlparse==0.3.0           # via django
 urllib3==1.25.3           # via requests
 uwsgi==2.0.18
-whitenoise==4.1.2
+whitenoise==4.1.3
 wsgiunproxy==1.0

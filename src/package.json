@@ -17,10 +17,10 @@
     "popper.js": "^1.15.0"
   },
   "devDependencies": {
-    "autoprefixer": "^9.6.0",
+    "autoprefixer": "^9.6.1",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
-    "del": "^4.1.1",
+    "del": "^5.0.0",
     "files-exist": "^1.1.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
@@ -33,9 +33,9 @@
     "gulp-size": "^3.0.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
-    "gulp.spritesmith-multi": "^3.1.0",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^8.0.0",
+    "merge-stream": "^2.0.0",
     "postcss-flexbugs-fixes": "^4.1.0",
     "postcss-remove-selectors": "^2.0.0",
     "require-dir": "^1.2.0"

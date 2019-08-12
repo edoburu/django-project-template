@@ -5,7 +5,7 @@
 # all requirements get the latest version on installation.
 
 # Infrastructure
-Django >= 2.2.3,< 2.3  # pyup: <2.4 until 2019-12-01
+Django >= 2.2.4,< 2.3  # pyup: <2.4 until 2019-12-01
 Pillow >= 6.1.0
 #for MySQL: MySQL-python >= 1.2.5
 psycopg2 >= 2.8.3
@@ -15,13 +15,13 @@ uWSGI >= 2.0.18
 WsgiUnproxy >= 1.0
 
 # CMS libraries
-django-fluent-dashboard >= 1.0
+django-fluent-dashboard >= 1.0.1
 
 # Support libs
 brotlipy >= 0.7.0
 django-admin-tools >= 0.8.1
 django-analytical >= 2.5.0
-django-axes >= 5.0.7
+django-axes >= 5.0.12
 django-compressor >= 2.3
 django-crispy-forms >= 1.7.2
 django-environ >= 0.4.5
@@ -30,7 +30,7 @@ django-healthchecks >= 1.4.2
 django-redis >= 4.10.0
 django-webmaster-verification >= 0.3.0
 netaddr >= 0.7.19
-pytz >= 2019.1
-redis >= 3.2.1
+pytz >= 2019.2
+redis >= 3.3.6
 sorl-thumbnail >= 12.5.0
-whitenoise >= 4.1.2
+whitenoise >= 4.1.3

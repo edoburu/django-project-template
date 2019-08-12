@@ -83,7 +83,6 @@ module.exports = {
     sass_glob: './frontend/sass/**/*.scss',
     css: './frontend/static/frontend/css/',
     images: './frontend/static/frontend/images/',
-    spriteInput: './frontend/static/frontend/images/sprites/*/*.png',
     vendor: vendor
   },
 

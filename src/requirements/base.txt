@@ -11,7 +11,7 @@ chardet==3.0.4            # via requests
 django-admin-tools==0.8.1
 django-analytical==2.5.0
 django-appconf==1.0.3     # via django-axes, django-compressor
-django-axes==5.0.12
+django-axes==5.0.13
 django-compressor==2.3
 django-crispy-forms==1.7.2
 django-environ==0.4.5

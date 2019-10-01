@@ -3,7 +3,7 @@
 -r ./unittest.txt
 
 # Tools for building
-pip-tools == 4.0.0
+pip-tools==4.1.0
 
 # Useful extra developer packages:
 

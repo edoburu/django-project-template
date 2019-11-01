@@ -6,7 +6,7 @@
 #
 brotlipy==0.7.0
 certifi==2019.9.11        # via requests
-cffi==1.12.3              # via brotlipy
+cffi==1.13.1              # via brotlipy
 chardet==3.0.4            # via requests
 django-admin-tools==0.8.1
 django-analytical==2.5.0

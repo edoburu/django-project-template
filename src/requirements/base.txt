@@ -14,13 +14,13 @@ django-analytical==2.5.0
 django-any-imagefield==1.0
 django-any-urlfield==2.6.1
 django-appconf==1.0.3     # via django-axes, django-compressor
-django-axes==5.0.12
+django-axes==5.2.2
 django-categories-i18n==1.1
-django-compressor==2.3
+django-compressor==2.4
 django-contrib-comments==1.9.1
-django-crispy-forms==1.7.2
+django-crispy-forms==1.8.1
 django-environ==0.4.5
-django-filebrowser-no-grappelli==3.7.8
+django-filebrowser-no-grappelli==3.8.0
 django-fluent-blogs==2.0.4
 django-fluent-comments==2.1
 django-fluent-contents==2.0.6
@@ -35,7 +35,7 @@ django-parler==2.0
 django-phonenumber-field==3.0.1
 django-polymorphic-tree==1.5
 django-polymorphic==2.1.2
-django-redis==4.10.0
+django-redis==4.11.0
 django-slug-preview==1.0.4
 django-staff-toolbar==1.2
 django-tag-parser==3.1
@@ -45,7 +45,7 @@ django-template-analyzer==1.6.1
 django-tinymce==2.8.0
 django-webmaster-verification==0.3.0
 django-wysiwyg==0.8.0
-django==2.2.4
+django==2.2.9
 fluentcms-button==2.0
 fluentcms-contactform==2.0
 fluentcms-jumbotron==2.0
@@ -57,22 +57,22 @@ idna==2.8                 # via requests
 micawber==0.5.0
 netaddr==0.7.19
 phonenumberslite==8.10.16
-pillow==6.1.0
-psycopg2==2.8.3
+pillow==7.0.0
+psycopg2==2.8.4
 pycparser==2.19           # via cffi
 python-akismet==0.4.1
-pytz==2019.2
+pytz==2019.3
 raven==6.10.0
 rcssmin==1.0.6            # via django-compressor
-redis==3.3.6
+redis==3.3.11
 requests==2.22.0          # via django-healthchecks, python-akismet
 rjsmin==1.1.0             # via django-compressor
-six==1.12.0               # via django-appconf, django-fluent-contents, django-fluent-pages, django-healthchecks, html5lib
+six==1.12.0               # via django-appconf, django-compressor, django-filebrowser-no-grappelli, django-fluent-contents, django-fluent-pages, django-healthchecks, html5lib
 smartypants==2.0.1
 sorl-thumbnail==12.5.0
 sqlparse==0.3.0           # via django
 urllib3==1.25.3           # via requests
 uwsgi==2.0.18
 webencodings==0.5.1       # via html5lib
-whitenoise==4.1.3
+whitenoise==5.0.1
 wsgiunproxy==1.0

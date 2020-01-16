@@ -5,39 +5,39 @@
 #    pip-compile --output-file=requirements/base.txt requirements/base.in
 #
 brotlipy==0.7.0
-certifi==2019.6.16        # via requests
-cffi==1.12.3              # via brotlipy
+certifi==2019.11.28       # via requests
+cffi==1.13.2              # via brotlipy
 chardet==3.0.4            # via requests
 django-admin-tools==0.8.1
 django-analytical==2.5.0
 django-appconf==1.0.3     # via django-axes, django-compressor
-django-axes==5.0.12
-django-compressor==2.3
-django-crispy-forms==1.7.2
+django-axes==5.2.2
+django-compressor==2.4
+django-crispy-forms==1.8.1
 django-environ==0.4.5
-django-filebrowser-no-grappelli==3.7.8
+django-filebrowser-no-grappelli==3.8.0
 django-fluent-dashboard==1.0.1
 django-healthchecks==1.4.2
 django-ipware==2.1.0      # via django-axes
-django-redis==4.10.0
+django-redis==4.11.0
 django-webmaster-verification==0.3.0
-django==2.2.4
-future==0.17.1            # via django-fluent-dashboard
+django==2.2.9
+future==0.18.2            # via django-fluent-dashboard
 idna==2.8                 # via requests
 netaddr==0.7.19
-pillow==6.1.0
-psycopg2==2.8.3
+pillow==7.0.0
+psycopg2==2.8.4
 pycparser==2.19           # via cffi
-pytz==2019.2
+pytz==2019.3
 raven==6.10.0
 rcssmin==1.0.6            # via django-compressor
-redis==3.3.6
+redis==3.3.11
 requests==2.22.0          # via django-healthchecks
 rjsmin==1.1.0             # via django-compressor
-six==1.12.0               # via django-appconf, django-healthchecks
+six==1.14.0               # via django-appconf, django-compressor, django-filebrowser-no-grappelli, django-healthchecks
 sorl-thumbnail==12.5.0
 sqlparse==0.3.0           # via django
-urllib3==1.25.3           # via requests
+urllib3==1.25.7           # via requests
 uwsgi==2.0.18
-whitenoise==4.1.3
+whitenoise==5.0.1
 wsgiunproxy==1.0

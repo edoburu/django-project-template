@@ -11,6 +11,7 @@
 .project
 .idea/
 .pydevproject
+.python-version
 .idea/workspace.xml
 .DS_Store
 .sass-cache/

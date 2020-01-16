@@ -3,13 +3,15 @@
 install: pip node_modules frontend
 
 requirements: requirements/base.in
-	pip-compile --output-file requirements/base.txt requirements/base.in
+	pip-compile -v --output-file requirements/base.txt requirements/base.in
 
 pip:
 	pip install -r requirements/dev.txt
 
+pip-sync:
+	pip-sync requirements/base.txt requirements/dev.txt
+
 upgrade:
-	pip install pip-tools pur
 	pur --patch=Django -r requirements/base.in
 	pur --no-recursive -r requirements/docker.txt
 	pur --no-recursive -r requirements/dev.txt

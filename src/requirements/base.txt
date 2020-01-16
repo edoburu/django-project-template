@@ -4,44 +4,44 @@
 #
 #    pip-compile --output-file=requirements/base.txt requirements/base.in
 #
-babel==2.7.0              # via django-phonenumber-field
+babel==2.8.0              # via django-phonenumber-field
 brotlipy==0.7.0
-certifi==2019.6.16        # via requests
-cffi==1.12.3              # via brotlipy
+certifi==2019.11.28       # via requests
+cffi==1.13.2              # via brotlipy
 chardet==3.0.4            # via requests
 django-admin-tools==0.8.1
 django-analytical==2.5.0
 django-any-imagefield==1.0
-django-any-urlfield==2.6.1
+django-any-urlfield==2.6.2
 django-appconf==1.0.3     # via django-axes, django-compressor
 django-axes==5.2.2
-django-categories-i18n==1.1
+django-categories-i18n==1.1.1
 django-compressor==2.4
-django-contrib-comments==1.9.1
+django-contrib-comments==1.9.2
 django-crispy-forms==1.8.1
 django-environ==0.4.5
 django-filebrowser-no-grappelli==3.8.0
-django-fluent-blogs==2.0.4
+django-fluent-blogs==2.0.5
 django-fluent-comments==2.1
-django-fluent-contents==2.0.6
+django-fluent-contents==2.0.7
 django-fluent-dashboard==1.0.1
-django-fluent-pages==2.0.6
+django-fluent-pages==2.0.7
 django-fluent-utils==2.0.1
 django-healthchecks==1.4.2
 django-ipware==2.1.0      # via django-axes
 django-js-asset==1.2.2    # via django-mptt
 django-mptt==0.10.0
-django-parler==2.0
-django-phonenumber-field==3.0.1
-django-polymorphic-tree==1.5
+django-parler==2.0.1
+django-phonenumber-field==4.0.0
+django-polymorphic-tree==1.5.1
 django-polymorphic==2.1.2
 django-redis==4.11.0
 django-slug-preview==1.0.4
 django-staff-toolbar==1.2
-django-tag-parser==3.1
-django-taggit-autosuggest==0.3.7
-django-taggit==1.1.0
-django-template-analyzer==1.6.1
+django-tag-parser==3.2
+django-taggit-autosuggest==0.3.8
+django-taggit==1.2.0
+django-template-analyzer==1.6.2
 django-tinymce==2.8.0
 django-webmaster-verification==0.3.0
 django-wysiwyg==0.8.0
@@ -51,12 +51,12 @@ fluentcms-contactform==2.0
 fluentcms-jumbotron==2.0
 fluentcms-pager==2.0
 fluentcms-teaser==1.1.2
-future==0.17.1            # via django-fluent-contents, django-fluent-dashboard, django-fluent-pages, django-polymorphic-tree
+future==0.18.2            # via django-fluent-contents, django-fluent-dashboard, django-fluent-pages, django-polymorphic-tree
 html5lib==1.0.1
 idna==2.8                 # via requests
-micawber==0.5.0
+micawber==0.5.1
 netaddr==0.7.19
-phonenumberslite==8.10.16
+phonenumberslite==8.11.2
 pillow==7.0.0
 psycopg2==2.8.4
 pycparser==2.19           # via cffi
@@ -67,11 +67,11 @@ rcssmin==1.0.6            # via django-compressor
 redis==3.3.11
 requests==2.22.0          # via django-healthchecks, python-akismet
 rjsmin==1.1.0             # via django-compressor
-six==1.12.0               # via django-appconf, django-compressor, django-filebrowser-no-grappelli, django-fluent-contents, django-fluent-pages, django-healthchecks, html5lib
+six==1.14.0               # via django-appconf, django-compressor, django-contrib-comments, django-filebrowser-no-grappelli, django-fluent-contents, django-healthchecks, django-parler, html5lib
 smartypants==2.0.1
 sorl-thumbnail==12.5.0
 sqlparse==0.3.0           # via django
-urllib3==1.25.3           # via requests
+urllib3==1.25.7           # via requests
 uwsgi==2.0.18
 webencodings==0.5.1       # via html5lib
 whitenoise==5.0.1

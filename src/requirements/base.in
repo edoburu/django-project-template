@@ -43,7 +43,7 @@ django-crispy-forms >= 1.8.1
 django-environ >= 0.4.5
 django-filebrowser-no-grappelli >= 3.8.0
 django-healthchecks >= 1.4.2
-django-mptt >= 0.10.0
+django-mptt >= 0.11.0
 django-parler >= 2.0.1
 django-phonenumber-field >= 4.0.0
 django-polymorphic >= 2.1.2
@@ -68,5 +68,5 @@ whitenoise >= 5.0.1
 
 # Installed dependencies
 django-template-analyzer >= 1.6.2
-phonenumberslite >= 8.11.2
+phonenumberslite >= 8.11.4
 python-akismet >= 0.4.1

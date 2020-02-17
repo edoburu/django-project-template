@@ -7,9 +7,9 @@
 babel==2.8.0              # via django-phonenumber-field
 brotlipy==0.7.0
 certifi==2019.11.28       # via requests
-cffi==1.13.2              # via brotlipy
+cffi==1.14.0              # via brotlipy
 chardet==3.0.4            # via requests
-django-admin-tools==0.8.1
+django-admin-tools==0.9.0
 django-analytical==2.5.0
 django-any-imagefield==1.0
 django-any-urlfield==2.6.2
@@ -45,7 +45,7 @@ django-template-analyzer==1.6.2
 django-tinymce==2.8.0
 django-webmaster-verification==0.3.0
 django-wysiwyg==0.8.0
-django==2.2.9
+django==2.2.10
 fluentcms-button==2.0
 fluentcms-contactform==2.0
 fluentcms-jumbotron==2.0
@@ -64,14 +64,14 @@ python-akismet==0.4.1
 pytz==2019.3
 raven==6.10.0
 rcssmin==1.0.6            # via django-compressor
-redis==3.3.11
+redis==3.4.1
 requests==2.22.0          # via django-healthchecks, python-akismet
 rjsmin==1.1.0             # via django-compressor
 six==1.14.0               # via django-appconf, django-compressor, django-contrib-comments, django-filebrowser-no-grappelli, django-fluent-contents, django-healthchecks, django-parler, html5lib
 smartypants==2.0.1
-sorl-thumbnail==12.5.0
+sorl-thumbnail==12.6.3
 sqlparse==0.3.0           # via django
-urllib3==1.25.7           # via requests
+urllib3==1.25.8           # via requests
 uwsgi==2.0.18
 webencodings==0.5.1       # via html5lib
 whitenoise==5.0.1

@@ -5,7 +5,7 @@
 # all requirements get the latest version on installation.
 
 # Infrastructure
-Django >= 2.2.9,< 2.3  # pyup: <2.4 until 2019-12-01
+Django >= 2.2.10,< 2.3  # pyup: <2.4 until 2019-12-01
 Pillow >= 7.0.0
 #for MySQL: MySQL-python >= 1.2.5
 psycopg2 >= 2.8.4
@@ -31,7 +31,7 @@ fluentcms-teaser >= 1.1.2
 
 # Support libs
 brotlipy >= 0.7.0
-django-admin-tools >= 0.8.1
+django-admin-tools >= 0.9.0
 django-analytical >= 2.5.0
 django-any-imagefield >= 1.0
 django-any-urlfield >= 2.6.2
@@ -61,9 +61,9 @@ html5lib >= 1.0.1
 micawber >= 0.5.1
 netaddr >= 0.7.19
 pytz >= 2019.3
-redis >= 3.3.11
+redis >= 3.4.1
 smartypants >= 2.0.1
-sorl-thumbnail >= 12.5.0
+sorl-thumbnail >= 12.6.3
 whitenoise >= 5.0.1
 
 # Installed dependencies

@@ -23,7 +23,7 @@ django-redis==4.11.0
 django-webmaster-verification==0.3.0
 django==3.0.3
 future==0.18.2            # via django-fluent-dashboard
-idna==2.8                 # via requests
+idna==2.9                 # via requests
 netaddr==0.7.19
 pillow==7.0.0
 psycopg2==2.8.4

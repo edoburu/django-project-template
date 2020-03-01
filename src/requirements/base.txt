@@ -21,7 +21,7 @@ django-healthchecks==1.4.2
 django-ipware==2.1.0      # via django-axes
 django-redis==4.11.0
 django-webmaster-verification==0.3.0
-django==2.2.10
+django==3.0.3
 future==0.18.2            # via django-fluent-dashboard
 idna==2.8                 # via requests
 netaddr==0.7.19

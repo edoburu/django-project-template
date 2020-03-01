@@ -13,7 +13,7 @@ django-analytical==2.5.0
 django-appconf==1.0.3     # via django-axes, django-compressor
 django-axes==5.2.2
 django-compressor==2.4
-django-crispy-forms==1.8.1
+django-crispy-forms==1.9.0
 django-environ==0.4.5
 django-filebrowser-no-grappelli==3.8.0
 django-fluent-dashboard==1.0.1
@@ -21,9 +21,9 @@ django-healthchecks==1.4.2
 django-ipware==2.1.0      # via django-axes
 django-redis==4.11.0
 django-webmaster-verification==0.3.0
-django==2.2.10
+django==3.0.3
 future==0.18.2            # via django-fluent-dashboard
-idna==2.8                 # via requests
+idna==2.9                 # via requests
 netaddr==0.7.19
 pillow==7.0.0
 psycopg2==2.8.4
@@ -32,11 +32,11 @@ pytz==2019.3
 raven==6.10.0
 rcssmin==1.0.6            # via django-compressor
 redis==3.4.1
-requests==2.22.0          # via django-healthchecks
+requests==2.23.0          # via django-healthchecks
 rjsmin==1.1.0             # via django-compressor
 six==1.14.0               # via django-appconf, django-compressor, django-filebrowser-no-grappelli, django-healthchecks
 sorl-thumbnail==12.6.3
-sqlparse==0.3.0           # via django
+sqlparse==0.3.1           # via django
 urllib3==1.25.8           # via requests
 uwsgi==2.0.18
 whitenoise==5.0.1

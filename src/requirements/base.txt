@@ -19,7 +19,7 @@ django-filebrowser-no-grappelli==3.8.0
 django-fluent-dashboard==1.0.1
 django-healthchecks==1.4.2
 django-ipware==2.1.0      # via django-axes
-django-redis==4.11.0
+django-redis==4.12.1
 django-webmaster-verification==0.3.0
 django==2.2.10
 future==0.18.2            # via django-fluent-dashboard

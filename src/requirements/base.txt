@@ -9,7 +9,7 @@ certifi==2020.6.20       # via requests
 cffi==1.14.1              # via brotlipy
 chardet==3.0.4            # via requests
 django-admin-tools==0.9.0
-django-analytical==2.5.0
+django-analytical==2.6.0
 django-appconf==1.0.3     # via django-axes, django-compressor
 django-axes==5.2.2
 django-compressor==2.4

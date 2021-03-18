@@ -5,39 +5,95 @@
 #    pip-compile --output-file=requirements/base.txt requirements/base.in
 #
 brotlipy==0.7.0
-certifi==2019.11.28       # via requests
-cffi==1.14.0              # via brotlipy
-chardet==3.0.4            # via requests
+    # via -r base.in
+certifi==2019.11.28
+    # via requests
+cffi==1.14.0
+    # via brotlipy
+chardet==3.0.4
+    # via requests
 django-admin-tools==0.9.0
+    # via
+    #   -r base.in
+    #   django-fluent-dashboard
 django-analytical==2.5.0
-django-appconf==1.0.3     # via django-axes, django-compressor
+    # via -r base.in
+django-appconf==1.0.3
+    # via
+    #   django-axes
+    #   django-compressor
 django-axes==5.2.2
+    # via -r base.in
 django-compressor==2.4
+    # via -r base.in
 django-crispy-forms==1.8.1
+    # via -r base.in
 django-environ==0.4.5
+    # via -r base.in
 django-filebrowser-no-grappelli==3.8.0
+    # via -r base.in
 django-fluent-dashboard==1.0.1
+    # via -r base.in
 django-healthchecks==1.4.2
-django-ipware==2.1.0      # via django-axes
+    # via -r base.in
+django-ipware==2.1.0
+    # via django-axes
 django-redis==4.11.0
+    # via -r base.in
 django-webmaster-verification==0.3.0
-django==2.2.10
-future==0.18.2            # via django-fluent-dashboard
-idna==2.8                 # via requests
+    # via -r base.in
+django==2.2.18
+    # via
+    #   -r base.in
+    #   django-analytical
+    #   django-appconf
+    #   django-axes
+    #   django-healthchecks
+    #   django-redis
+    #   django-webmaster-verification
+future==0.18.2
+    # via django-fluent-dashboard
+idna==2.8
+    # via requests
 netaddr==0.7.19
+    # via -r base.in
 pillow==7.0.0
+    # via -r base.in
 psycopg2==2.8.4
-pycparser==2.19           # via cffi
+    # via -r base.in
+pycparser==2.19
+    # via cffi
 pytz==2019.3
+    # via
+    #   -r base.in
+    #   django
 raven==6.10.0
-rcssmin==1.0.6            # via django-compressor
+    # via -r base.in
+rcssmin==1.0.6
+    # via django-compressor
 redis==3.4.1
-requests==2.22.0          # via django-healthchecks
-rjsmin==1.1.0             # via django-compressor
-six==1.14.0               # via django-appconf, django-compressor, django-filebrowser-no-grappelli, django-healthchecks
+    # via
+    #   -r base.in
+    #   django-redis
+requests==2.22.0
+    # via django-healthchecks
+rjsmin==1.1.0
+    # via django-compressor
+six==1.14.0
+    # via
+    #   django-appconf
+    #   django-compressor
+    #   django-filebrowser-no-grappelli
+    #   django-healthchecks
 sorl-thumbnail==12.6.3
-sqlparse==0.3.0           # via django
-urllib3==1.25.8           # via requests
+    # via -r base.in
+sqlparse==0.3.0
+    # via django
+urllib3==1.25.8
+    # via requests
 uwsgi==2.0.18
+    # via -r base.in
 whitenoise==5.0.1
+    # via -r base.in
 wsgiunproxy==1.0
+    # via -r base.in
